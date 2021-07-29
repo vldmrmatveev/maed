@@ -1,0 +1,297 @@
+$blue-light: #D1E2EB;
+$blue: #B4D1E0;
+$blue-dark: #6A7EDA;
+$white: #ffffff;
+$gray: #F5F5F5;
+$indigo: #223549;
+$red: #EC663D;
+$yellow: #F7C154;
+.carousel-card-start {
+	height: 260px;
+	&__link {
+		&:hover {
+			.carousel-card-start__undertext {
+				opacity: 0.8;
+			}
+			.carousel-card-start {
+				&.bg-red {
+					background-color: darken($color: $red, $amount: 10%)
+				}
+				&.bg-yellow {
+					background-color: darken($color: $yellow, $amount: 10%)
+				}
+				&.bg-blue-dark {
+					background-color: darken($color: $blue-dark, $amount: 10%)
+				}
+			}
+		}
+	}
+	&__content {
+		width: 70%;
+		min-width: 150px;
+		max-width: 400px;
+		&-min {
+			width: 60%;
+			min-width: 150px;
+			max-width: 400px;
+		}
+	}
+	&__img {
+		max-width: 160px;
+		@media (max-width: 560px) {
+			height: initial;
+			width: 140px;
+		}
+	}
+}
+
+.maed-logo {
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	line-height: 1;
+	margin: 0 2px;
+	font-weight: bold;
+	&__head {
+		width: 26px;
+		height: 26px;
+		font-size: 18px;
+	}
+	&__xl {
+		width: 32px;
+		height: 32px;
+		font-size: 20px;
+	}
+}
+
+.course-card__main {
+	min-height: 355px;
+	&.bg-red {
+		color: $white;
+		.popover {
+			background-color: $white;
+			color: $red;
+			&-container {
+				background-color: $white;
+				color: $red;
+			}
+		}
+		.course-card__main-colorder-btn {
+			border: 1px solid $white;
+			background-color: transparent;
+			color: $white;
+			&-triangle {
+				border-left-color: $white;
+			}
+			&:hover {
+				background-color: $white;
+				color: $red;
+				.course-card__main-colorder-btn-triangle {
+					border-left-color: $red;
+				}
+			}
+		}
+	}
+	&.border-yellow {
+		.course-card__main-colorder-btn {
+			background-color: $yellow;
+			color: $white;
+			&:hover {
+				background-color: darken($color: $yellow, $amount: 10%);
+			}
+		}
+		.popover {
+			background-color: $yellow;
+			&-container {
+				background-color: $indigo;
+			}
+		}
+	}
+	&.border-red {
+		.course-card__main-colorder-btn {
+			background-color: $red;
+			color: $white;
+			&:hover {
+				background-color: darken($color: $red, $amount: 10%);
+			}
+		}
+		.popover {
+			background-color: $red;
+			&-container {
+				background-color: $red;
+			}
+		}
+	}
+	&.bg-yellow {
+		color: $white;
+		.popover {
+			background-color: $white;
+			color: $yellow;
+			&-container {
+				background-color: $white;
+				color: $indigo;
+			}
+		}
+		.course-card__main-colorder-btn {
+			background-color: $white;
+			color: $yellow;
+			&-triangle {
+				border-left-color: $yellow;
+			}
+			&:hover {
+				background-color: $red;
+				color: $white;
+				.course-card__main-colorder-btn-triangle {
+					border-left-color: $white;
+				}
+			}
+		}
+	}
+	&.bg-blue-dark {
+		color: $white;
+		.popover {
+			background-color: $white;
+			color: $blue-dark;
+			&-container {
+				background-color: $white;
+				color: $blue-dark;
+			}
+		}
+		.course-card__main-colorder-btn {
+			background-color: transparent;
+			color: $white;
+			border: 1px solid $white;
+			&:hover {
+				background-color: $white;
+				color: $blue-dark;
+				.course-card__main-colorder-btn-triangle {
+					border-left-color: $blue-dark;
+				}
+			}
+		}
+	}
+	&.border-blue-dark {
+		.course-card__main-colorder-text {
+			color: $blue-dark;
+		}
+		.course-card__main-colorder-btn {
+			background-color: $blue-dark;
+			color: $white;
+			&:hover {
+				background-color: darken($color: $blue-dark, $amount: 10%);
+			}
+		}
+	}
+	&-colorder-btn {
+		&-triangle {
+			margin-left: 8px;
+			width: 0; 
+			height: 0; 
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $white;
+		}
+	}
+}
+
+.animated-block {
+	&-1,
+	&-2 {
+		@media (max-width: 1023px) {
+			transform: none !important;
+		}
+	}
+}
+
+.popover {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	text-align: center;
+	position: absolute;
+	top: -5px;
+	right: 32px;
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	&-container {
+		z-index: 10;
+		font-size: 10px;
+    line-height: 1;
+    padding: 4px;
+		color: $white;
+    background-color: $blue-dark;
+    border-radius: 4px;
+    font-weight: normal;
+    bottom: 42px;
+		width: 100px;
+	}
+	&:hover {
+		background-color: darken($color: $blue-dark, $amount: 10%);
+	}
+}
+
+.skew-block {
+	position: absolute;
+	left: 0;
+	top: -150px;
+	z-index: auto;
+	width: 100%;
+	height: 354px;
+	transform: skew(0deg, -5deg);
+	&__right {
+		transform: skew(0deg, 5deg);
+	}
+}
+
+.text-placeholder-white {
+	&::placeholder {
+		color: rgba(255,255,255,0.8);
+		@media (max-width: 639px) {
+			color: $indigo;
+		}
+	}
+}
+
+.checkbox-hidden {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.true-checkbox {
+	width: 20px;
+	min-width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	&:before {
+		content: '';
+		width: 14px;
+		height: 14px;
+		background-image: url('/upload/check.svg');
+		background-size: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		opacity: 0;
+		@media (max-width: 639px) {
+			background-image: url('/upload/check-white.svg')
+		}
+	}
+}
+
+.checkbox-hidden:checked + label .true-checkbox {
+	background-color: white;
+	&:before {
+		opacity: 1;
+	}
+	@media (max-width: 639px) {
+		background-color: $indigo;
+	}
+}

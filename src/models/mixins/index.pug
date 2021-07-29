@@ -1,0 +1,58 @@
+mixin checkbox(link, text)
+	input(type="checkbox" name="checkbox-"+link id="checkbox-"+link).checkbox-hidden
+	label(for="checkbox-"+link).flex.items-center
+		span.true-checkbox.border.border-indigo.sm_border-white.rounded-sm.duration-300 
+		span.sm_text-white.text-sm.ml-3.whitespace-nowrap= text
+mixin start-card(color, title, desc, user)
+	a(href="#").carousel-card-start__link
+		.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.carousel-card-start.justify-between.duration-300.overflow-hidden(class=color)
+			.carousel-card-start__content
+				if color != 'bg-yellow' 
+					p.text-white.font-bold.text-sm.mb-3 Старт 29 апреля
+					p.text-white.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
+					p.text-white.font-bold.text-sm.mb-5 Все что нужно знать SMM-щику
+				else
+					p.text-indigo.font-bold.text-sm.mb-3 Старт 29 апреля
+					p.text-indigo.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
+					p.text-indigo.font-bold.text-sm.mb-5 Все что нужно знать SMM-щику
+			.flex.items-center
+				if color != 'bg-yellow' 
+					p.text-2xl.font-extrabold.text-white.mb-0 -40%
+					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
+				else
+					p.text-2xl.font-extrabold.text-indigo -40%
+					p.ml-2.text-indigo.text-xs Скидка <br> до 26 августа
+			img(src="img/upload/"+user, alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
+		p.text-center.font-bold.text-gray.mb-5.opacity-30.carousel-card-start__undertext.duration-300= desc
+mixin course-card(color, title, user)
+	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.course-card__main.overflow-hidden(class=color)
+		.carousel-card-start__content
+			p.font-bold.text-sm.mb-1 Профессия
+			p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-4= title 
+			ul.list-disc.list-inside
+				li.text-xs.mb-3 Гарантированное трудоустройство
+				li.text-xs.mb-3 Один курс в подарок
+		.carousel-card-start__content-min
+			.flex.items-end.flex-wrap
+				p.mr-2.text-lg.font-bold.line-through 58 000 &#8381;
+				p.text-2xl.font-extrabold.mb-0.relative.popover-parent 2900
+					span 
+					span.text-xs &#8381; / мес
+					span.popover.bg-blue-dark.text-white.duration-300(data-popover="Проверочный текст, который говорит, что всё работает") ?
+			p.text-lg.course-card__main-colorder-text.font-bold.mb-3.flex.flex-wrap.items-center 
+				span.mr-1 -40%
+				span.text-xs.pt-1 Скидка до 26 Августа
+			a(href="#").inline-block.course-card__main-colorder-btn.px-4.py-3.rounded-md.duration-300
+				span Записаться
+				span.course-card__main-colorder-btn-triangle.inline-block
+		img(src="img/upload/"+user, alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
+mixin maed-logo(className)
+	.flex.align-items-center 
+		.flex.items-center.justify-center.maed-logo(class=className)
+			span.maed-logo__word M
+		.flex.items-center.justify-center.maed-logo(class=className)
+			span.maed-logo__word A
+		.flex.items-center.justify-center.maed-logo(class=className)
+			span.maed-logo__word E
+		.flex.items-center.justify-center.maed-logo(class=className)
+			span.maed-logo__word D
