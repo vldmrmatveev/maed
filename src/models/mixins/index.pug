@@ -22,7 +22,7 @@ mixin start-card(color, title, desc, user)
 				else
 					p.text-2xl.font-extrabold.text-indigo -40%
 					p.ml-2.text-indigo.text-xs Скидка <br> до 26 августа
-			img(src="img/upload/"+user, alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
+			img(src=require("./img/"+user), alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
 		p.text-center.font-bold.text-gray.mb-5.opacity-30.carousel-card-start__undertext.duration-300= desc
 mixin course-card(color, title, user)
 	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.course-card__main.overflow-hidden(class=color)
@@ -45,7 +45,7 @@ mixin course-card(color, title, user)
 			a(href="#").inline-block.course-card__main-colorder-btn.px-4.py-3.rounded-md.duration-300
 				span Записаться
 				span.course-card__main-colorder-btn-triangle.inline-block
-		img(src="img/upload/"+user, alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
+		img(src=require("./img/"+user), alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
 mixin maed-logo(className)
 	.flex.align-items-center 
 		.flex.items-center.justify-center.maed-logo(class=className)

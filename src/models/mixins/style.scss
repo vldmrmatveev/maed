@@ -271,7 +271,7 @@ $yellow: #F7C154;
 		content: '';
 		width: 14px;
 		height: 14px;
-		background-image: url('/upload/check.svg');
+		background-image: url('../img/check.svg');
 		background-size: cover;
 		position: absolute;
 		left: 0;
@@ -281,7 +281,7 @@ $yellow: #F7C154;
 		margin: auto;
 		opacity: 0;
 		@media (max-width: 639px) {
-			background-image: url('/upload/check-white.svg')
+			background-image: url('../img/check-white.svg')
 		}
 	}
 }

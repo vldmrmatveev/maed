@@ -1,3 +1,5 @@
+import "@/style/libs.scss";
+import "@/style/style.scss";
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 import { carouselOptions } from "@models/carousel-start/script";
 import { ScrollAnimationAsymetric } from "@models/plugins/animation";

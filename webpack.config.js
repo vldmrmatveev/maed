@@ -46,16 +46,14 @@ const optimization = () => {
 module.exports = {
 	context: path.resolve(__dirname, "src"),
 	mode: "development",
-	entry: {
-		libs: ["@babel/polyfill", "@/style/libs.scss"],
-		main: ["@/js/index.js", "@/style/style.scss"],
-	},
+	entry: ["@babel/polyfill", "@/js/index.js"],
 	output: {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "dist"),
+		assetModuleFilename: "[path][name][ext]",
 	},
 	resolve: {
-		extensions: [".js", ".json"],
+		extensions: [".js", ".json", ".scss"],
 		alias: {
 			"@models": path.resolve(__dirname, "src/models"),
 			"@": path.resolve(__dirname, "src"),
@@ -95,18 +93,6 @@ module.exports = {
 					from: path.resolve(__dirname, "src/favicon.ico"),
 					to: path.resolve(__dirname, "dist"),
 				},
-				{
-					from: path.resolve(__dirname, "src/img/upload"),
-					to: path.resolve(__dirname, "dist/img/upload"),
-				},
-				{
-					from: path.resolve(__dirname, "src/img/backgrounds"),
-					to: path.resolve(__dirname, "dist/img/backgrounds"),
-				},
-				{
-					from: path.resolve(__dirname, "src/fonts"),
-					to: path.resolve(__dirname, "dist/fonts"),
-				},
 			],
 		}),
 	],
@@ -117,14 +103,13 @@ module.exports = {
 				use: isProd ? "pug-loader" : "pug-loader?pretty=true",
 			},
 			{
-				test: /\.scss$/,
+				test: /\.scss$/i,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
 						loader: "css-loader",
 						options: {
 							sourceMap: true,
-							url: false,
 						},
 					},
 					{
@@ -143,12 +128,6 @@ module.exports = {
 						},
 					},
 					{
-						loader: "resolve-url-loader",
-						options: {
-							// root: "./img",
-						},
-					},
-					{
 						loader: "sass-loader",
 						options: {
 							sourceMap: true,
@@ -156,14 +135,14 @@ module.exports = {
 					},
 				],
 			},
-			// {
-			// 	test: /\.[png|svg|jpg|jpeg|gif]$/,
-			// 	use: "file-loader",
-			// },
-			// {
-			// 	test: /\.[ttf|woff|woff2|eot]$/,
-			// 	use: "url-loader",
-			// },
+			{
+				test: /\.(png|jpe?g|gif|svg)$/i,
+				type: "asset/resource",
+			},
+			{
+				test: /\.(ttf|woff|woff2|eot)$/i,
+				type: "asset/resource",
+			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
