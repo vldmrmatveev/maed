@@ -3,20 +3,61 @@ section.bg-white.pt-28.overflow-hidden
 		h1.text-6xl.font-black.mb-4.text-indigo Каталог курсов
 		p.text-xl.font-bold.mb-8.text-indigo Самое время начать!
 		.sm_bg-indigo.sm_px-8.sm_py-6.sm_rounded-xl
-			.flex.flex-wrap 
+			.flex.flex-wrap.mb-3 
 				.w-full(class="md_w-4/12 md_pr-3")
 					input.border-0.border-b.border-indigo.sm_border-white.w-full.bg-transparent.sm_text-white.outline-none.text-sm.text-placeholder-white.mb-4(type="text" placeholder="Поиск по #тегам")
 				.flex.items-center.flex-wrap(class="md_w-8/12 md_pl-3")
-					.mr-4.mb-4
+					.w-full.sm_w-initial.sm_mr-4.mb-4
 						+checkbox('1', 'Бесплатно')
-					.mr-4.mb-4
+					.w-full.sm_w-initial.sm_mr-4.mb-4
 						+checkbox('2', 'Трудоустройство')
-					.mr-4.mb-4
+					.w-full.sm_w-initial.sm_mr-4.mb-4
 						+checkbox('3', 'Скидка')
-					.mr-4.mb-4
+					.w-full.sm_w-initial.sm_mr-4.mb-4
 						+checkbox('4', 'Скоро старт')
-					.mb-4
+					.w-full.sm_w-initial.mb-4
 						+checkbox('5', 'Международный диплом')
+			.flex.flex-wrap.mb-3.xl_justify-between
+					.mr-2.mb-4
+						+radio('1', 'Все курсы', true)
+					.mr-2.mb-4
+						+radio('2', 'Професcии')
+					.mr-2.mb-4
+						+radio('3', 'SMM')
+					.mr-2.mb-4
+						+radio('4', 'Performance')
+					.mr-2.mb-4
+						+radio('5', 'Контент')
+					.mr-2.mb-4
+						+radio('6', 'E-commerce')
+					.mr-2.mb-4
+						+radio('7', 'B2B')
+					.mr-2.mb-4
+						+radio('8', 'Финансы')
+					.mr-2.mb-4
+						+radio('9', 'Недвижимось')
+					.mb-4
+						+radio('10', 'Авто')
+			.flex.flex-wrap
+				.w-full.mb-4.md_pr-3(class="md_w-1/2 lg_w-4/12")
+					.flex.justify-between.mb-2 
+						.text-indigo.sm_text-white.text-sm Продолжительность
+						.text-indigo.sm_text-white.text-sm 
+							span от
+							span 
+							span#sliderRangeMin 1
+							span 
+							span до
+							span 
+							span#sliderRangeMax 6
+							span 
+							span месяцев
+					.slide-range#sliderRange
+				.w-full.md_px-3(class="md_w-4/12 ")
+					.text-white.text-3xl 
+						span Проверка
+						i.icon.icon-check
+				.w-full.md_pl-3(class="md_w-4/12")
 section#catalog-courses.overflow-hidden
 	.bg-white
 		.bg-red.pt-40.rounded-t-2xl

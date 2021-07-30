@@ -1,6 +1,10 @@
+mixin radio(link, text, checked)
+	input(type="radio" name="radio-category" id="radio-category-"+link checked=checked).checkbox-hidden
+	label(for="radio-category-"+link).flex.items-center.cursor-pointer
+		span.text-sm.whitespace-nowrap.font-semibold.rounded-xl.hover_bg-indigo.sm_hover_bg-white.hover_text-white.sm_hover_text-indigo.text-indigo.sm_text-white.duration-300.px-3.sm_px-4.py-3.border.border-indigo.sm_border-white.true-radio= text
 mixin checkbox(link, text)
 	input(type="checkbox" name="checkbox-"+link id="checkbox-"+link).checkbox-hidden
-	label(for="checkbox-"+link).flex.items-center
+	label(for="checkbox-"+link).flex.items-center.cursor-pointer
 		span.true-checkbox.border.border-indigo.sm_border-white.rounded-sm.duration-300 
 		span.sm_text-white.text-sm.ml-3.whitespace-nowrap= text
 mixin start-card(color, title, desc, user)

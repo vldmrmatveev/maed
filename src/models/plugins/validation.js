@@ -6,6 +6,8 @@ export function validation(className) {
 			e.preventDefault();
 			const form = e.target.closest("form");
 			const inputEmail = form.elements.email;
+			const textSuccess = e.target.dataset.text;
+			const formParent = form.closest(".form_container");
 			if (!inputEmail.validity.valid) {
 				inputEmail.classList.remove("border-white");
 				inputEmail.classList.add("border-red");
@@ -15,17 +17,18 @@ export function validation(className) {
 				const result = postData(inputEmail.value);
 				result.then((res) => {
 					if (res) {
-						form.insertAdjacentHTML(
-							"afterend",
-							`<p class="text-revert-bg">Спасибо, ваши данные были отправлены</p>`
-						);
+						const textItem = document.createElement("p");
+						textItem.classList.add("text-revert-bg");
+						textItem.textContent = textSuccess;
+						formParent.append(textItem);
 						inputEmail.disabled = true;
 						e.target.disabled = true;
 					} else {
-						form.insertAdjacentHTML(
-							"afterend",
-							`<p class="text-revert-bg">Что-то пошло не так, попробуйте перезагрузить страницу</p>`
-						);
+						const textItem = document.createElement("p");
+						textItem.classList.add("text-revert-bg");
+						textItem.textContent =
+							"Что-то пошло не так, попробуйте перезагрузить страницу";
+						formParent.append(textItem);
 					}
 				});
 			}

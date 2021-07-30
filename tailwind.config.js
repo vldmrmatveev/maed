@@ -43,7 +43,11 @@ module.exports = {
 				xl: "1140px",
 			},
 		},
-		extend: {},
+		extend: {
+			width: {
+				initial: "initial",
+			},
+		},
 	},
 	variants: {
 		extend: {},
