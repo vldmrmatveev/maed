@@ -10,6 +10,8 @@ module.exports = {
 			transparent: "transparent",
 			current: "currentColor",
 			blue: {
+				newwave: "#6E99AE",
+				gray: "#CBDCE3",
 				sea: "#EBF5FF",
 				wave: "#5DC7D1",
 				light: "#D1E2EB",

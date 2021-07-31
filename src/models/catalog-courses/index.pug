@@ -1,4 +1,4 @@
-section.bg-white.pt-28.overflow-hidden
+section.pt-28.mb-14.sm_-mb-28.z-20.relative
 	.container
 		h1.text-6xl.font-black.mb-4.text-indigo Каталог курсов
 		p.text-xl.font-bold.mb-8.text-indigo Самое время начать!
@@ -53,14 +53,25 @@ section.bg-white.pt-28.overflow-hidden
 							span 
 							span месяцев
 					.slide-range#sliderRange
-				.w-full.md_px-3(class="md_w-4/12 ")
-					.text-white.text-3xl 
-						span Проверка
-						i.icon.icon-check
-				.w-full.md_pl-3(class="md_w-4/12")
+				.w-full.md_pl-3.lg_px-3.mb-4(class="md_w-1/2 lg_w-4/12")
+					.select-container
+						select(name="property" data-img="student")#selectLevel
+							option(value="0" selected disabled) Уровень знаний
+							option(value="elementary") Начальный
+							option(value="middle") Средний
+							option(value="senior") Высокий
+							option(value="any") Любой
+				.w-full.lg_pl-3.mb-4(class="lg_w-4/12")
+					.select-container
+						select(name="property" data-img="star")#selectProfession
+							option(value="0" selected disabled) Специфика курса
+							option(value="business") Бизнес
+							option(value="marketing") Маркетинг
+							option(value="education") Обучение
+							option(value="any") Любой
 section#catalog-courses.overflow-hidden
 	.bg-white
-		.bg-red.pt-40.rounded-t-2xl
+		.bg-red.pt-20.sm_pt-40.rounded-t-2xl
 			.container
 				.flex.flex-wrap
 					.lg_pr-4.relative.z-10(class="lg_w-1/3")

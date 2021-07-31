@@ -46,7 +46,10 @@ const optimization = () => {
 module.exports = {
 	context: path.resolve(__dirname, "src"),
 	mode: "development",
-	entry: ["@babel/polyfill", "@/js/index.js"],
+	entry: {
+		main: "@/js/index.js",
+		libs: "@babel/polyfill",
+	},
 	output: {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "dist"),
