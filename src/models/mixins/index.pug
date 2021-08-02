@@ -1,5 +1,22 @@
-mixin radio(link, text, checked)
-	input(type="radio" name="radio-category" id="radio-category-"+link checked=checked).checkbox-hidden
+mixin footerList(...lists)
+	ul 
+		each list in lists
+			li.mb-2
+				a(href="#").text-xxs.font-semibold.text-white.opacity-50.duration-300.hover_text-red.hover_opacity-100.underline= list
+mixin headerList(disabled, ...lists)
+	ul
+		each list, index in lists
+			if disabled
+				li.mb-4.flex
+					if index == lists.length - 1
+						span.text-xs.text-white.font-semibold.inline-block.leading-tight.opacity-50!= list
+					else 
+						a(href="#").text-xs.text-white.font-semibold.hover_text-red.duration-300.inline-block.leading-tight!= list
+			else 
+				li.mb-4.flex
+					a(href="#").text-xs.text-white.font-semibold.hover_text-red.duration-300.inline-block.leading-tight!= list
+mixin radio(link, text, checked, namedCollection)
+	input(type="radio" name=namedCollection id="radio-category-"+link checked=checked).checkbox-hidden
 	label(for="radio-category-"+link).flex.items-center.cursor-pointer
 		span.text-sm.whitespace-nowrap.font-semibold.rounded-xl.hover_bg-indigo.sm_hover_bg-white.hover_text-white.sm_hover_text-indigo.text-indigo.sm_text-white.duration-300.px-3.sm_px-4.py-3.border.border-indigo.sm_border-white.true-radio= text
 mixin checkbox(link, text)

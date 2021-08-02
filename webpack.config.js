@@ -103,7 +103,8 @@ module.exports = {
 		rules: [
 			{
 				test: /\.pug$/,
-				use: isProd ? "pug-loader" : "pug-loader?pretty=true",
+				// use: isProd ? "pug-loader" : "pug-loader?pretty=true",
+				use: "pug-loader?pretty=true",
 			},
 			{
 				test: /\.scss$/i,

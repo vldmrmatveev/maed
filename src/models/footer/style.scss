@@ -1,0 +1,17 @@
+.footer_social-link {
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	svg path {
+		transition: 0.3s ease all;
+	}
+	&:hover {
+		svg {
+			path {
+				fill: $blue-light;
+			}
+		}
+	}
+}

@@ -1,0 +1,183 @@
+header.fixed.w-full.z-40.bg-white#header
+	.header__container.border-b.border-gray.py-8.sm_py-8.duration-300
+		.container.flex.justify-between.items-center
+			nav.hidden.sm_block
+				ul.flex.flex-wrap 
+					li.mr-5.my-1.lg_my-0 
+						a(href="#" data-open="headerDesktopHidden").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link Каталог курсов 
+					li.mr-5.my-1.lg_my-0
+						a(href="#").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link NIMA
+					li.mr-5.my-1.lg_my-0
+						a(href="#").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link Экосистема обучения
+					li.mr-5.my-1.lg_my-0
+						a(href="#").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link Центр карьеры
+					li.mr-5.my-1.lg_my-0
+						a(href="#").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link Команда
+					li.mr-5.my-1.lg_my-0
+						a(href="#").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link Корпоративное обучение
+					li.mr-5.my-1.lg_my-0
+						a(href="#").text-indigo.py-2.font-bold.text-sm.duration-300.hover_text-red.inline-flex.header__link MAED magazine 
+			a(href="#").block.header__logo
+				+maed-logo('text-white bg-indigo duration-300')
+			button.bg-transparent.border-0.relative.sm_hidden.open-mob-menu.outline-none(data-open="headerDesktopHidden")
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+				span.open-mob-menu-item
+	.bg-white.sm_bg-indigo.header__container-hidden.overflow-scroll#headerDesktopHidden
+		.container.pt-8.hidden.sm_block
+			.flex.flex-wrap.pb-5.border-b.border-white 
+				.w-full(class="lg_w-1/4")
+					.flex.items-center.mb-4
+						img(src=require("/img/Group_7106.svg"), alt="" class='w-16 mr-4')
+						p.text-white.uppercase.font-semibold Экспресс-курсы
+					p.text-white.text-xs.opacity-50.lg_mb-2.mb-6 Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.
+				.w-full(class="lg_w-1/4 md_w-1/3 lg_pl-6 lg_pt-4")
+					+headerList(false, 'Директор по&nbsp;digital-маркетингу (NIMA-B-Digital)', 'Директор по&nbsp;социальным медиа&nbsp;/ SMM директор', 'Директор по&nbsp;Digital B2B-маркетингу')
+				.w-full(class="lg_w-1/4 md_w-1/3 md_pl-6 lg_pt-4")
+					+headerList(false, 'Маркетолог-практик (NIMA-A)', 'Интернет-маркетолог с нуля', 'Трафик-менеджер / performance', 'Ведущий интернет-маркетолог')
+				.w-full(class="lg_w-1/4 md_w-1/3 md_pl-6 lg_pt-4")
+					+headerList(false, 'CRM-маркетолог', 'E-commerce маркетолог', 'SMM-профи с нуля', 'С нуля до директора по Digital-маркетингу')
+			.flex.flex-wrap.py-5.border-b.border-white 
+				.w-full(class="lg_w-1/4")
+					.flex.items-center.mb-4
+						img(src=require("/img/apple-books.svg"), alt="" class='w-16 mr-4')
+						p.text-white.uppercase.font-semibold методички, чек-листы, Инструкции
+					p.text-white.text-xs.opacity-50.lg_mb-2.mb-6 Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.
+				.w-full(class="lg_w-1/4 md_w-1/3 lg_pl-6 lg_pt-4")
+					+headerList(false, 'Digital-маркетинг для ТОПов и предпринимателей', 'Менеджер по маркетплейсам', 'Таргетолог профессионал', 'Email-маркетолог профи')
+				.w-full(class="lg_w-1/4 md_w-1/3 md_pl-6 lg_pt-4")
+					+headerList(false, 'Мастер контекстной рекламы', 'Веб-аналитик', 'Мессенджер-маркетолог профи', 'Контент-маркетинг от а до я')
+				.w-full(class="lg_w-1/4 md_w-1/3 md_pl-6 lg_pt-4")
+					+headerList(true, 'CRM от А до Я', 'SEO-Маркетолог', 'Скоро: Спец по веб трафику')
+			.flex.flex-wrap.pt-5
+				.w-full(class="lg_w-1/4")
+					.flex.items-center.mb-4
+						img(src=require("/img/chalkboard.svg"), alt="" class='w-16 mr-4')
+						p.text-white.uppercase.font-semibold ОтКРЫТЫЕ УРОКИ И ВЕБИНАРЫ
+					p.text-white.text-xs.opacity-50.lg_mb-2.mb-6 Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления
+				.w-full(class="lg_w-1/4 md_w-1/3 lg_pl-6 lg_pt-4")
+					+headerList(true, 'Интернет-маркетинг для B2B и сложных рынков', 'Скоро: Спец по веб трафику')
+			.flex.pt-5.justify-end 
+				a(href="#").close-header-container.border.border-red.px-10.py-4.rounded-t-3xl.text-white.font-bold.text-xs.hover_bg-red.duration-300 Свернуть
+		.container.pt-8.sm_hidden#mobContent
+			p.text-xl.text-indigo.font-extrabold.mb-6 Направления курсов
+			input.border-0.border-b.border-indigo.w-full.bg-transparent.outline-none.text-sm.text-placeholder-white.mb-4(type="text" placeholder="Поиск по #тегам")
+			.flex.flex-wrap.py-4.border-b.border-indigo
+				.mr-2.mb-4
+					+radio('1-mob', 'Все курсы', true, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('2-mob', 'Професcии', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('3-mob', 'SMM', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('4-mob', 'Performance', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('5-mob', 'Контент', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('6-mob', 'E-commerce', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('7-mob', 'B2B', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('8-mob', 'Финансы', false, 'radio-category-mob')
+				.mr-2.mb-4
+					+radio('9-mob', 'Недвижимось', false, 'radio-category-mob')
+				.mb-4
+					+radio('10-mob', 'Авто', false, 'radio-category-mob')
+			.border-b.border-indigo
+				a(href="#profession" data-dropdown="true" data-parent="#mobContent").flex.items-center.justify-between.py-4.drop__link
+					span.font-extrabold.text-xl.drop__link-item.text-indigo Профессии
+					img(src=require("/img/Vector_588.svg"), alt="" class='w-4 ml-4 drop__link-item drop__link-item-img duration-300')
+				#profession.drop__collapse
+					ul.py-3 
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по digital-маркетингу (NIMA-B-Digital)
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по социальным медиа / SMM директор
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по Digital B2B-маркетингу
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Маркетолог-практик (NIMA-A)
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Интернет-маркетолог с нуля
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Трафик-менеджер / performance
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Ведущий интернет-маркетолог
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold CRM-маркетолог
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold E-commerce маркетолог
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold SMM-профи с нуля
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold С нуля до директора по Digital-маркетингу
+			.border-b.border-indigo
+				a(href="#instruction" data-dropdown="true" data-parent="#mobContent").flex.items-center.justify-between.py-4.drop__link
+					span.font-extrabold.text-xl.drop__link-item.text-indigo Методички, чек-листы, инструкции
+					img(src=require("/img/Vector_588.svg"), alt="" class='w-4 ml-4 drop__link-item drop__link-item-img duration-300')
+				#instruction.drop__collapse
+					ul.py-3 
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по digital-маркетингу (NIMA-B-Digital)
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по социальным медиа / SMM директор
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по Digital B2B-маркетингу
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Маркетолог-практик (NIMA-A)
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Интернет-маркетолог с нуля
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Трафик-менеджер / performance
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Ведущий интернет-маркетолог
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold CRM-маркетолог
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold E-commerce маркетолог
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold SMM-профи с нуля
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold С нуля до директора по Digital-маркетингу
+			.border-b.border-indigo
+				a(href="#lessons" data-dropdown="true" data-parent="#mobContent").flex.items-center.justify-between.py-4.drop__link
+					span.font-extrabold.text-xl.drop__link-item.text-indigo Открытые уроки и вебинары
+					img(src=require("/img/Vector_588.svg"), alt="" class='w-4 ml-4 drop__link-item drop__link-item-img duration-300')
+				#lessons.drop__collapse
+					ul.py-3 
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Интернет-маркетинг для B2B и сложных рынков
+						li.mb-3 
+							span.opacity-50.text-indigo.text-sm.font-semibold Скоро: Спец по веб трафику
+						li.mb-3 
+							span.opacity-50.text-indigo.text-sm.font-semibold Скоро: Спец по контенту
+			.border-b.border-indigo
+				a(href="#academy" data-dropdown="true" data-parent="#mobContent").flex.items-center.justify-between.py-4.drop__link
+					span.font-extrabold.text-xl.drop__link-item.text-indigo Академия
+					img(src=require("/img/Vector_588.svg"), alt="" class='w-4 ml-4 drop__link-item drop__link-item-img duration-300')
+				#academy.drop__collapse
+					ul.py-3 
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по digital-маркетингу (NIMA-B-Digital)
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по социальным медиа / SMM директор
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по Digital B2B-маркетингу
+			div
+				a(href="#forStudents" data-dropdown="true" data-parent="#mobContent").flex.items-center.justify-between.py-4.drop__link
+					span.font-extrabold.text-xl.drop__link-item.text-indigo Для студентов
+					img(src=require("/img/Vector_588.svg"), alt="" class='w-4 ml-4 drop__link-item drop__link-item-img duration-300')
+				#forStudents.drop__collapse
+					ul.py-3 
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по digital-маркетингу (NIMA-B-Digital)
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по социальным медиа / SMM директор
+						li.mb-3 
+							a(href="#").text-indigo.text-sm.font-semibold Директор по Digital B2B-маркетингу

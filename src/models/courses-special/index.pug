@@ -7,17 +7,17 @@ section#courses-special.overflow-hidden
 						h2.text-white.text-3xl.sm_text-4xl.xl_text-5xl.font-black.mb-4 Отраслевые курсы
 						.mb-8
 							+maed-logo('text-yellow bg-white')
-					.text-white.text-xl.md_text-2xl.md_font-bold.mb-4.relative.z-10(class="lg_w-2/3 xl_w-1/3") Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов, способствуя их продвижению по карьерной лестнице.
+					.text-white.text-xl.md_text-2xl.md_font-bold.mb-4.relative.z-10(class="lg_w-2/3 xl_w-1/3") Программы обучения разработаны с учетом специфики отдельных отраслей. 
 	.bg-white.pt-10.pb-20.sm_pb-24.sm_pb-36.md_pb-48.sm_pt-14.xl_pt-10.relative.pb-100
 		.skew-block.bg-yellow
 		.container.flex.flex-wrap.px-1.relative.z-10
-			.px-3.animated-block-1(class="w-full md_w-1/2 lg_w-1/3")
+			.px-3.animated-block-2(class="w-full md_w-1/2 lg_w-1/3")
 				+course-card('bg-white border border-yellow', 'Директор по digital-маркетингу', 'user-4.png')
 				+course-card('bg-white border border-yellow', 'Ведущий интернет маркетолог', 'user-2.png')
 			.px-3(class="w-full md_w-1/2 lg_w-1/3")
 				+course-card('bg-white border border-yellow', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png')
 				+course-card('bg-yellow', 'Ведущий интернет маркетолог', 'user-3.png')
-			.px-3.animated-block-2(class="hidden lg_block md_w-1/2 lg_w-1/3")
+			.px-3.animated-block-1(class="hidden lg_block md_w-1/2 lg_w-1/3")
 				+course-card('bg-white border border-yellow', 'Директор по социальным медиа / smm-директор', 'user-4.png')
 				+course-card('bg-white border border-yellow', 'Мессенджер маркетолог профи', 'user-3.png')
 		.text-yellow.justify-center.text-2xl.uppercase.absolute.made-by-maed.font-bold.hidden.sm_flex
@@ -47,7 +47,7 @@ section#courses-special.overflow-hidden
 				div(class="sm_w-8/12")
 					h3.text-2xl.sm_text-3xl.lg_text-4xl.font-black.mb-4 Подпишись на самые актуальные новости по маркетингу!
 					.form_container
-						form.form.flex.flex-wrap.md_flex-nowrap
+						form.form.flex.flex-wrap.md_flex-nowrap(action="https://jsonplaceholder.typicode.com/users")
 							input(type="email" name="email" placeholder="Введи свою почту"  required class="w-full lg_w-2/4").rounded-xl.border-0.px-6.md_mr-3.outline-none.py-3.mb-4.border.border-white.duration-300.input_email
 							button.btn_submit.bg-indigo.rounded-xl.px-4.py-3.hover_bg-blue-dark.duration-300.font-semibold.text-white.mb-4.w-full(class="lg_w-1/4" data-text="Ваши данные были успешно отправлены") Подписаться
 				.relative.hidden.sm_block(class="sm_w-4/12")
@@ -61,7 +61,7 @@ section#courses-special.overflow-hidden
 					p.text-white.text-xl.mb-6 Для маркетолога
 					p.text-blue-wave.mb-6.text-sm.max-w-xs.font-semibold Бесплатная база материалов для всех, кто хочет научится маркетингу. Получи ссылку на почту.
 					.form_container
-						form.form.flex.flex-wrap.lg_flex-nowrap
+						form.form.flex.flex-wrap.lg_flex-nowrap(action="https://jsonplaceholder.typicode.com/usesssrs")
 							input(type="email" name="email" placeholder="Введи свою почту"  required class="w-full lg_w-2/4").rounded-xl.border-0.px-6.lg_mr-3.outline-none.py-3.mb-4.border.border-white.duration-300.input_email
 							button.btn_submit.bg-pink.rounded-xl.px-4.py-3.hover_bg-pink-dark.duration-300.font-semibold.mb-4.w-full.flex.items-center.justify-center.lg_w-56(data-text="Материалы были отправлены на вашу почту")
 								span.pointer-events-none.inline-flex.items-center

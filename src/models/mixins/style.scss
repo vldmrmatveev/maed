@@ -136,12 +136,14 @@ $yellow: #F7C154;
 		.course-card__main-colorder-btn {
 			background-color: $white;
 			color: $yellow;
+			border: 1px solid transparent;
 			&-triangle {
 				border-left-color: $yellow;
 			}
 			&:hover {
-				background-color: $red;
+				background-color: transparent;
 				color: $white;
+				border-color: $white;
 				.course-card__main-colorder-btn-triangle {
 					border-left-color: $white;
 				}
@@ -306,13 +308,6 @@ $yellow: #F7C154;
 	}
 }
 
-// .slide-range {
-// 	width: 100%;
-// 	height: 6px;
-// 	margin-bottom: 6px;
-// 	border-bottom: 1px solid $white;
-// }
-
 .slide-range {
 	&.noUi-horizontal {
 		height: 2px;
@@ -422,4 +417,8 @@ $yellow: #F7C154;
 			}
 		}
 	}
+}
+
+.text-xxs {
+	font-size: 11px;
 }

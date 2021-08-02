@@ -1,25 +1,32 @@
 class SelectJs {
 	constructor(selector) {
 		this.selector = document.getElementById(selector);
+		if (this.selector == null) {
+			return false;
+		}
 		this.imgSrc = this.selector.dataset.img || null;
 		this.parent = this.selector.closest(".select-container");
 	}
 	create() {
-		const select = document.createElement("div");
-		select.classList.add("select-container-item");
-		const img = addImg(this.imgSrc);
-		if (img) {
-			select.insertAdjacentHTML("afterbegin", img);
+		if (this.selector != null) {
+			const select = document.createElement("div");
+			select.classList.add("select-container-item");
+			const img = addImg(this.imgSrc);
+			if (img) {
+				select.insertAdjacentHTML("afterbegin", img);
+			}
+			let text = document.createElement("span");
+			text.textContent = this.selector[0].text;
+			select.append(text);
+			this.parent.append(select);
+			let list = this.addValuetoList();
+			this.parent.append(list);
+			this.showList();
+			this.getValue();
+			this.hideListOnClickOut();
+		} else {
+			return false;
 		}
-		let text = document.createElement("span");
-		text.textContent = this.selector[0].text;
-		select.append(text);
-		this.parent.append(select);
-		let list = this.addValuetoList();
-		this.parent.append(list);
-		this.showList();
-		this.getValue();
-		this.hideListOnClickOut();
 	}
 	addValuetoList() {
 		const ul = document.createElement("ul");

@@ -1,5 +1,15 @@
 module.exports = {
-	purge: ["./src/*.pug", "./src/models/*/*.pug"],
+	purge: {
+		content: ["./src/*.pug", "./src/models/*/*.pug"],
+		safelist: [
+			"mr-3",
+			"overflow-hidden",
+			"sm_py-3",
+			"sm_py-8",
+			"border-white",
+			"border-red",
+		],
+	},
 	darkMode: false, // or 'media' or 'class'
 	separator: "_",
 	theme: {
@@ -41,7 +51,7 @@ module.exports = {
 			screens: {
 				sm: "560px",
 				md: "720px",
-				lg: "991px",
+				lg: "1024px",
 				xl: "1140px",
 			},
 		},

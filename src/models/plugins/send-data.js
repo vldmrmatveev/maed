@@ -1,6 +1,4 @@
-const url = "https://jsonplaceholder.typicode.com/users";
-
-export async function postData(email) {
+export async function postData(email, url) {
 	const obj = {
 		email,
 		time: createDate(),
