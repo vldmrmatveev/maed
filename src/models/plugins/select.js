@@ -80,9 +80,18 @@ class SelectJs {
 				this.parent.querySelector(
 					".select-container-item span"
 				).textContent = text;
-				// console.log(this.selector.value);
+				this.addOnChange(this.selector);
 			}
 		});
+	}
+	addOnChange(item) {
+		if ("createEvent" in document) {
+			var evt = document.createEvent("HTMLEvents");
+			evt.initEvent("change", false, true);
+			item.dispatchEvent(evt);
+		} else {
+			item.fireEvent("onchange");
+		}
 	}
 	get lengthValue() {
 		return this.selector.length;

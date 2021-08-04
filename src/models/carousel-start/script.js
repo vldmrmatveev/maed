@@ -1,20 +1,23 @@
-export function carouselOptions() {
-	return {
-		pagination: {
+class CarouselOption {
+	constructor(space, autoplayTiming) {
+		this.pagination = {
 			el: ".swiper-pagination",
 			type: "bullets",
 			clickable: true,
-		},
-		navigation: {
+		};
+		this.navigation = {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
-		},
-		autoplay: {
-			delay: 5000,
+		};
+		this.autoplay = {
+			delay: autoplayTiming,
 			pauseOnMouseEnter: false,
-		},
-		slidesPerView: "auto",
-		spaceBetween: 10,
-		loop: true,
-	};
+		};
+		this.slidesPerView = "auto";
+		this.spaceBetween = space;
+		this.loop = true;
+	}
 }
+
+export const mainOption = new CarouselOption(10, 5000);
+export const galleryOption = new CarouselOption(0, 5000);

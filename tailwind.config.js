@@ -20,6 +20,7 @@ module.exports = {
 			transparent: "transparent",
 			current: "currentColor",
 			blue: {
+				lightwave: "#D8EEFA",
 				newwave: "#6E99AE",
 				gray: "#CBDCE3",
 				sea: "#EBF5FF",
@@ -37,10 +38,12 @@ module.exports = {
 			gray: "#F5F5F5",
 			indigo: "#223549",
 			red: {
+				light: "#FADFD8",
 				DEFAULT: "#EC663D",
 				dark: "#A7411D",
 			},
 			yellow: {
+				light: "#FFFCE0",
 				DEFAULT: "#F7C154",
 				dark: "#ffba2f",
 			},
@@ -62,7 +65,9 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			grayscale: ["hover", "focus"],
+		},
 	},
 	plugins: [],
 };

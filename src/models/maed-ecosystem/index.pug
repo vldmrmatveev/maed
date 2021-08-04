@@ -1,0 +1,26 @@
+mixin maed-ecosystem-arrow(text)
+	.w-full.relative(class="md_w-1/5 md_pr-4 pl-6 md_pl-0")
+		.w-4.h-4.bg-yellow.md_bg-indigo.rounded-full.mb-3.md_mt-7.md_relative.absolute.left-2.md_left-0
+		p.text-indigo.font-bold.text-sm.mb-6.md_mb-0.pl-4.md_pl-0= text
+section.py-16.container
+	.flex.flex-wrap.items-center.mb-4
+		.w-full(class="md_w-1/2 md_pr-4")
+			h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Экосистема MAED
+			p.text-lg.text-indigo.font-semibold.mb-6 Мы погружаем студента в маркетинговую среду MAED, где на каждом этапе его окружают элементы, направленные на повышение профессиональных компетенций и их развитие
+	.flex.flex-wrap.relative.py-6
+		img(src=require("/img/Group_7681.svg"), alt="").hidden.md_block.absolute.mt-1.lg_mt-0.top-12.left-1.w-full
+		img(src=require("/img/Group_7682.svg"), alt="").md_hidden.absolute.left-3.top-7.h-full.max-h-80.arrow-img-mobile
+		+maed-ecosystem-arrow('Уникальные программы обучения высокого уровня')
+		+maed-ecosystem-arrow('Преподаватели с реальным опытом')
+		+maed-ecosystem-arrow('Поддержка от кураторов на каждом этапе')
+		+maed-ecosystem-arrow('Помощь HR-специалистов в трудоустройстве')
+		+maed-ecosystem-arrow('Комьюнити единомышленников')
+	.bg-yellow.p-4.sm_px-12.sm_py-10.flex.flex-wrap.items-center.rounded-xl.mt-16 
+		.w-full.order-2.md_order-1(class="md_w-1/2 md_pr-4 lg_w-7/12")
+			h3.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-black.mb-2 Masters Education 360&deg; 
+			p.text-indigo.font-black.text-xl.mb-6 &mdash;&nbsp;это подход, в&nbsp;котором подготовка специалиста не&nbsp;ограничивается образовательным курсом, а&nbsp;захватывает все сферы, связанные с&nbsp;развитием в&nbsp;выбранном направлении профессиональной деятельности
+			a(href="#").inline-block.px-8.md_px-10.py-3.rounded-xl.duration-300.bg-indigo.text-white.hover_bg-blue-dark.mb-4.sm_mb-0
+				span.font-semibold Подробнее о подходе
+				span.course-card__main-colorder-btn-triangle.inline-block
+		.w-full.mb-6.md_mb-0.order-1.md_order-2(class="md_w-1/2 md_pl-4 lg_w-5/12")
+			img(src=require("/img/maed-ecosystem.svg"), alt="").w-full

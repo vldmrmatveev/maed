@@ -83,8 +83,8 @@ module.exports = {
 			minify: false,
 		}),
 		new HtmlWebpackPlugin({
-			template: "./contact.pug",
-			filename: "contact.html",
+			template: "./main.pug",
+			filename: "main.html",
 			inject: true,
 			minify: false,
 		}),

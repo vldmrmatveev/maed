@@ -193,6 +193,13 @@ $yellow: #F7C154;
 			border-top: 5px solid transparent;
 			border-bottom: 5px solid transparent;
 			border-left: 5px solid $white;
+			&_red {
+				margin-left: 0;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+				border-left: 10px solid $red;
+				transform: translateX(2px);
+			}
 		}
 	}
 }
@@ -421,4 +428,42 @@ $yellow: #F7C154;
 
 .text-xxs {
 	font-size: 11px;
+}
+
+.width-initial {
+	width: initial;
+}
+
+.swiper-gallery {
+	.swiper-button-prev, .swiper-button-next {
+		bottom: -15px;
+		background-color: white;
+	}
+}
+
+.blockquote {
+	&:before,
+	&:after {
+		font-size: 120%;
+		color: $yellow;
+		display: inline-block;
+	}
+	&:before {
+		content: '“';
+		transform: translateX(-5px);
+	}
+	&:after {
+		content: '”';
+		transform: translate(5px, 50%);
+	}
+}
+
+.min-height-title {
+	min-height: 72px;
+	display: flex;
+	align-items: center;
+	@media (max-width: 639px) {
+		min-height: initial;
+		display: block;
+	}
 }

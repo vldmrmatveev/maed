@@ -1,0 +1,24 @@
+mixin career-center-card(num, title, text, link)
+	.flex.flex-col.justify-between.items-start.h-full
+		.block
+			p.text-6xl.text-yellow.font-black.mb-2= num
+			p.text-xl.text-indigo.font-black.mb-4= title 
+			p.text-sm.text-indigo.mb-4= text 
+		a(href="#").text-indigo.font-bold.text-sm.duration-300.hover_text-red.underline= link
+section.py-8.sm_py-16.container
+	.flex.flex-wrap.items-center.mb-4
+		.w-full(class="md_w-1/2 md_pr-4")
+			h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Центр карьеры
+			p.text-lg.text-indigo.font-semibold.mb-6 Помогаем студентам найти работу мечты, а компаниям- партнерам получить квалифицированных специалистов из сферы digital
+			a(href="#").inline-block.px-8.md_px-10.py-3.rounded-xl.duration-300.bg-indigo.text-white.hover_bg-blue-dark.mb-10
+				span.font-semibold Подробнее о подходе
+				span.course-card__main-colorder-btn-triangle.inline-block
+	.flex.flex-wrap
+		.w-full.mb-6(class="sm_w-6/12 lg_w-3/12 sm_pr-4")
+			+career-center-card('1', 'Трудоустройство', 'Помошь в трудостройстве студентам, которые успешно освоивили учебные модули и защитили диплом', 'Как трудоустроиться?')
+		.w-full.mb-6(class="sm_w-6/12 lg_w-3/12 sm_px-4 lg_pr-4")
+			+career-center-card('2', 'Стажировки', 'Возможность после или даже во время обучения пройти стажировку в партнерской компании и познако- миться с работой маркетолога изнутри ', 'Что со стажировкой?')
+		.w-full.mb-6(class="sm_w-6/12 lg_w-3/12 sm_pr-4 lg_pl-4")
+			+career-center-card('3', 'Закрытые вакансии', 'После выпуска у тебя будет доступ к закрытым группам, где еженедельно публикуется список актуальных вакансий в сфере маркетинга', 'Подробнее о вакансиях')
+		.w-full.mb-6(class="sm_w-6/12 lg_w-3/12 sm_pl-4 lg_pr-4")
+			+career-center-card('4', 'Консультации с HRом', 'С HR-менеджером можно обсудить стратегию поиска работы, тонкости составления резюме и прохождения собеседования', 'Стратегия поиска работы')

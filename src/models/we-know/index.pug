@@ -1,0 +1,43 @@
+mixin we-know-card(name, className, bg, ...lists)
+	.mb-6(class=className)
+		.rounded-xl.border.border-yellow.px-4.py-8.h-full(class=bg)
+			h5.text-indigo.text-lg.font-extrabold.leading-tight.mb-3= name 
+			if lists.length > 1
+				ul.pl-3.list-disc
+					each list in lists
+						li.mb-3.font-semibold.text-indigo.text-sm= list
+			else 
+				p.mb-3.font-semibold.text-indigo.text-sm= lists
+section.py-16
+	.container.mb-6
+		.flex.items-center.flex-wrap 
+			.w-full(class="sm_w-1/2 sm_pr-4")
+				h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Мы знаем, что нужно именно тебе
+				p.text-lg.text-indigo.font-semibold.mb-6 Даём актуальное системное образование по всем основным направлениям маркетинга и управления бизнесом.
+			.hidden.sm_block.w-full(class="sm_w-1/2 sm_pl-4")
+				.sm_flex.justify-end.items-end
+					.relative 
+						img(src=require("/img/image_628.png"), alt="").absolute.-top-20.right-6.w-40
+						.text-3xl.md_text-4xl.xl_text-5xl.font-black.mb-4.text-indigo.relative В ТОП-10
+						p.text-xl.font-bold.text-indigo.max-w-sm.relative.mb-6 общего росийского рейтинга образовательных структур в сфере Digital
+		.hidden.md_flex.flex-wrap.pt-6
+			+we-know-card('Новички', 'w-full md_w-4/12 xl_w-1/5 md_pr-3', 'bg-yellow we-know-card', 'Системные базовые знания', 'Обучение профессии с нуля', 'Первые клиенты во время обучения')
+			+we-know-card('Маркетологи', 'w-full md_w-4/12 xl_w-1/5 md_px-3', 'we-know-card', 'Новые инструменты маркетинга', 'Карьерный рост до руководителя', 'Крупное комьюнити маркетологов')
+			+we-know-card('Директора', 'w-full md_w-4/12 xl_w-1/5 md_px-3', 'we-know-card', 'Формирование личного бренда', 'Поиск сотрудников  и партнеров', 'Управление командой')
+			+we-know-card('Отраслевой маркетинг', 'w-full md_w-4/12 xl_w-1/5 md_pr-3 xl_pl-3', 'we-know-card', 'Специализированный курс для промышленных компаний из сферы  B2B с сетями диллеров')
+			+we-know-card('Компании', 'w-full md_w-4/12 xl_w-1/5 md_pl-3 md_pr-3 xl_pr-0', 'we-know-card', 'Обучение вашего маркетингового отдела под задачи бизнеса', 'Переориентирование дилеров и партнёров на digital- инструменты и технологии')
+		.md_hidden 
+			.swiper-container.relative.pb-10.swiper-container-yellow
+				.swiper-wrapper
+					.swiper-slide
+						+we-know-card('Новички', 'w-full md_w-4/12 xl_w-1/5 md_pr-3', 'bg-yellow we-know-card', 'Системные базовые знания', 'Обучение профессии с нуля', 'Первые клиенты во время обучения')
+					.swiper-slide
+						+we-know-card('Маркетологи', 'w-full md_w-4/12 xl_w-1/5 md_px-3', 'we-know-card', 'Новые инструменты маркетинга', 'Карьерный рост до руководителя', 'Крупное комьюнити маркетологов')
+					.swiper-slide
+						+we-know-card('Директора', 'w-full md_w-4/12 xl_w-1/5 md_px-3', 'we-know-card', 'Формирование личного бренда', 'Поиск сотрудников  и партнеров', 'Управление командой')
+					.swiper-slide
+						+we-know-card('Отраслевой маркетинг', 'w-full md_w-4/12 xl_w-1/5 md_pr-3 xl_pl-3', 'we-know-card', 'Специализированный курс для промышленных компаний из сферы  B2B с сетями диллеров')
+					.swiper-slide
+						+we-know-card('Компании', 'w-full md_w-4/12 xl_w-1/5 md_pl-3 md_pr-3 xl_pr-0', 'we-know-card', 'Обучение вашего маркетингового отдела под задачи бизнеса', 'Переориентирование дилеров и партнёров на digital- инструменты и технологии')
+				.swiper-button-prev.duration-300.text-white.bg-yellow
+				.swiper-button-next.duration-300.text-white.bg-yellow

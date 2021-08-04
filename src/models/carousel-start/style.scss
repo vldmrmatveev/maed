@@ -35,6 +35,19 @@
 				background-color: $indigo;
 			}
 		}
+		&-revert {
+			.swiper-pagination-bullet {
+				background-color: $indigo;
+				opacity: 1;
+				&:before {
+					border-color: $indigo;
+					border-top-color: $yellow;
+				}
+				&-active {
+					background-color: $yellow;
+				}
+			}
+		}
 	}
 }
 
@@ -79,6 +92,12 @@
 		border-radius: 100%;
 		bottom: 10px;
 		top: auto;
+		&.bg-yellow {
+			background-color: $yellow;
+		}
+		&.bg-indigo {
+			background-color: $indigo;
+		}
 		&:hover {
 			background-color: rgba(217, 218, 219, 0.5);
 		}

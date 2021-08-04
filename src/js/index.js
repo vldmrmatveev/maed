@@ -1,6 +1,7 @@
 import "@/style/libs.scss";
 import "@/style/style.scss";
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+import { Fancybox } from "@fancyapps/ui";
 import noUiSlider from "nouislider";
 import {
 	changeHeaderPadding,
@@ -9,7 +10,7 @@ import {
 	dropdownClick,
 } from "@models/header/script";
 import { getYear } from "@models/footer/script";
-import { carouselOptions } from "@models/carousel-start/script";
+import { mainOption, galleryOption } from "@models/carousel-start/script";
 import { ScrollAnimationAsymetric } from "@models/plugins/animation";
 import { createPopover } from "@models/plugins/popover";
 import { ValidateForm } from "@models/plugins/validation";
@@ -23,13 +24,15 @@ import {
 Swiper.use([Navigation, Pagination, Autoplay]);
 
 document.addEventListener("DOMContentLoaded", () => {
+	Fancybox.bind("[data-fancybox]", {});
 	if (rangeSliderValues[0] != null && rangeSlider != null) {
 		noUiSlider.create(rangeSlider, rangeSliderSetting(1, 6, 12));
 		rangeSlider.noUiSlider.on("slide", function (values, handle) {
 			rangeSliderValues[handle].innerHTML = Math.floor(values[handle]);
 		});
 	}
-	new Swiper(".swiper-container", carouselOptions());
+	new Swiper(".swiper-container", mainOption);
+	new Swiper(".swiper-gallery", galleryOption);
 	getYear();
 	createPopover();
 	const validateBtn = new ValidateForm(".btn_submit");
