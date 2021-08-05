@@ -8,6 +8,12 @@ module.exports = {
 			"sm_py-8",
 			"border-white",
 			"border-red",
+			"bg-blue-lightwave",
+			"bg-red-light",
+			"bg-yellow-light",
+			"mb-16",
+			"hover_bg-purple-dark",
+			"hover_text-yellow",
 		],
 	},
 	darkMode: false, // or 'media' or 'class'
