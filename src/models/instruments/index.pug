@@ -1,59 +1,57 @@
 section#marketing-tools.overflow-hidden
 	.bg-indigo
-		.bg-blue-dark.pt-20.rounded-t-2xl
+		.bg-purple.pt-20.rounded-t-2xl
 			.container
-				.flex.flex-wrap
-					.lg_pr-4.relative.z-10(class="lg_w-1/3")
-						h2.text-white.text-3xl.sm_text-4xl.xl_text-5xl.font-black.mb-4 Инструменты маркетинга
-						.mb-8
-							+maed-logo('text-blue-dark bg-white')
-					.text-white.text-xl.md_text-2xl.md_font-bold.mb-4.relative.z-10(class="lg_w-2/3 xl_w-1/3") Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов, способствуя их продвижению по карьерной лестнице.
+				.flex.flex-wrap.-mx-3
+					.relative.z-10.px-3(class="lg_w-1/3")
+						+catalogTitle('Инструменты маркетинга')
+						.mb-8.mt-4
+							+maed-logo('purple', 'white')
+					.relative.z-10.px-3.mb-4(class="lg_w-2/3 xl_w-1/3")
+						+catalogUnderTitle('white', 'Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов, способствуя их продвижению по карьерной лестнице.')
 	.bg-white.pt-10.pb-32.sm_pt-14.xl_pt-10.relative.pb-100
-		.skew-block.bg-blue-dark
-		.container.flex.flex-wrap.px-1
-			.animated-block-1.px-3(class="w-full md_w-1/2 lg_w-1/3")
-				+course-card('bg-white border border-blue-dark', 'Директор по digital-маркетингу', 'user-4.png')
-				+course-card('bg-white border border-blue-dark', 'Ведущий интернет маркетолог', 'user-2.png')
-				+course-card('bg-blue-dark', 'Ведущий интернет маркетолог', 'user-3.png')
-			.px-3(class="w-full md_w-1/2 lg_w-1/3")
-				+course-card('bg-white border border-blue-dark', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png')
-				+course-card('bg-white border border-blue-dark', 'E-commerce маркетолог', 'user-vector.svg')
-				+course-card('bg-white border border-blue-dark', 'Digital-маркетинг и разработка стратегии для b2b', 'user-4.png')
-				.pt-4.mb-4
-					.border.border-blue-dark.border-dashed.px-4.py-5.rounded-xl.flex.justify-center.items-center.relative
-						p.text-blue-dark.mb-5.text-xl.sm_text-3xl.font-bold Маркетинг для предпринимателей и&nbsp;ТОПов
-						span.absolute.text-blue-dark.bottom-3.left-4.font-bold.text-sm Скоро
-			.animated-block-2.px-3(class="hidden lg_block md_w-1/2 lg_w-1/3")
-				+course-card('bg-white border border-blue-dark', 'Директор по социальным медиа / smm-директор', 'user-4.png')
-				+course-card('bg-white border border-blue-dark', 'Мессенджер маркетолог профи', 'user-3.png')
-				+course-card('bg-white border border-blue-dark', 'Digital-маркетинг и разработка стратегии для b2b', 'user-vector-2.svg')
-				.pt-4.mb-4
-					p.text-blue-dark.mb-5.text-xl.sm_text-2xl.font-bold Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом.
+		+skewBlock('purple', 'left')
+		.container
+			.flex.flex-wrap.-mx-3
+				.animated-block-1.px-3(class="w-full md_w-1/2 lg_w-1/3")
+					+course-card('purple', 'white', 'Директор по digital-маркетингу', 'user-4.png')
+					+course-card('purple', 'white', 'Ведущий интернет маркетолог', 'user-2.png')
+					+course-card('purple', 'purple', 'Мессенджер маркетолог профи', 'user-3.png')
+				.px-3(class="w-full md_w-1/2 lg_w-1/3")
+					+course-card('purple', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png')
+					+course-card('purple', 'white', 'E-commerce маркетолог', 'user-vector.svg')
+					+course-card('purple', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-4.png')
+					.pt-4.mb-4
+						.border.border-purple.border-dashed.px-4.py-5.rounded-xl.flex.justify-center.items-center.relative
+							p.text-purple.mb-5.text-xl.sm_text-3xl.font-bold Маркетинг для предпринимателей и&nbsp;ТОПов
+							span.absolute.text-purple.bottom-3.left-4.font-bold.text-sm Скоро
+				.animated-block-2.px-3(class="hidden lg_block md_w-1/2 lg_w-1/3")
+					+course-card('purple', 'white', 'Директор по социальным медиа / smm-директор', 'user-4.png')
+					+course-card('purple', 'white', 'Мессенджер маркетолог профи', 'user-3.png')
+					+course-card('purple', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-vector-2.svg')
+					.pt-4.mb-4
+						p.text-purple.mb-5.text-xl.sm_text-2xl.font-bold Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом.
 	.bg-white.pb-32
 		.container
 			.bg-red.maed-club-card.flex.flex-wrap.rounded-2xl.relative.lg_pr-12.xl_pr-16
-				.absolute.left-4.sm_left-10(class="-top-4")
-					+maed-logo('maed-logo__xl text-white bg-indigo')
-				.absolute.left-10.sm_block.hidden(class="-bottom-4")
-					a(href="#").inline-flex.items-center.bg-yellow.rounded-xl.text-center.px-4.py-2.hover_bg-yellow-dark.duration-300
-						span.underline.mr-2 Вступить в клуб 
-						img(src=require("./img/Arrow.svg"), alt="").w-6
+				.absolute.left-4.sm_left-12(class="-top-4")
+					+maed-logo('white', 'indigo', 'xl')
+				.absolute.left-12.sm_block.hidden(class="-bottom-4")
+					+btnArrow('text-indigo bg-yellow hover_bg-yellow-dark hover_text-white px-4 py-2 rounded-xl', 'Вступить в клуб')
 				.px-4.pb-4.pt-10.sm_py-10.sm_px-12(class="sm_w-8/12")
 					h3.text-white.text-2xl.sm_text-3xl.md_text-4xl.font-black.mb-4 MAED Club – клуб для профессионалов в маркетинге
-					p.text-red-dark.text-xl.font-semibold.mb-6 Вся практика международного маркетинга из первых уст
+					p.text-red-darken.text-xl.font-semibold.mb-6 Вся практика международного маркетинга из первых уст
 					.flex.flex-wrap 
 						.sm_pr-3(class="sm_w-1/2")
 							h3.text-white.text-xl.font-extrabold.mb-4 Курсы
 							p.text-white.text-sm.sm_mb-2.mb-5 Для резидентов закрытого клуба особые льготные условия на покупку курсов MAED
-							a(href="#").inline-flex.items-center.bg-yellow.rounded-xl.text-center.px-4.py-3.hover_bg-yellow-dark.sm_hidden.mb-6.duration-300
-								span.mr-2 Подробнее о курсах
-								img(src=require("./img/Arrow.svg"), alt="").w-6
+							.sm_hidden
+								+btnArrow('text-indigo bg-yellow hover_bg-yellow-dark hover_text-white mb-6 px-6 py-3 rounded-xl', 'Подробнее о курсах')
 						.sm_pl-3(class="sm_w-1/2")
 							h3.text-white.text-xl.font-extrabold.mb-4 Материалы
 							p.text-white.text-sm.sm_mb-2.mb-5 Практические материалы и чек-листы для 
 								a(href="#").font-bold.underline применения в работе 
-							a(href="#").inline-flex.items-center.bg-indigo.rounded-xl.text-center.px-4.py-3.hover_bg-blue-dark.sm_hidden.mb-6.text-yellow.duration-300
-								span.mr-2 Материалы
-								img(src=require("./img/Arrow-yellow.svg"), alt="").w-6
+							.sm_hidden
+								+btnArrow('text-yellow bg-indigo hover_bg-purple hover_text-white mb-6 px-6 py-3 rounded-xl', 'Материалы')
 				.flex.items-end(class="sm_w-4/12")
 					img(src=require("./img/maed-club-card.png"), alt="").w-full

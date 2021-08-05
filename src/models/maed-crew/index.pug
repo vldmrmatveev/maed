@@ -4,25 +4,23 @@ mixin maed-crew-nums(num, text)
 		p.text-indigo.font-bold.text-xl!= text
 section.py-16
 	.container.mb-6
-		.flex.items-center.flex-wrap 
-			.w-full(class="md_w-1/2 md_pr-4")
-				h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Команда MAED
-				p.text-lg.text-indigo.font-semibold.mb-6 За каждой успешной компанией или брендом стоят люди, которые приводят проект к результату. Поэтому мы сформировали команду профессионалов, которые знают, как работать в маркетинге и умеют этому учить.
-				a(href="#").inline-block.px-8.md_px-10.py-3.rounded-xl.duration-300.bg-indigo.text-white.hover_bg-blue-dark.mb-12
-					span.font-semibold Подробнее о команде
-					span.course-card__main-colorder-btn-triangle.inline-block
-			.w-full(class="md_w-1/2 md_pl-4")
+		.flex.items-center.flex-wrap.-mx-3
+			.w-full(class="md_w-1/2 px-3")
+				+mainTitle('Команда MAED')
+				+mainTextSecondary('За каждой успешной компанией или брендом стоят люди, которые приводят проект к результату. Поэтому мы сформировали команду профессионалов, которые знают, как работать в маркетинге и умеют этому учить.')
+				+btnTriangle('indigo', 'purple', 'Подробнее о команде', '12', false)
+			.w-full(class="md_w-1/2 px-3")
 				+maed-crew-nums('+300', 'человек <br> в команде')
 				+maed-crew-nums('+120', 'преподавателей <br> –практиков')
 				+maed-crew-nums('+500', 'проектов в Рунете <br> за плечами у методистов')
 	.container.pt-10 
-		.flex.flex-wrap
-			.w-full(class="xl_w-3/12 md_w-1/2 xl_pr-4")
+		.flex.flex-wrap.-mx-3
+			.w-full(class="xl_w-3/12 md_w-1/2 px-3")
 				blockquote.text-indigo.text-2xl.sm_text-3xl.xl_text-4xl.font-extrabold.mb-4.blockquote.mb-6.md_mb-0 Даем возможность учиться у&nbsp;лучших
-			.flex.items-center.flex-wrap.w-full(class='xl_w-9/12 xl_pl-4')
-				.mb-5.sm_mb-0(class="sm_w-1/2 sm_pr-4")
-					img(src=require("/img/Group_7021.png"), alt="").w-full
-				div(class="sm_w-1/2 sm_pl-4")
+			.flex.items-center.flex-wrap.w-full(class='xl_w-9/12')
+				.mb-5.sm_mb-0(class="sm_w-1/2 px-3")
+					img(src=require("/img/Group_7021.png"), alt="").w-full.xl_max-w-sm.max-w-xs.block.mx-auto
+				.px-3(class="sm_w-1/2")
 					h4.text-indigo.text-2xl.sm_text-3xl.xl_text-4xl.font-extrabold.mb-5 Андрей Гавриков
 					p.text-indigo.font-semibold.mb-8 Основатель Академии MAED, совладелец и генеральный директор ООО «Комплето», член Гильдии Маркетологов, NLP Practicioner, NLP MBA, телеведущий, бизнес-тренер
 					.flex.items-center.mb-5

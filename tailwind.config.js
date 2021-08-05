@@ -13,6 +13,14 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	separator: "_",
 	theme: {
+		letterSpacing: {
+			widest: "1.5rem",
+		},
+		minHeight: {
+			sm: "4.5rem",
+			md: "16.5rem",
+			lg: "22rem",
+		},
 		fontFamily: {
 			sans: ["Proxima Nova", "Arial", "sans-serif"],
 		},
@@ -28,7 +36,10 @@ module.exports = {
 				light: "#D1E2EB",
 				DEFAULT: "#B4D1E0",
 				dark: "#6A7EDA",
-				darken: "#2E2D41",
+			},
+			purple: {
+				DEFAULT: "#6A7EDA",
+				dark: "#415bd0",
 			},
 			pink: {
 				DEFAULT: "#E37FC1",
@@ -36,11 +47,15 @@ module.exports = {
 			},
 			white: "#ffffff",
 			gray: "#F5F5F5",
-			indigo: "#223549",
+			indigo: {
+				DEFAULT: "#223549",
+				dark: "#2E2D41",
+			},
 			red: {
 				light: "#FADFD8",
 				DEFAULT: "#EC663D",
-				dark: "#A7411D",
+				dark: "#e04516",
+				darken: "#A7411D",
 			},
 			yellow: {
 				light: "#FFFCE0",
@@ -59,6 +74,9 @@ module.exports = {
 			},
 		},
 		extend: {
+			fontSize: {
+				xxs: "11px",
+			},
 			width: {
 				initial: "initial",
 			},

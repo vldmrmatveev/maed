@@ -51,14 +51,14 @@ export function openHeaderHiddenBlock() {
 }
 
 function changeHiddenBlockHeight() {
-	if (window.innerWidth < 768) {
+	if (window.innerWidth < 1024) {
 		let headerHeight = document.querySelector(".header__container")
 			.offsetHeight;
 		document.getElementById(
 			"headerDesktopHidden"
 		).style.height = `calc(100vh - ${headerHeight}px)`;
 	} else {
-		document.getElementById("headerDesktopHidden").height = "";
+		document.getElementById("headerDesktopHidden").style.height = "";
 	}
 }
 

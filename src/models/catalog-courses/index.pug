@@ -1,25 +1,23 @@
 section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
 	.container
 		h1.text-3xl.sm_text-4xl.md_text-6xl.font-black.mb-4.text-indigo Каталог курсов
-		p.text-xl.font-bold.mb-8.text-indigo Самое время начать!
-		.flex.flex-col.sm_block.sm_bg-indigo.sm_px-8.sm_py-6.sm_rounded-xl
-			.sm_hidden.order-1
-				input.border-0.border-b.border-indigo.w-full.bg-transparent.outline-none.text-sm.text-placeholder-white.mb-6(type="text" placeholder="Поиск по #тегам")
-			.flex.flex-wrap.mb-3.order-3.sm_order-1
-				.hidden.sm_block.w-full(class="md_w-4/12 md_pr-3")
-					input.border-0.border-b.border-indigo.sm_border-white.w-full.bg-transparent.sm_text-white.outline-none.text-sm.text-placeholder-white.mb-4(type="text" placeholder="Поиск по #тегам")
-				.flex.items-center.flex-wrap.pt-4.sm_pt-0(class="md_w-8/12 md_pl-3")
-					.w-full.sm_w-initial.sm_mr-4.mb-4
-						+checkbox('1', 'Бесплатно')
-					.w-full.sm_w-initial.sm_mr-4.mb-4
-						+checkbox('2', 'Трудоустройство')
-					.w-full.sm_w-initial.sm_mr-4.mb-4
-						+checkbox('3', 'Скидка')
-					.w-full.sm_w-initial.sm_mr-4.mb-4
-						+checkbox('4', 'Скоро старт')
-					.w-full.sm_w-initial.mb-4
-						+checkbox('5', 'Международный диплом')
-			.flex.flex-wrap.mb-3.xl_justify-between.order-1.sm_order-2
+		.pb-4
+			+catalogUnderTitle('indigo', 'Самое время начать!')
+		.flex.flex-wrap.sm_bg-indigo.sm_px-5.sm_py-6.sm_rounded-xl
+			.w-full.mb-3.order-1(class="md_w-4/12 px-3")
+				input.border-0.border-b.border-indigo.sm_border-white.w-full.bg-transparent.sm_text-white.outline-none.text-sm.placeholder-indigo.sm_placeholder-white.mb-4(type="text" name="searchName" placeholder="Поиск по названию")
+			.flex.items-center.flex-wrap.pt-4.sm_pt-0.mb-3.order-3.sm_order-1(class="md_w-8/12 px-3")
+				.w-full.sm_w-initial.sm_mr-4.mb-4
+					+checkbox('1', 'Бесплатно')
+				.w-full.sm_w-initial.sm_mr-4.mb-4
+					+checkbox('2', 'Трудоустройство')
+				.w-full.sm_w-initial.sm_mr-4.mb-4
+					+checkbox('3', 'Скидка')
+				.w-full.sm_w-initial.sm_mr-4.mb-4
+					+checkbox('4', 'Скоро старт')
+				.w-full.sm_w-initial.mb-4
+					+checkbox('5', 'Международный диплом')
+			.w-full.flex.flex-wrap.mb-3.xl_justify-between.order-1.sm_order-2.px-3
 					.mr-2.mb-4
 						+radio('1', 'Все курсы', true, 'radio-category')
 					.mr-2.mb-4
@@ -40,7 +38,7 @@ section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
 						+radio('9', 'Недвижимось', false, 'radio-category')
 					.mb-4
 						+radio('10', 'Авто', false, 'radio-category')
-			.flex.flex-wrap.order-2.sm_order-3
+			.w-full.flex.flex-wrap.order-2.sm_order-3.px-3
 				.w-full.mb-4.md_pr-3(class="md_w-1/2 lg_w-4/12")
 					.flex.justify-between.mb-2 
 						.text-indigo.sm_text-white.text-sm Продолжительность
@@ -75,24 +73,26 @@ section#catalog-courses.overflow-hidden
 	.bg-white
 		.bg-red.pt-20.sm_pt-40.rounded-t-2xl
 			.container
-				.flex.flex-wrap
-					.lg_pr-4.relative.z-10(class="lg_w-1/3")
-						h2.text-white.text-3xl.sm_text-4xl.xl_text-5xl.font-black.mb-4 Профессии
-						.mb-8
-							+maed-logo('text-red bg-white')
-					.text-white.text-xl.md_text-2xl.md_font-bold.mb-4.relative.z-10(class="lg_w-2/3 xl_w-1/3") Начни свое движение в крутой мир маркетинговых исследований и экспериментов
+				.flex.flex-wrap.-mx-3
+					.relative.z-10.px-3(class="lg_w-1/3")
+						+catalogTitle('Профессии')
+						.mb-8.mt-4
+							+maed-logo('red', 'white')
+					.relative.z-10.px-3.mb-4(class="lg_w-2/3 xl_w-1/3")
+						+catalogUnderTitle('white', 'Начни свое движение в крутой мир маркетинговых исследований и экспериментов')
 	.bg-white.pt-10.pb-32.sm_pt-14.xl_pt-10.relative.pb-100
-		.skew-block.skew-block__right.bg-red
-		.container.flex.flex-wrap.px-1
-			.animated-block-2.px-3(class="w-full md_w-1/2 lg_w-1/3")
-				+course-card('bg-white border border-red', 'Директор по digital-маркетингу', 'user-4.png')
-				+course-card('bg-white border border-red', 'Ведущий интернет маркетолог', 'user-2.png')
-				+course-card('bg-red', 'Ведущий интернет маркетолог', 'user-3.png')
-			.px-3(class="w-full md_w-1/2 lg_w-1/3")
-				+course-card('bg-white border border-red', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png')
-				+course-card('bg-white border border-red', 'E-commerce маркетолог', 'user-vector.svg')
-				+course-card('bg-white border border-red', 'Digital-маркетинг и разработка стратегии для b2b', 'user-4.png')
-			.animated-block-1.px-3(class="hidden lg_block md_w-1/2 lg_w-1/3")
-				+course-card('bg-white border border-red', 'Директор по социальным медиа / smm-директор', 'user-4.png')
-				+course-card('bg-white border border-red', 'Мессенджер маркетолог профи', 'user-3.png')
-				+course-card('bg-white border border-red', 'Digital-маркетинг и разработка стратегии для b2b', 'user-vector-2.svg')
+		+skewBlock('red', 'right')
+		.container
+			.flex.flex-wrap.-mx-3
+				.animated-block-2.px-3(class="w-full md_w-1/2 lg_w-1/3")
+					+course-card('red', 'white', 'Директор по digital-маркетингу', 'user-4.png')
+					+course-card('red', 'white', 'Ведущий интернет маркетолог', 'user-2.png')
+					+course-card('red', 'red', 'Мессенджер маркетолог профи', 'user-3.png')
+				.px-3(class="w-full md_w-1/2 lg_w-1/3")
+					+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png')
+					+course-card('red', 'white', 'E-commerce маркетолог', 'user-vector.svg')
+					+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-4.png')
+				.animated-block-1.px-3(class="hidden lg_block md_w-1/2 lg_w-1/3")
+					+course-card('red', 'white', 'Директор по социальным медиа / smm-директор', 'user-4.png')
+					+course-card('red', 'white', 'Мессенджер маркетолог профи', 'user-3.png')
+					+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-vector-2.svg')

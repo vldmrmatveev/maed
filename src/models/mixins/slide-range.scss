@@ -1,0 +1,36 @@
+.slide-range {
+	&.noUi-horizontal {
+		height: 2px;
+		border: none;
+		box-shadow: none;
+		@media (max-width: 639px) {
+			background-color: $indigo;
+		}
+		.noUi-base, .noUi-connects {
+			height: 4px;
+		}
+		.noUi-connect {
+			background-color: $white;
+			@media (max-width: 639px) {
+				background-color: $indigo;
+			}
+		}
+		.noUi-handle {
+			width: 12px;
+			height: 12px;
+			border-radius: 100%;
+			border: none;
+			right: -7px;
+			top: -5px;
+			box-shadow: none;
+			outline: none;
+			&:before,
+			&:after {
+				display: none;
+			}
+			@media (max-width: 639px) {
+				background-color: $indigo;
+			}
+		}
+	}
+}

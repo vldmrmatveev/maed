@@ -1,3 +1,4 @@
+- var num = 1;
 mixin arrow-marketing-academy(year, text)
 	.w-full.relative(class="md_w-1/5 md_pr-4 pl-6 md_pl-0 ml-3 md_ml-0")
 		p.text-indigo.text-4xl.font-extrabold.mb-2.md_mb-3= year
@@ -9,16 +10,10 @@ section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.z-20.relative.overflow-hidden
 			.w-full(class="sm_w-7/12 sm_pr-4")
 				h1.text-3xl.md_text-4xl.xl_text-5xl.font-extrabold.mb-4.text-indigo Академия маркетинга международного уровня
 			.w-full(class="sm_w-5/12 sm_pl-4")
-				p.text-lg.font-semibold.mb-8.text-indigo Все курсы адаптированы под задачи студентов, наполнены актуальными знаниями, при этом не перегружены лишней информацией
+				+mainTextSecondary('Все курсы адаптированы под задачи студентов, наполнены актуальными знаниями, при этом не перегружены лишней информацией')
 	.flex.items-center.justify-center.mb-12
-		img(src=require("/img/user-1.jpg"), alt="").user-img
-		img(src=require("/img/user-2.jpg"), alt="").user-img
-		img(src=require("/img/user-3.jpg"), alt="").user-img
-		img(src=require("/img/user-4.jpg"), alt="").user-img
-		img(src=require("/img/user-5.jpg"), alt="").user-img
-		img(src=require("/img/user-6.jpg"), alt="").user-img
-		img(src=require("/img/user-7.jpg"), alt="").user-img
-		img(src=require("/img/user-8.jpg"), alt="").user-img
+		while num <= 8
+			img(src=require("./img/user-"+num++ +".jpg"), alt="").user-img
 	.container.py-6
 		.flex.flex-wrap.relative
 			img(src=require("/img/Group_7681.svg"), alt="").hidden.md_block.absolute.mt-1.lg_mt-0.top-12.left-1.w-full

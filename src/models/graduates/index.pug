@@ -1,110 +1,45 @@
 section.py-16.container
-	.flex.flex-wrap.items-center.mb-8
-		.w-full(class="md_w-1/2 md_pr-4")
-			h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Выпускники MAED 
-			p.text-lg.text-indigo.font-semibold.mb-6 Более 100 компаний, в которых работают наши выпускники. От перспективных стартапов до крупных международных корпораций в разных сферах бизнеса. Масштаб меняется — оплата растет
-		.w-full.flex.flex-wrap(class="md_w-1/2 md_pl-4")
-			.flex.items-center.justify-content-center.border-b.border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Group.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/google-logo.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.sm_border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Group_17104.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.border-r.sm_border-r-0.lg_border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Alfa-Bank.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/image_565.png"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.sm_border-r.lg_border-r-0.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Beeline.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.lg_border-b-0.border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Raiffeisen_Bank.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.lg_border-b-0.border-r.sm_border-r-0.lg_border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Coca-Cola_logo.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-b.sm_border-b-0.sm_border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/image_566.png"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Mercedes-Benz-Logo.png"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.border-r.border-gray.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Frame.svg"), alt="").h-10.object-contain.w-full
-			.flex.items-center.justify-content-center.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300(class="lg_w-2/12 sm_w-3/12 w-4/12")
-				img(src=require("/img/Pepsi_logo_new.svg"), alt="").h-10.object-contain.w-full
+	.flex.flex-wrap.items-center.mb-8.-mx-3
+		.w-full(class="md_w-1/2 px-3")
+			+mainTitle('Выпускники MAED')
+			+mainTextSecondary('Более 100 компаний, в которых работают наши выпускники. От перспективных стартапов до крупных международных корпораций в разных сферах бизнеса. Масштаб меняется — оплата растет')
+		.w-full(class="md_w-1/2 px-3")
+			+tableLabel('Group.svg', 'google-logo.svg', 'Group_17104.svg', 'Alfa-Bank.svg', 'image_565.png', 'Beeline.svg', 'Raiffeisen_Bank.svg', 'Coca-Cola_logo.svg', 'image_566.png', 'Mercedes-Benz-Logo.png', 'Frame.svg', 'Pepsi_logo_new.svg')
 	.block
 		.swiper-container.relative.pb-8.sm_pb-12.swiper-container-yellow
 			.swiper-wrapper
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-1.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Мария <br> Буркастова
-						p.text-xs.font-bold.mb-4.text-indigo Интернет-маркетинг для В2В
-						p.text-xs.text-indigo.mb-6 В интернете есть много бесплатной информации, но ничего не известно об источнике. На курсе я уверена в экспертности преподавателей, знаю, кто преподает, доверяю и прислушиваюсь к  мнению специалистов. 
+						+graduatesCard('Мария <br> Буркастова', 'Интернет-маркетинг для В2В', 'В интернете есть много бесплатной информации, но ничего не известно об источнике. На курсе я уверена в экспертности преподавателей, знаю, кто преподает, доверяю и прислушиваюсь к  мнению специалистов.', 'user-carousel-1.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-2.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Татьяна <br> Лейн
-						p.text-xs.font-bold.mb-4.text-indigo Интернет-маркетолог с нуля
-						p.text-xs.text-indigo.mb-6 Курс с внимательными кураторами и быстрой коммуникацией по любым вопросам – это залог отличного усвоения материла и вовремя сданных  домашних заданий.
+						+graduatesCard('Татьяна <br> Лейн', 'Интернет-маркетолог с нуля', 'Курс с внимательными кураторами и быстрой коммуникацией по любым вопросам – это залог отличного усвоения материла и вовремя сданных  домашних заданий.', 'user-carousel-2.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-3.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Денис <br> Булай
-						p.text-xs.font-bold.mb-4.text-indigo Директор по digital-маркетингу
-						p.text-xs.text-indigo.mb-6 Очень понравилось, что была обратная связь и есть персонализация под конкретно твои особенности бизнеса. Можно сказать, что курс под тебя подстраивается, а не ты под курс.
+						+graduatesCard('Денис <br> Булай', 'Директор по digital-маркетингу', 'Очень понравилось, что была обратная связь и есть персонализация под конкретно твои особенности бизнеса. Можно сказать, что курс под тебя подстраивается, а не ты под курс.', 'user-carousel-3.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						a(href="https://youtu.be/AImkPHOsejM" data-fancybox).relative.block.mb-2
-							.rounded-full.overflow-hidden
-								img(src=require("/img/user-carousel-4.jpg"), alt="").object-contain.w-full
-							.absolute.h-12.w-12.rounded-full.bottom-0.right-0.bg-indigo.flex.items-center.justify-center.duration-300.hover_bg-blue-dark
-								span.course-card__main-colorder-btn-triangle.course-card__main-colorder-btn-triangle_red
-						p.text-2xl.font-black.mb-2.text-indigo Инна <br> Героева
-						p.text-xs.font-bold.mb-4.text-indigo Таргетолог-профессионал
-						p.text-xs.text-indigo.mb-6 Из бухгалтера ушла в таргетологи. Двух первых клиентов нашла еще во время прохождения курса.
+						+graduatesCard('Инна <br> Героева', 'Таргетолог-профессионал', 'Из бухгалтера ушла в таргетологи. Двух первых клиентов нашла еще во время прохождения курса.', 'user-carousel-4.jpg', true)
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-5.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Александр <br> Шарашкин 
-						p.text-xs.font-bold.mb-4.text-indigo Контент-маркетинг от А до Я
-						p.text-xs.text-indigo.mb-6 Мы продаем дорогой и сложный продукт, проекты могут длиться годами, поэтому экспертный контент для нас важен. Теперь есть четкое понимание как выстраивать контент-стратегию, как и через какие каналы наладить нужные коммуникации с клиентами. 
+						+graduatesCard('Александр <br> Шарашкин', 'Контент-маркетинг от А до Я', 'Мы продаем дорогой и сложный продукт, проекты могут длиться годами, поэтому экспертный контент для нас важен. Теперь есть четкое понимание как выстраивать контент-стратегию, как и через какие каналы наладить нужные коммуникации с клиентами.', 'user-carousel-5.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-6.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Олег <br> Воробьев
-						p.text-xs.font-bold.mb-4.text-indigo Интернет-маркетолог с нуля
-						p.text-xs.text-indigo.mb-6 Мне очень пригодилась тема о поисковом продвижении — провел SEO анализ сайта и понял, что нужно менять, увидел упущения и ошибки, которые мы допускали.
+						+graduatesCard('Олег <br> Воробьев', 'Интернет-маркетолог с нуля', ' Мне очень пригодилась тема о поисковом продвижении — провел SEO анализ сайта и понял, что нужно менять, увидел упущения и ошибки, которые мы допускали.', 'user-carousel-6.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-7.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Роман <br> Ковешников
-						p.text-xs.font-bold.mb-4.text-indigo Директор по digital-маркетингу
-						p.text-xs.text-indigo.mb-6 Решил пойти учиться, чтобы детально изучить  тему маркетинга и разговаривать с подрядчиками на одном языке. Итог обучения — готовая диджитал-стратегия компании на несколько лет вперед.
+						+graduatesCard('Роман <br> Ковешников', 'Директор по digital-маркетингу', 'Решил пойти учиться, чтобы детально изучить  тему маркетинга и разговаривать с подрядчиками на одном языке. Итог обучения — готовая диджитал-стратегия компании на несколько лет вперед.', 'user-carousel-7.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						a(href="https://youtu.be/AImkPHOsejM" data-fancybox).relative.block.mb-2
-							.rounded-full.overflow-hidden
-								img(src=require("/img/user-carousel-8.jpg"), alt="").object-contain.w-full
-							.absolute.h-12.w-12.rounded-full.bottom-0.right-0.bg-indigo.flex.items-center.justify-center.duration-300.hover_bg-blue-dark
-								span.course-card__main-colorder-btn-triangle.course-card__main-colorder-btn-triangle_red
-						p.text-2xl.font-black.mb-2.text-indigo Юлия <br> Краснова
-						p.text-xs.font-bold.mb-4.text-indigo Интернет-маркетинг для В2В
-						p.text-xs.text-indigo.mb-6 Кроме знаний на курсе приобрела опыт из общения с коллегами по курсу и с преподавателями. Это классное коммьюнити, которое готово помочь в решении вопросов и поделиться своими лайфхаками.
+						+graduatesCard('Юлия <br> Краснова', 'Интернет-маркетинг для В2В', 'Кроме знаний на курсе приобрела опыт из общения с коллегами по курсу и с преподавателями. Это классное коммьюнити, которое готово помочь в решении вопросов и поделиться своими лайфхаками.', 'user-carousel-8.jpg', true)
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-9.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Антон <br> Политаев
-						p.text-xs.font-bold.mb-4.text-indigo Интернет-маркетинг для В2В
-						p.text-xs.text-indigo.mb-6 В моем случае, этот курс на 100% решил основную «боль» последних 2-х лет — собрал в единую систему разрозненные знания. У меня появился четкий план и цель. С заказчиками стал общаться на понятном им языке, по-другому взглянул на подрядчиков.
+						+graduatesCard('Антон <br> Политаев', 'Интернет-маркетинг для В2В', 'В моем случае, этот курс на 100% решил основную «боль» последних 2-х лет — собрал в единую систему разрозненные знания. У меня появился четкий план и цель. С заказчиками стал общаться на понятном им языке, по-другому взглянул на подрядчиков.', 'user-carousel-9.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-10.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Елена <br> Канаева
-						p.text-xs.font-bold.mb-4.text-indigo Интернет-маркетолог с нуля
-						p.text-xs.text-indigo.mb-6 Здорово, что работа в компании и стала учебным проектом. То есть и анализ конкурентов, и ведение соцсетей — у меня совпадало практически всё, моя домашняя работа была непосредственно моей работой в компании.
+						+graduatesCard('Елена <br> Канаева', 'Интернет-маркетолог с нуля', 'Здорово, что работа в компании и стала учебным проектом. То есть и анализ конкурентов, и ведение соцсетей — у меня совпадало практически всё, моя домашняя работа была непосредственно моей работой в компании.', 'user-carousel-10.jpg')
 				.swiper-slide.swiper-slide-1_4
 					.sm_px-2
-						img(src=require("/img/user-carousel-11.jpg"), alt="").object-contain.w-full.mb-2
-						p.text-2xl.font-black.mb-2.text-indigo Егор <br> Уватенко
-						p.text-xs.font-bold.mb-4.text-indigo Директор по маркетингу
-						p.text-xs.text-indigo.mb-6 Мне хотелось систематизировать знания и получить теорию, чтобы системно работать с клиентами. Ожидания полностью оправдались
+						+graduatesCard('Егор <br> Уватенко', 'Директор по маркетингу', 'Мне хотелось систематизировать знания и получить теорию, чтобы системно работать с клиентами. Ожидания полностью оправдались', 'user-carousel-11.jpg')
 			.hidden.sm_block.swiper-pagination.darken-revert
-			.swiper-button-prev.duration-300.text-yellow.bg-indigo
-			.swiper-button-next.duration-300.text-yellow.bg-indigo
+			+swiperNav('yellow', 'bg-indigo hover_bg-yellow hover_text-white')

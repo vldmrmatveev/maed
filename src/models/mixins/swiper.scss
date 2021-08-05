@@ -88,22 +88,18 @@
 	&-next {
 		width: 30px;
 		height: 30px;
-		background-color: rgba(217, 218, 219, 0.2);
 		border-radius: 100%;
 		bottom: 10px;
 		top: auto;
-		&.bg-yellow {
-			background-color: $yellow;
-		}
-		&.bg-indigo {
-			background-color: $indigo;
-		}
-		&:hover {
-			background-color: rgba(217, 218, 219, 0.5);
-		}
 		&:after {
 			font-size: 16px;
 			color: currentColor;
 		}
+	}
+}
+
+.swiper-gallery {
+	.swiper-button-prev, .swiper-button-next {
+		bottom: -15px;
 	}
 }

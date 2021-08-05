@@ -1,10 +1,71 @@
+mixin mainTitle(text, margin = '4', textColor = 'indigo')
+	h2.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold(class="mb-"+margin + " text-"+textColor)!= text
+mixin mainTextSecondary(text, margin = '6')
+	p.text-lg.lg_text-xl.text-indigo.font-semibold(class="mb-"+margin)!= text
+mixin swiperNav(text, bg = 'bg-gray bg-opacity-30 hover_bg-opacity-20')
+	.swiper-button-prev.duration-300(class="text-"+text + " " + bg)
+	.swiper-button-next.duration-300(class="text-"+text + " " + bg)
+mixin madeByMaed(arr)
+	each val, index in arr
+		if index % 2
+			span.block= val
+		else
+			span.block.transform.translate-y-10= val
+mixin tableLabel(...images)
+	.table-label.flex.flex-wrap
+		each img in images
+			.flex.items.center.justify-center.px-4.py-6.filter.grayscale.hover_grayscale-0.duration-300.table-label__item(class="lg_w-2/12 sm_w-3/12 w-4/12")
+				img(src=require("./img/" + img), alt="").h-10.object-contain.w-full
+mixin skewBlock(color, position)
+	if position == "right"
+		.skew-block.skew-block__right(class="bg-"+color)
+	else 
+		.skew-block(class="bg-"+color)
+mixin btnTriangle(color, hoverColor, text, margin, underline)
+	a(href="#" class="bg-" + color + " hover_bg-" + hoverColor + " mb-" + margin).inline-flex.items-center.px-8.md_px-10.py-3.rounded-xl.duration-300.text-white
+		if underline == true
+			span.font-semibold.underline.mr-3= text 
+		else
+			span.font-semibold.mr-3= text 
+		span.triangle-to-right.triangle-to-right__big.inline-block
+mixin btnArrow(className, text)
+	a(href="#" class=className).inline-flex.items-center.text-center.duration-300
+		span.underline.mr-2= text
+		svg.w-6(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+			path(fill-rule='evenodd' clip-rule='evenodd' d='M3 10V11H14V14L18 10.5L14 7V10H3Z' class="fill-current")
+mixin catalogTitle(text)
+	h2.text-3xl.sm_text-4xl.xl_text-5xl.font-black.text-white= text
+mixin catalogUnderTitle(color, text)
+	p.text-xl.sm_text-2xl.font-semibold.sm_font-bold.mb-4(class="text-"+color)= text
+mixin graduatesCard(name, title, text, img, video = false)
+	if video
+		a(href="https://youtu.be/AImkPHOsejM" data-fancybox).relative.block.mb-2
+			.rounded-full.overflow-hidden
+				img(src=require("/img/"+img), alt="").object-contain.w-full
+			.absolute.h-12.w-12.rounded-full.bottom-0.right-0.bg-indigo.flex.items-center.justify-center.duration-300.hover_bg-blue-dark.text-red.hover_text-white
+				span.triangle-to-right.triangle-to-right__big.ml-1
+	else
+		img(src=require("./img/"+ img), alt="").object-contain.w-full.mb-2
+	p.text-2xl.font-black.mb-2.text-indigo!= name
+	p.text-xs.font-bold.mb-4.text-indigo= title
+	p.text-xs.text-indigo.mb-6= text
+mixin graduateCase
+	.border.border-indigo.rounded-xl.px-10.py-8.mb-6
+		a(href="#").inline-block.text-indigo.font-black.text-2xl.mb-5.hover_text-blue-dark.duration-300 Как начать карьеру интернет-маркетолога
+		p.mb-4.text-indigo.text-sm Карьерный путь, навыки и обязанности начинающего маркетолога.
+		a(href="#").block.rounded-md.overflow-hidden.mb-5
+			img(src=require("./img/Yellow_Prod_card.jpg"), alt="").h-28.object-cover.w-full
+		a(href="#").inline-flex.items-center.text-center.duration-300.rounded-lg.px-5.py-2.text-white.bg-red.hover_bg-red-dark
+			span.underline.mr-2 Читать
+			svg.w-6(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M3 10V11H14V14L18 10.5L14 7V10H3Z' class="fill-current")
 mixin footerList(...lists)
 	ul 
 		each list in lists
 			li.mb-2
 				a(href="#").text-xxs.font-semibold.text-white.opacity-50.duration-300.hover_text-red.hover_opacity-100.underline= list
 mixin headerList(disabled, ...lists)
-	ul
+	ul.md_pt-4
 		each list, index in lists
 			if disabled
 				li.mb-4.flex
@@ -15,6 +76,23 @@ mixin headerList(disabled, ...lists)
 			else 
 				li.mb-4.flex
 					a(href="#").text-xs.text-white.font-semibold.hover_text-red.duration-300.inline-block.leading-tight!= list
+mixin dropdownLink(id, parent, text)
+	a(href=id data-dropdown="true" data-parent=parent).flex.items-center.justify-between.py-4.drop__link
+		span.font-extrabold.text-xl.drop__link-item.text-indigo= text
+		svg(width='14' class="w-4 ml-4 duration-300 pointer-events-none" height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+			path(d='M13 1L7 6L1 1' stroke='#223549' stroke-width='2')
+mixin headerListMob(disabled, identity, ...lists)
+	.drop__collapse(id=identity)
+		ul.py-3 
+			each list, index in lists
+				li.mb-3 
+					if disabled
+						if index == lists.length - 1
+							span.opacity-50.text-indigo.text-sm.font-semibold= list 
+						else 
+							a(href="#").text-indigo.text-sm.font-semibold= list 
+					else 
+						a(href="#").text-indigo.text-sm.font-semibold= list 
 mixin radio(link, text, checked, namedCollection)
 	input(type="radio" name=namedCollection id="radio-category-"+link checked=checked).checkbox-hidden
 	label(for="radio-category-"+link).flex.items-center.cursor-pointer
@@ -45,35 +123,106 @@ mixin start-card(color, title, desc, user)
 					p.ml-2.text-indigo.text-xs Скидка <br> до 26 августа
 			img(src=require("./img/"+user), alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
 		p.text-center.font-bold.text-gray.mb-5.opacity-30.carousel-card-start__undertext.duration-300= desc
-mixin course-card(color, title, user)
-	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.course-card__main.overflow-hidden(class=color)
-		.carousel-card-start__content
-			p.font-bold.text-sm.mb-1 Профессия
-			p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-4= title 
-			ul.list-disc.list-inside
-				li.text-xs.mb-3 Гарантированное трудоустройство
-				li.text-xs.mb-3 Один курс в подарок
-		.carousel-card-start__content-min
-			.flex.items-end.flex-wrap
-				p.mr-2.text-lg.font-bold.line-through 58 000 &#8381;
-				p.text-2xl.font-extrabold.mb-0.relative.popover-parent 2900
-					span 
-					span.text-xs &#8381; / мес
-					span.popover.bg-blue-dark.text-white.duration-300(data-popover="Проверочный текст, который говорит, что всё работает") ?
-			p.text-lg.course-card__main-colorder-text.font-bold.mb-3.flex.flex-wrap.items-center 
-				span.mr-1 -40%
-				span.text-xs.pt-1 Скидка до 26 Августа
-			a(href="#").inline-block.course-card__main-colorder-btn.px-4.py-3.rounded-md.duration-300
-				span Записаться
-				span.course-card__main-colorder-btn-triangle.inline-block
-		img(src=require("./img/"+user), alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
-mixin maed-logo(className)
-	.flex.align-items-center 
-		.flex.items-center.justify-center.maed-logo(class=className)
-			span.maed-logo__word M
-		.flex.items-center.justify-center.maed-logo(class=className)
-			span.maed-logo__word A
-		.flex.items-center.justify-center.maed-logo(class=className)
-			span.maed-logo__word E
-		.flex.items-center.justify-center.maed-logo(class=className)
-			span.maed-logo__word D
+mixin start-card-new(bg, title, desc, user)
+	a(href="#").block
+		.min-h-md.px-4.py-5.flex.flex-col.justify-between.relative.mb-4.rounded-xl.overflow-hidden.duration-300(class="bg-"+ bg + " hover_bg-"+ bg + "-dark")
+			if bg == 'yellow'
+				div(class="w-9/12 pr-2")
+					p.text-indigo.font-bold.text-sm.mb-3 Старт 29 апреля
+					p.text-indigo.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
+					p.text-indigo.font-bold.text-sm.mb-5 Все что нужно знать SMM-щику
+				.flex.items-center.flex-wrap
+					p.text-2xl.font-extrabold.text-indigo -40%
+					p.ml-2.text-indigo.text-xs Скидка <br> до 26 августа
+			else 
+				div(class="w-9/12 pr-2")
+					p.text-white.font-bold.text-sm.mb-3 Старт 29 апреля
+					p.text-white.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
+					p.text-white.font-bold.text-sm.mb-5 Все что нужно знать SMM-щику
+				.flex.items-center.flex-wrap
+					p.text-2xl.font-extrabold.text-white -40%
+					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
+			img(src=require("./img/"+user), alt="" class="w-5/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
+		p.text-center.font-bold.text-gray.mb-5.opacity-80.duration-300= desc
+mixin course-card(color, bg, title, user)
+	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.sm_min-h-lg(class="bg-"+bg + " border border-" + color)
+		if bg == "white"
+			div(class="sm_w-9/12")
+				p.font-bold.text-sm.mb-1.text-indigo Профессия
+				p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-4.text-indigo= title 
+				ul.list-disc.list-inside
+					li.text-xs.mb-3.text-indigo Гарантированное трудоустройство
+					li.text-xs.mb-3.text-indigo Один курс в подарок
+			div(class="w-8/12 pr-2")
+				.flex.items-end.flex-wrap
+					p.mr-2.text-lg.font-bold.line-through.text-indigo 58 000 &#8381;
+					p.text-2xl.font-extrabold.mb-0.relative.popover-parent.text-indigo 2900
+						span 
+						span.text-xs &#8381; / мес
+						span.popover.text-white.duration-300(data-popover="Проверочный текст, который говорит" data-popover-bg="bg-"+color data-popover-text="text-white" class="bg-"+color + " hover_bg-"+color+"-dark") ?
+				p.text-lg.font-bold.mb-3.flex.flex-wrap.items-center(class='text-'+color)
+					span.mr-1 -40%
+					span.text-xs.pt-1 Скидка до 26 Августа
+				a(href="#" class="bg-"+color + " text-white hover_bg-"+ color + "-dark").inline-block.px-4.py-3.rounded-md.duration-300
+					span.mr-3 Записаться
+					span.inline-block.triangle-to-right
+		else
+			div(class="sm_w-9/12")
+				p.font-bold.text-sm.mb-1.text-white Профессия
+				p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-4.text-white= title 
+				ul.list-disc.list-inside
+					li.text-xs.mb-3.text-white Гарантированное трудоустройство
+					li.text-xs.mb-3.text-white Один курс в подарок
+			div(class="w-8/12 pr-2")
+				.flex.items-end.flex-wrap
+					p.mr-2.text-lg.font-bold.line-through.text-white 58 000 &#8381;
+					p.text-2xl.font-extrabold.mb-0.relative.popover-parent.text-white 2900
+						span 
+						span.text-xs &#8381; / мес
+						span.popover.bg-white.duration-300(data-popover="Проверочный текст, который говорит" data-popover-bg="bg-white" data-popover-text="text-"+color class="bg-white text-"+color) ?
+				p.text-lg.font-bold.mb-3.flex.flex-wrap.items-center.text-white
+					span.mr-1 -40%
+					span.text-xs.pt-1 Скидка до 26 Августа
+				a(href="#" class="border border-white text-white hover_bg-white hover_text-"+color).inline-block.px-4.py-3.rounded-md.duration-300
+					span.mr-3 Записаться
+					span.inline-block.triangle-to-right
+		img(src=require("./img/"+user), alt="" class="w-5/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
+mixin maed-logo(color, bg, size)
+	.flex.align-items-center
+		if size == 'xl'
+			each val in ['M', 'A', 'E', 'D']
+				span.flex.items-center.justify-center.w-8.h-8.text-xl.leading-none.mr-1.font-bold(class="bg-"+bg + " text-"+color)= val
+		else
+			each val in ['M', 'A', 'E', 'D']
+				span.flex.items-center.justify-center.w-6.h-6.text-md.leading-none.mr-1.font-bold(class="bg-"+bg + " text-"+color)= val
+mixin maed-logo-link(color, bg)
+	a(href="#").flex.align-items-center.revert-on-hover
+		each val in ['M', 'A', 'E', 'D']
+			if bg == 'white'
+				span.flex.items-center.justify-center.w-6.h-6.text-md.leading-none.mr-1.font-bold.duration-300.revert-on-hover__item-footer(class="bg-"+bg + " text-"+color)= val
+			else
+				span.flex.items-center.justify-center.w-6.h-6.text-md.leading-none.mr-1.font-bold.duration-300.revert-on-hover__item-header(class="bg-"+bg + " text-"+color)= val
+mixin downloadBtnContent
+	span.pointer-events-none.inline-flex.items-center
+		svg.w-6(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+			path(d='M13.7048 4.67524L13.7698 5.03949L14.1118 5.1808C14.8763 5.4967 15.5076 6.0678 15.8984 6.79687C16.2891 7.52594 16.4151 8.3679 16.2548 9.1794C16.0945 9.9909 15.658 10.7218 15.0194 11.2476C14.3811 11.7732 13.5804 12.0614 12.7536 12.0632H11.9035C11.8571 12.0632 11.8126 12.0447 11.7797 12.0119L11.3022 12.4895L11.7797 12.0119C11.7469 11.9791 11.7285 11.9346 11.7285 11.8882C11.7285 11.8417 11.7469 11.7972 11.7797 11.7644C11.8126 11.7316 11.8571 11.7131 11.9035 11.7131H12.7539V11.7132L12.7602 11.7131C13.5412 11.7059 14.2932 11.4156 14.8765 10.8961C15.4598 10.3766 15.8349 9.66314 15.9321 8.88809C16.0293 8.11305 15.842 7.32905 15.4051 6.68157C14.9682 6.0341 14.3112 5.5671 13.5561 5.36723L13.5561 5.36714L13.5454 5.36449C13.5092 5.35555 13.4769 5.33533 13.453 5.30675C13.4292 5.27817 13.4151 5.24273 13.4127 5.20558L13.4122 5.19727L13.4115 5.18898C13.3108 4.04071 12.7735 2.97478 11.9104 2.2108C11.0473 1.44682 9.924 1.04298 8.772 1.08249C7.62 1.12199 6.52702 1.60182 5.71825 2.42313C4.90948 3.24445 4.44651 4.34467 4.42473 5.49714L4.42461 5.49714L4.42461 5.50962C4.42455 5.65643 4.43279 5.80313 4.4493 5.94901L4.44935 5.94937C4.45242 5.97641 4.44915 6.00379 4.43979 6.02934L5.07402 6.26161L4.43979 6.02934C4.43044 6.05489 4.41525 6.0779 4.39544 6.09655L4.39544 6.09655L4.39298 6.09888C4.37402 6.11692 4.35107 6.13024 4.326 6.13775L4.5198 6.78477L4.326 6.13775C4.30093 6.14526 4.27444 6.14675 4.24868 6.14211L4.241 6.14072L4.23329 6.13952C4.09628 6.11807 3.95772 6.10825 3.81908 6.11014C3.07798 6.11154 2.36755 6.40654 1.84342 6.93067L2.28917 7.37643L1.84342 6.93067C1.31803 7.45606 1.02287 8.16863 1.02287 8.91164C1.02287 9.65464 1.31803 10.3672 1.84342 10.8926C2.3688 11.418 3.08137 11.7131 3.82438 11.7131H5.10003C5.14644 11.7131 5.19096 11.7316 5.22378 11.7644C5.2566 11.7972 5.27504 11.8417 5.27504 11.8882C5.27504 11.9346 5.2566 11.9791 5.22378 12.0119L5.70138 12.4895L5.22378 12.0119C5.19096 12.0447 5.14645 12.0632 5.10003 12.0632H3.82483C3.0185 12.0626 2.24305 11.753 1.65805 11.1981C1.07305 10.6432 0.722994 9.88515 0.679926 9.07997C0.636859 8.27479 0.904052 7.48373 1.42652 6.86957C1.949 6.25541 2.687 5.86487 3.48867 5.77832L4.04687 5.71805L4.08963 5.15824C4.17958 3.98071 4.69588 2.87639 5.54175 2.05227C6.38762 1.22814 7.50501 0.740787 8.68449 0.681539C9.86397 0.62229 11.0246 0.995216 11.9488 1.73042C12.873 2.46563 13.4973 3.51265 13.7048 4.67524Z' class="stroke-current" stroke='white' stroke-width='1.35085')
+			path(d='M10.0743 14.3206L9.8308 14.5641L8.67777 15.7171V14.0865V10.1864C8.67777 10.14 8.65934 10.0954 8.62651 10.0626C8.59369 10.0298 8.54918 10.0114 8.50276 10.0114C8.45635 10.0114 8.41183 10.0298 8.37901 10.0626M10.0743 14.3206L8.37901 10.0626M10.0743 14.3206C10.107 14.2903 10.15 14.2736 10.1947 14.274C10.2406 14.2744 10.2845 14.2928 10.3169 14.3252C10.3494 14.3577 10.3678 14.4016 10.3682 14.4475C10.3686 14.4921 10.3519 14.5352 10.3216 14.5679L8.6265 16.263C8.59368 16.2958 8.54917 16.3142 8.50276 16.3142C8.45639 16.3142 8.41192 16.2958 8.3791 16.2631C8.37908 16.263 8.37906 16.263 8.37903 16.263L6.68395 14.5679C6.65366 14.5352 6.63696 14.4921 6.63734 14.4475C6.63774 14.4016 6.65615 14.3577 6.6886 14.3252C6.72105 14.2928 6.76494 14.2744 6.81083 14.274C6.85549 14.2736 6.89856 14.2903 6.93127 14.3206L7.17473 14.5641L8.32775 15.7171V14.0865V10.1864C8.32775 10.14 8.34619 10.0954 8.37901 10.0626M10.0743 14.3206L7.90142 9.58502L8.37901 10.0626' class="stroke-current" stroke='white' stroke-width='1.35085')
+		span.underline.ml-2.text-sm.lg_text-md Скачать бесплатно
+mixin social
+	ul.flex.items-center.mb-4.sm_order-2.order-1
+		li.mx-2
+			a(href="#" target="_blank").w-10.h-10.inline-flex.items-center.justify-center.text-white.hover_text-blue-light.duration-300
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path(fill-rule='evenodd' class="fill-current" clip-rule='evenodd' d='M14.6234 1.00375L12.2249 1C9.5302 1 7.78878 2.73871 7.78878 5.42982V7.47227H5.37715C5.16875 7.47227 5 7.63668 5 7.83949V10.7988C5 11.0016 5.16895 11.1658 5.37715 11.1658H7.78878V18.633C7.78878 18.8358 7.95753 19 8.16593 19H11.3124C11.5208 19 11.6896 18.8356 11.6896 18.633V11.1658H14.5093C14.7177 11.1658 14.8865 11.0016 14.8865 10.7988L14.8876 7.83949C14.8876 7.74211 14.8478 7.64886 14.7772 7.57994C14.7066 7.51103 14.6103 7.47227 14.5103 7.47227H11.6896V5.74086C11.6896 4.90868 11.8933 4.48622 13.0073 4.48622L14.623 4.48566C14.8312 4.48566 15 4.32124 15 4.11863V1.37077C15 1.16835 14.8314 1.00412 14.6234 1.00375Z' fill='white')
+		li.mx-2 
+			a(href="#" target="_blank").w-10.h-10.inline-flex.items-center.justify-center.text-white.hover_text-blue-light.duration-300
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path.fill-current(fill-rule='evenodd' clip-rule='evenodd' d='M10 1.5C12.3085 1.5 12.5979 1.50978 13.5045 1.55115C14.4093 1.59242 15.0272 1.73612 15.5678 1.94626C16.1268 2.16345 16.6008 2.45409 17.0734 2.92663C17.5459 3.3992 17.8366 3.87323 18.0538 4.43218C18.2639 4.97284 18.4076 5.59073 18.4488 6.49546C18.4902 7.40208 18.5 7.69154 18.5 10C18.5 12.3085 18.4902 12.5979 18.4488 13.5045C18.4076 14.4093 18.2639 15.0272 18.0538 15.5678C17.8366 16.1268 17.5459 16.6008 17.0734 17.0734C16.6008 17.5459 16.1268 17.8366 15.5678 18.0538C15.0272 18.2639 14.4093 18.4076 13.5045 18.4488C12.5979 18.4902 12.3085 18.5 10 18.5C7.69154 18.5 7.40208 18.4902 6.49546 18.4488C5.59073 18.4076 4.97284 18.2639 4.43218 18.0538C3.87323 17.8366 3.3992 17.5459 2.92663 17.0734C2.45409 16.6008 2.16345 16.1268 1.94626 15.5678C1.73612 15.0272 1.59242 14.4093 1.55115 13.5045C1.50978 12.5979 1.5 12.3085 1.5 10C1.5 7.69154 1.50978 7.40208 1.55115 6.49546C1.59242 5.59073 1.73612 4.97284 1.94626 4.43218C2.16345 3.87323 2.45409 3.3992 2.92663 2.92663C3.3992 2.45409 3.87323 2.16345 4.43218 1.94626C4.97284 1.73612 5.59073 1.59242 6.49546 1.55115C7.40208 1.50978 7.69154 1.5 10 1.5ZM9.99734 12.8298C11.5616 12.8298 12.8298 11.5616 12.8298 9.99734C12.8298 8.433 11.5616 7.16488 9.99734 7.16488C8.433 7.16488 7.16488 8.433 7.16488 9.99734C7.16488 11.5616 8.433 12.8298 9.99734 12.8298ZM9.99734 5.63383C12.4072 5.63383 14.3608 7.58742 14.3608 9.99734C14.3608 12.4072 12.4072 14.3608 9.99734 14.3608C7.58742 14.3608 5.63383 12.4072 5.63383 9.99734C5.63383 7.58742 7.58742 5.63383 9.99734 5.63383ZM15.8556 5.37224C15.8556 5.94601 15.3904 6.41111 14.8166 6.41111C14.2429 6.41111 13.7778 5.94601 13.7778 5.37224C13.7778 4.79847 14.2429 4.33333 14.8166 4.33333C15.3904 4.33333 15.8556 4.79847 15.8556 5.37224Z' fill='white')
+		li.mx-2 
+			a(href="#" target="_blank").w-10.h-10.inline-flex.items-center.justify-center.text-white.hover_text-blue-light.duration-300
+				svg(width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path.fill-current(fill-rule='evenodd' clip-rule='evenodd' d='M20 11C20 16.5228 15.5228 21 10 21C4.47715 21 0 16.5228 0 11C0 5.47715 4.47715 1 10 1C15.5228 1 20 5.47715 20 11ZM10.3584 8.38245C9.38572 8.78701 7.44179 9.62434 4.52659 10.8944C4.0532 11.0827 3.80522 11.2669 3.78265 11.4469C3.7445 11.7513 4.1256 11.8711 4.64457 12.0343C4.71516 12.0565 4.7883 12.0795 4.86329 12.1038C5.37387 12.2698 6.0607 12.464 6.41775 12.4717C6.74163 12.4787 7.10312 12.3452 7.50221 12.0711C10.226 10.2325 11.632 9.30318 11.7203 9.28315C11.7825 9.26902 11.8688 9.25124 11.9273 9.30321C11.9858 9.35518 11.98 9.45361 11.9738 9.48001C11.9361 9.64096 10.4401 11.0318 9.66594 11.7515C9.42459 11.9759 9.2534 12.135 9.21841 12.1714C9.14001 12.2528 9.06011 12.3298 8.98333 12.4038C8.50898 12.8611 8.15327 13.204 9.00302 13.764C9.41137 14.0331 9.73813 14.2556 10.0641 14.4776C10.4201 14.7201 10.7752 14.9619 11.2347 15.2631C11.3517 15.3398 11.4635 15.4195 11.5724 15.4971C11.9867 15.7925 12.359 16.0579 12.8188 16.0155C13.086 15.9909 13.3621 15.7397 13.5022 14.9903C13.8335 13.2193 14.4847 9.38206 14.6352 7.80082C14.6484 7.66228 14.6318 7.48498 14.6185 7.40715C14.6052 7.32932 14.5773 7.21843 14.4761 7.13634C14.3563 7.03912 14.1714 7.01862 14.0886 7.02008C13.7125 7.0267 13.1355 7.22736 10.3584 8.38245Z' fill='white')
+		li.mx-2 
+			a(href="#" target="_blank").w-10.h-10.inline-flex.items-center.justify-center.text-white.hover_text-blue-light.duration-300
+				svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path.fill-current(fill-rule='evenodd' clip-rule='evenodd' d='M10 2.80078C7.102 2.80078 3.3406 3.53013 3.3406 3.53013L3.33113 3.54099C2.01123 3.75303 1 4.89226 1 6.27775V13.7225C1.00266 15.0907 1.99367 16.2531 3.33789 16.466L3.3406 16.4701C3.3406 16.4701 7.102 17.2008 10 17.2008C12.898 17.2008 16.6594 16.4701 16.6594 16.4701C18.0065 16.2562 18.9986 15.0922 19 13.7238V6.27775C18.998 4.91034 18.0068 3.74719 16.6621 3.5342C16.6594 3.53013 12.898 2.80078 10 2.80078ZM8.2 6.85078L13.6 10.0008L8.2 13.1508V6.85078Z' fill='white')

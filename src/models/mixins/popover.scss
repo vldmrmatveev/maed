@@ -1,0 +1,24 @@
+.popover {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	text-align: center;
+	position: absolute;
+	top: -5px;
+	right: 32px;
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	&-container {
+		z-index: 10;
+		font-size: 10px;
+		line-height: 1;
+		padding: 4px;
+		border-radius: 4px;
+		font-weight: normal;
+		bottom: 42px;
+		width: 100px;
+	}
+}

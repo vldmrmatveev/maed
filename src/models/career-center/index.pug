@@ -6,13 +6,11 @@ mixin career-center-card(num, title, text, link)
 			p.text-sm.text-indigo.mb-4= text 
 		a(href="#").text-indigo.font-bold.text-sm.duration-300.hover_text-red.underline= link
 section.py-8.sm_py-16.container
-	.flex.flex-wrap.items-center.mb-4
-		.w-full(class="md_w-1/2 md_pr-4")
-			h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Центр карьеры
-			p.text-lg.text-indigo.font-semibold.mb-6 Помогаем студентам найти работу мечты, а компаниям- партнерам получить квалифицированных специалистов из сферы digital
-			a(href="#").inline-block.px-8.md_px-10.py-3.rounded-xl.duration-300.bg-indigo.text-white.hover_bg-blue-dark.mb-10
-				span.font-semibold Подробнее о подходе
-				span.course-card__main-colorder-btn-triangle.inline-block
+	.flex.flex-wrap.items-center.mb-4.-mx-3
+		.w-full(class="md_w-8/12 xl_w-1/2 px-3")
+			+mainTitle('Центр карьеры')
+			+mainTextSecondary('Помогаем студентам найти работу мечты, а компаниям- партнерам получить квалифицированных специалистов из сферы digital')
+			+btnTriangle('indigo', 'purple', 'Подробнее о подходе', '10', false)
 	.flex.flex-wrap
 		.w-full.mb-6(class="sm_w-6/12 lg_w-3/12 sm_pr-4")
 			+career-center-card('1', 'Трудоустройство', 'Помошь в трудостройстве студентам, которые успешно освоивили учебные модули и защитили диплом', 'Как трудоустроиться?')

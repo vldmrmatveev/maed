@@ -1,31 +1,29 @@
 section.py-8.sm_py-16.container
-	h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-6 Условия обучения Академии MAED
-	.w-full(class="md_w-1/2 md_pr-4")
-		p.text-lg.text-indigo.font-semibold.mb-8 Помогаем студентам найти работу мечты, а&nbsp;компаниям- партнерам получить квалифицированных специалистов из&nbsp;сферы digital
+	+mainTitle('Условия обучения Академии MAED', '6')
+	.w-full(class="md_w-8/12 lg_w-7/12")
+		+mainTextSecondary('Помогаем студентам найти работу мечты, а&nbsp;компаниям- партнерам получить квалифицированных специалистов из&nbsp;сферы digital', '14')
 	.flex.justify-center 
 		.w-full.text-center(class="sm_w-10/12 lg_w-9/12")
 			img(src=require("/img/Group_7462.svg"), alt="").w-full.mb-8.hidden.sm_block
 			img(src=require("/img/Group_7653.svg"), alt="").w-full.mb-8.sm_hidden.max-w-xs.mx-auto
-			a(href="#").inline-block.px-8.md_px-10.py-3.rounded-xl.duration-300.bg-indigo.text-white.hover_bg-blue-dark.mb-8
-				span.font-semibold Подробнее
-				span.course-card__main-colorder-btn-triangle.inline-block
+			+btnTriangle('indigo', 'purple', 'Подробнее', '8', false)
 .container.py-8.sm_py-16.xl_pt-24
 	.bg-indigo.flex.flex-wrap.rounded-xl.relative.py-10.px-4.sm_px-10.sm_py-16
 		.absolute.left-4.sm_left-10.flex(class="-top-4")
-			+maed-logo('maed-logo__xl text-white bg-red')
+			+maed-logo('white', 'red', 'xl')
 			span.bg-red.text-white.ml-1.px-3.py-1.text-center.font-bold.lg_inline-block.hidden Клуб для своих
 		.w-full(class="md_w-1/2")
 			h3.text-white.text-2xl.sm_text-3xl.md_text-4xl.font-black.mb-4.relative.z-10 MAED Club&nbsp;&mdash; клуб для профессионалов в&nbsp;маркетинге
 			p.text-white.text-xl.font-semibold.mb-6.relative.z-10.max-w-md Вся практика международного маркетинга из первых уст
 			img(src=require("./img/Frame-maed.svg"), alt="" class="sm_w-7/12").sm_absolute.right-5.-top-32.mb-6.sm_mb-0
-		.flex.flex-wrap 
-			.mb-6(class="sm_w-4/12 sm_pr-8")
+		.flex.flex-wrap.-mx-3
+			.mb-6(class="sm_w-4/12 px-3")
 				h3.text-red.text-xl.font-extrabold.mb-4 Курсы
 				p.text-white.text-sm.font-semibold Для резидентов закрытого клуба особые льготные условия на покупку курсов MAED
-			.mb-6(class="sm_w-4/12 sm_pr-8")
+			.mb-6(class="sm_w-4/12 px-3")
 				h3.text-red.text-xl.font-extrabold.mb-4 Материалы
 				p.text-white.text-sm.font-semibold Практические материалы и чек-листы для применения в работе
-			.mb-6(class="sm_w-4/12")
+			.mb-6(class="sm_w-4/12 px-3")
 				h3.text-red.text-xl.font-extrabold.mb-4 Общение
 				p.text-white.text-sm.font-semibold
 					span Маркетологи-практики делятся 

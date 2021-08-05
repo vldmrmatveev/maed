@@ -3,46 +3,39 @@ section.bg-blue-light.bg-opacity-50
 		.flex.flex-wrap
 			.w-full(class="md_w-1/2")
 				h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-black.mb-8 MAED <br> Magazine
-				a(href="#").inline-flex.items-center.rounded-xl.text-center.px-4.py-2.duration-300.border.border-indigo.mb-8.text-indigo.hover_bg-blue-wave.hover_border-blue-wave
-					span.underline.mr-2 Перейти на страницу журнала
-					img(src=require("/img/Arrow.svg"), alt="").w-6
+				+btnArrow('px-3 sm_px-5 py-2 sm_py-3 border border-indigo hover_bg-indigo text-indigo hover_text-white rounded-lg rounded-xl mb-8 font-semibold', 'Перейти на страницу журнала')
 			.w-full(class="md_w-1/2")
 				p.text-indigo.text-xl.mb-6 Журнал о digital, маркетинге, бизнесе и менеджменте. Подробные мануалы, исчерпывающие гайды, инструкции, обзоры и новости в мире маркетинга.
 		.swiper-container.relative.pb-10.swiper-container-yellow
 			.swiper-wrapper
 				.swiper-slide.swiper-slide-1_2
-					.bg-blue.rounded-xl.flex.flex-wrap.overflow-hidden.maed-mag-card.mb-5
-						.w-full.sm_h-full.sm_order-1.order-2(class="sm_w-8/12")
-							.p-8.flex.flex-col.justify-between.items-start.h-full
-								span.text-xs.uppercase.text-blue-newwave.mb-4 Блог
-								a(href="#").text-lg.sm_text-xl.font-black.mb-6.text-indigo.hover_text-blue-dark.duration-300 Как начать карьеру интернет-маркетолога
-								p.text-sm.mb-6.text-indigo Карьерный путь, навыки и обязанности начинающего маркетолога.
-								a(href="#").inline-flex.items-center.rounded-md.text-center.px-4.py-2.duration-300.bg-indigo.hover_bg-blue-wave
-									span.underline.mr-2.text-white Читать
-									img(src=require("/img/arrow-white.svg"), alt="").w-4
-						.hidden.sm_block.w-full.sm_order-2.order-1(class="sm_w-4/12")
-							a(href="#").block.sm_h-full
-								img(src=require("/img/maed-mag-bg.jpg"), alt="").w-full.h-full.object-cover
+					.px-2
+						.bg-blue.rounded-xl.flex.flex-wrap.overflow-hidden.maed-mag-card.mb-5
+							.w-full.sm_h-full.sm_order-1.order-2(class="sm_w-8/12")
+								.p-8.flex.flex-col.justify-between.items-start.h-full
+									span.text-xs.uppercase.text-blue-newwave.mb-4 Блог
+									a(href="#").text-lg.sm_text-xl.font-black.mb-6.text-indigo.hover_text-purple.duration-300 Как начать карьеру интернет-маркетолога
+									p.text-sm.mb-6.text-indigo Карьерный путь, навыки и обязанности начинающего маркетолога.
+									+btnArrow('px-4 py-2 bg-indigo hover_bg-purple text-white rounded-lg rounded-lg', 'Читать')
+							.hidden.sm_block.w-full.sm_order-2.order-1(class="sm_w-4/12")
+								a(href="#").block.sm_h-full
+									img(src=require("/img/maed-mag-bg.jpg"), alt="").w-full.h-full.object-cover
 				.swiper-slide.swiper-slide-1_4
-					.bg-white.rounded-xl.overflow-hidden.maed-mag-card.mb-5.flex.flex-col
-						.relative.maed-mag-card-height-1
-							.px-3.py-1.text-xs.text-white.bg-red.absolute.left-4.top-4.rounded-sm Популярно
-							a(href="#").block.h-full
-								img(src=require("/img/maed-mag-bg-2.jpg"), alt="").h-full.w-full.object-cover
-						.pt-4.pb-8.px-4.sm_px-6.flex.flex-col.justify-between.items-start.maed-mag-card-height-2
-							a(href="#").font-black.text-indigo.hover_text-blue-dark.mb-3.duration-300 Полный гайд по TikTok
-							p.text-indigo.mb-4 Чек-лист: нужен ли TikTok вашему бизнесу
-							a(href="#").inline-flex.items-center.rounded-md.text-center.px-4.py-2.duration-300.bg-indigo.hover_bg-blue-wave
-								span.underline.mr-2.text-white Читать
-								img(src=require("/img/arrow-white.svg"), alt="").w-4
+					.px-2
+						.bg-white.rounded-xl.overflow-hidden.maed-mag-card.mb-5.flex.flex-col
+							.relative.maed-mag-card-height-1
+								.px-3.py-1.text-xs.text-white.bg-red.absolute.left-4.top-4.rounded-sm Популярно
+								a(href="#").block.h-full
+									img(src=require("/img/maed-mag-bg-2.jpg"), alt="").h-full.w-full.object-cover
+							.pt-4.pb-8.px-4.sm_px-6.flex.flex-col.justify-between.items-start.maed-mag-card-height-2
+								a(href="#").font-black.text-indigo.hover_text-purple.mb-3.duration-300 Полный гайд по TikTok
+								p.text-indigo.mb-4 Чек-лист: нужен ли TikTok вашему бизнесу
+								+btnArrow('px-4 py-2 bg-indigo hover_bg-purple text-white rounded-lg rounded-lg', 'Читать')
 				.swiper-slide.swiper-slide-1_4
-					.bg-blue.rounded-xl.overflow-hidden.maed-mag-card.maed-mag-card__hand.mb-5.flex.flex-col.justify-between.items-start.pt-4.pb-8.px-4.sm_px-6
-						p.text-white.uppercase.text-xs.mb-4.text-center.w-full.sm_pt-8 Блог 
-						a(href="#").text-lg.sm_text-xl.font-black.mb-6.text-indigo.hover_text-blue-dark.duration-300 Как создать Customer Journey Map: путь клиента шаг за шагом 
-						a(href="#").inline-flex.items-center.rounded-md.text-center.px-4.py-2.duration-300.bg-indigo.hover_bg-blue-wave
-							span.underline.mr-2.text-white Читать
-							img(src=require("/img/arrow-white.svg"), alt="").w-4
-
+					.px-2
+						.bg-blue.rounded-xl.overflow-hidden.maed-mag-card.maed-mag-card__hand.mb-5.flex.flex-col.justify-between.items-start.pt-4.pb-8.px-4.sm_px-6
+							p.text-white.uppercase.text-xs.mb-4.text-center.w-full.sm_pt-8 Блог 
+							a(href="#").text-lg.sm_text-xl.font-black.mb-6.text-indigo.hover_text-purple.duration-300 Как создать Customer Journey Map: путь клиента шаг за шагом 
+							+btnArrow('px-4 py-2 bg-indigo hover_bg-purple text-white rounded-lg rounded-lg', 'Читать')
 			.swiper-pagination.darken
-			.swiper-button-prev.duration-300.text-indigo.border.border-blue-gray
-			.swiper-button-next.duration-300.text-indigo.border.border-gray
+			+swiperNav('indigo', 'border border-blue-gray hover_bg-indigo hover_text-white')

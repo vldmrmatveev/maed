@@ -1,0 +1,49 @@
+.checkbox-hidden {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.true-checkbox {
+	width: 20px;
+	min-width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	&:before {
+		content: '';
+		width: 14px;
+		height: 14px;
+		background-image: url('../img/check.svg');
+		background-size: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		opacity: 0;
+		@media (max-width: 639px) {
+			background-image: url('../img/check-white.svg')
+		}
+	}
+}
+
+.checkbox-hidden:checked + label .true-checkbox {
+	background-color: white;
+	&:before {
+		opacity: 1;
+	}
+	@media (max-width: 639px) {
+		background-color: $indigo;
+	}
+}
+
+.checkbox-hidden:checked + label .true-radio {
+	background-color: $white;
+	color: $indigo;
+	@media (max-width: 639px) {
+		background-color: $indigo;
+		color: $white;
+	}
+}

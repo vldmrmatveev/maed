@@ -1,7 +1,11 @@
+mixin career-track-card(img, text)
+	.flex.items-center.mb-6(class="sm_w-1/2 lg_w-1/3 px-3")
+		img(src=require("./img/"+img), alt="").lg_w-24.w-16.mr-4
+		span.font-semibold.text-indigo=text
 section.py-8.sm_py-16.container
-	.w-full(class="md_w-1/2 md_pr-4")
-		h2.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold.mb-4 Карьерный трек
-		p.text-lg.text-indigo.font-semibold.mb-6 Персональная программа обучения в зависимости от точки старта, желаний и возможностей студентов
+	.w-full(class="md_w-1/2")
+		+mainTitle('Карьерный трек')
+		+mainTextSecondary('Персональная программа обучения в зависимости от точки старта, желаний и возможностей студентов', '10')
 	.flex.justify-between.items-center.sm_items-start.relative.mb-3.sm_mb-20
 		.flex.items-center.justify-start.sm_justify-center.relative.z-10(class="lg_w-2/12 sm_w-3/12 w-2/12")
 			.sm_w-24
@@ -21,13 +25,7 @@ section.py-8.sm_py-16.container
 			p.text-md.sm_text-lg.text-indigo.font-bold Начинающий маркетолог
 		.w-24.text-right
 			p.text-md.sm_text-lg.text-indigo.font-bold Директор по&nbsp;digital-маркетингу
-	.flex.flex-wrap 
-		.flex.items-center.mb-6(class="sm_w-1/2 lg_w-1/3 sm_pr-4")
-			img(src=require("/img/Group_7453.svg"), alt="").lg_w-24.w-16.mr-4
-			span.font-semibold.text-indigo Определяем стартовый уровень студента и намечаем желаемый результат к концу обучения
-		.flex.items-center.mb-6(class="sm_w-1/2 lg_w-1/3 sm_pl-4 lg_pr-4")
-			img(src=require("/img/Group_27451.svg"), alt="").lg_w-24.w-16.mr-4
-			span.font-semibold.text-indigo Составляем индивидуальный образовательный трек из нужных модулей разных курсов
-		.flex.items-center.mb-6(class="lg_w-1/3 lg_pl-4 sm_w-1/2")
-			img(src=require("/img/Group_2123.svg"), alt="").lg_w-24.w-16.mr-4
-			span.font-semibold.text-indigo Выпускаем готового специалиста со скидкой до 50% и бесплатной консультацией с HR-ом
+	.flex.flex-wrap.-mx-3
+		+career-track-card('Group_7453.svg', 'Определяем стартовый уровень студента и намечаем желаемый результат к концу обучения')
+		+career-track-card('Group_27451.svg', 'Составляем индивидуальный образовательный трек из нужных модулей разных курсов')
+		+career-track-card('Group_2123.svg', 'Выпускаем готового специалиста со скидкой до 50% и бесплатной консультацией с HR-ом')
