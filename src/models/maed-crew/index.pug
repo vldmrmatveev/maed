@@ -1,6 +1,6 @@
 mixin maed-crew-nums(num, text)
 	.flex.items-center.mb-6
-		h5.text-indigo.text-4xl.sm_text-5xl.xl_text-6xl.font-extrabold.mr-4= num 
+		h5.text-indigo.text-4xl.sm_text-5xl.font-extrabold.mr-4= num 
 		p.text-indigo.font-bold.text-xl!= text
 section.py-16
 	.container.mb-6
@@ -10,16 +10,16 @@ section.py-16
 				+mainTextSecondary('За каждой успешной компанией или брендом стоят люди, которые приводят проект к результату. Поэтому мы сформировали команду профессионалов, которые знают, как работать в маркетинге и умеют этому учить.')
 				+btnTriangle('indigo', 'purple', 'Подробнее о команде', '12', false)
 			.w-full(class="md_w-1/2 px-3")
-				+maed-crew-nums('+300', 'человек <br> в команде')
+				+maed-crew-nums('+45', 'человек <br> в команде')
 				+maed-crew-nums('+120', 'преподавателей <br> –практиков')
 				+maed-crew-nums('+500', 'проектов в Рунете <br> за плечами у методистов')
 	.container.pt-10 
 		.flex.flex-wrap.-mx-3
-			.w-full(class="xl_w-3/12 md_w-1/2 px-3")
-				blockquote.text-indigo.text-2xl.sm_text-3xl.xl_text-4xl.font-extrabold.mb-4.blockquote.mb-6.md_mb-0 Даем возможность учиться у&nbsp;лучших
+			.w-full.flex.justify-center.sm_block(class="xl_w-3/12 md_w-1/2 px-3")
+				blockquote.text-indigo.text-4xl.font-extrabold.mb-4.blockquote.blockquote__max-width.mb-6.md_mb-0 Даем возможность учиться у&nbsp;лучших
 			.flex.items-center.flex-wrap.w-full(class='xl_w-9/12')
-				.mb-5.sm_mb-0(class="sm_w-1/2 px-3")
-					img(src=require("/img/Group_7021.png"), alt="").w-full.xl_max-w-sm.max-w-xs.block.mx-auto
+				.mb-5.sm_mb-0.flex.justify-center(class="w-full sm_w-1/2 px-3")
+					img(src=require("/img/Group_7021.png"), alt="").w-full.xl_max-w-md.max-w-xs.block.mx-auto
 				.px-3(class="sm_w-1/2")
 					h4.text-indigo.text-2xl.sm_text-3xl.xl_text-4xl.font-extrabold.mb-5 Андрей Гавриков
 					p.text-indigo.font-semibold.mb-8 Основатель Академии MAED, совладелец и генеральный директор ООО «Комплето», член Гильдии Маркетологов, NLP Practicioner, NLP MBA, телеведущий, бизнес-тренер

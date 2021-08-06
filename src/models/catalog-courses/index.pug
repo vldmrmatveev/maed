@@ -3,41 +3,41 @@ section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
 		h1.text-3xl.sm_text-4xl.md_text-6xl.font-black.mb-4.text-indigo Каталог курсов
 		.pb-4
 			+catalogUnderTitle('indigo', 'Самое время начать!')
-		.flex.flex-wrap.sm_bg-indigo.sm_px-5.sm_py-6.sm_rounded-xl
+		form(name="filter" id="filterItem").flex.flex-wrap.sm_bg-indigo.sm_px-5.sm_py-6.sm_rounded-xl
 			.w-full.mb-3.order-1(class="md_w-4/12 px-3")
 				input.border-0.border-b.border-indigo.sm_border-white.w-full.bg-transparent.sm_text-white.outline-none.text-sm.placeholder-indigo.sm_placeholder-white.mb-4(type="text" name="searchName" placeholder="Поиск по названию")
 			.flex.items-center.flex-wrap.pt-4.sm_pt-0.mb-3.order-3.sm_order-1(class="md_w-8/12 px-3")
 				.w-full.sm_w-initial.sm_mr-4.mb-4
-					+checkbox('1', 'Бесплатно')
+					+checkbox('free', 'Бесплатно')
 				.w-full.sm_w-initial.sm_mr-4.mb-4
-					+checkbox('2', 'Трудоустройство')
+					+checkbox('employment', 'Трудоустройство')
 				.w-full.sm_w-initial.sm_mr-4.mb-4
-					+checkbox('3', 'Скидка')
+					+checkbox('sale', 'Скидка')
 				.w-full.sm_w-initial.sm_mr-4.mb-4
-					+checkbox('4', 'Скоро старт')
+					+checkbox('soon', 'Скоро старт')
 				.w-full.sm_w-initial.mb-4
-					+checkbox('5', 'Международный диплом')
+					+checkbox('diploma', 'Международный диплом')
 			.w-full.flex.flex-wrap.mb-3.xl_justify-between.order-1.sm_order-2.px-3
 					.mr-2.mb-4
-						+radio('1', 'Все курсы', true, 'radio-category')
+						+radio('all', 'Все курсы', true, 'radio-category')
 					.mr-2.mb-4
-						+radio('2', 'Професcии', false, 'radio-category')
+						+radio('profession', 'Професcии', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('3', 'SMM', false, 'radio-category')
+						+radio('smm', 'SMM', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('4', 'Performance', false, 'radio-category')
+						+radio('performance', 'Performance', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('5', 'Контент', false, 'radio-category')
+						+radio('content', 'Контент', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('6', 'E-commerce', false, 'radio-category')
+						+radio('ecomerce', 'E-commerce', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('7', 'B2B', false, 'radio-category')
+						+radio('b2b', 'B2B', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('8', 'Финансы', false, 'radio-category')
+						+radio('finance', 'Финансы', false, 'radio-category')
 					.mr-2.mb-4
-						+radio('9', 'Недвижимось', false, 'radio-category')
+						+radio('realty', 'Недвижимось', false, 'radio-category')
 					.mb-4
-						+radio('10', 'Авто', false, 'radio-category')
+						+radio('auto', 'Авто', false, 'radio-category')
 			.w-full.flex.flex-wrap.order-2.sm_order-3.px-3
 				.w-full.mb-4.md_pr-3(class="md_w-1/2 lg_w-4/12")
 					.flex.justify-between.mb-2 
@@ -49,7 +49,7 @@ section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
 							span 
 							span до
 							span 
-							span#sliderRangeMax 6
+							span#sliderRangeMax 20
 							span 
 							span месяцев
 					.slide-range#sliderRange
@@ -63,7 +63,7 @@ section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
 							option(value="any") Любой
 				.w-full.lg_pl-3.mb-4(class="lg_w-4/12")
 					.select-container
-						select(name="property" data-img="star")#selectProfession
+						select(name="specification" data-img="star")#selectProfession
 							option(value="0" selected disabled) Специфика курса
 							option(value="business") Бизнес
 							option(value="marketing") Маркетинг

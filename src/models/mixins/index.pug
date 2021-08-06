@@ -1,5 +1,5 @@
 mixin mainTitle(text, margin = '4', textColor = 'indigo')
-	h2.text-3xl.sm_text-4xl.xl_text-5xl.font-extrabold(class="mb-"+margin + " text-"+textColor)!= text
+	h2.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold(class="mb-"+margin + " text-"+textColor)!= text
 mixin mainTextSecondary(text, margin = '6')
 	p.text-lg.lg_text-xl.text-indigo.font-semibold(class="mb-"+margin)!= text
 mixin swiperNav(text, bg = 'bg-gray bg-opacity-30 hover_bg-opacity-20')
@@ -63,7 +63,7 @@ mixin footerList(...lists)
 	ul 
 		each list in lists
 			li.mb-2
-				a(href="#").text-xxs.font-semibold.text-white.opacity-50.duration-300.hover_text-red.hover_opacity-100.underline= list
+				a(href="#").text-xxs.font-semibold.text-white.opacity-50.duration-300.hover_text-red.hover_opacity-100.sm_underline= list
 mixin headerList(disabled, ...lists)
 	ul.md_pt-4
 		each list, index in lists
@@ -94,12 +94,12 @@ mixin headerListMob(disabled, identity, ...lists)
 					else 
 						a(href="#").text-indigo.text-sm.font-semibold= list 
 mixin radio(link, text, checked, namedCollection)
-	input(type="radio" name=namedCollection id="radio-category-"+link checked=checked).checkbox-hidden
+	input(type="radio" value=link name=namedCollection id="radio-category-"+link checked=checked).checkbox-hidden
 	label(for="radio-category-"+link).flex.items-center.cursor-pointer
 		span.text-sm.whitespace-nowrap.font-semibold.rounded-xl.hover_bg-indigo.sm_hover_bg-white.hover_text-white.sm_hover_text-indigo.text-indigo.sm_text-white.duration-300.px-3.sm_px-4.py-3.border.border-indigo.sm_border-white.true-radio= text
 mixin checkbox(link, text)
-	input(type="checkbox" name="checkbox-"+link id="checkbox-"+link).checkbox-hidden
-	label(for="checkbox-"+link).flex.items-center.cursor-pointer
+	input(type="checkbox" name=link id=link).checkbox-hidden
+	label(for=link).flex.items-center.cursor-pointer
 		span.true-checkbox.border.border-indigo.sm_border-white.rounded-sm.duration-300 
 		span.sm_text-white.text-sm.ml-3.whitespace-nowrap= text
 mixin start-card(color, title, desc, user)
@@ -142,17 +142,17 @@ mixin start-card-new(bg, title, desc, user)
 				.flex.items-center.flex-wrap
 					p.text-2xl.font-extrabold.text-white -40%
 					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
-			img(src=require("./img/"+user), alt="" class="w-5/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
+			img(src=require("./img/"+user), alt="" class="w-5/12 xl_w-6/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
 		p.text-center.font-bold.text-gray.mb-5.opacity-80.duration-300= desc
 mixin course-card(color, bg, title, user)
-	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.sm_min-h-lg(class="bg-"+bg + " border border-" + color)
+	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color data-title=title.toUpperCase())
 		if bg == "white"
 			div(class="sm_w-9/12")
 				p.font-bold.text-sm.mb-1.text-indigo Профессия
-				p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-4.text-indigo= title 
+				p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3.text-indigo.line-height-min= title 
 				ul.list-disc.list-inside
-					li.text-xs.mb-3.text-indigo Гарантированное трудоустройство
-					li.text-xs.mb-3.text-indigo Один курс в подарок
+					li.text-xs.mb-2.text-indigo Гарантированное трудоустройство
+					li.text-xs.mb-2.text-indigo Один курс в подарок
 			div(class="w-8/12 pr-2")
 				.flex.items-end.flex-wrap
 					p.mr-2.text-lg.font-bold.line-through.text-indigo 58 000 &#8381;
@@ -169,10 +169,10 @@ mixin course-card(color, bg, title, user)
 		else
 			div(class="sm_w-9/12")
 				p.font-bold.text-sm.mb-1.text-white Профессия
-				p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-4.text-white= title 
+				p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3.text-white.line-height-min= title 
 				ul.list-disc.list-inside
-					li.text-xs.mb-3.text-white Гарантированное трудоустройство
-					li.text-xs.mb-3.text-white Один курс в подарок
+					li.text-xs.mb-2.text-white Гарантированное трудоустройство
+					li.text-xs.mb-2.text-white Один курс в подарок
 			div(class="w-8/12 pr-2")
 				.flex.items-end.flex-wrap
 					p.mr-2.text-lg.font-bold.line-through.text-white 58 000 &#8381;
@@ -186,7 +186,7 @@ mixin course-card(color, bg, title, user)
 				a(href="#" class="border border-white text-white hover_bg-white hover_text-"+color).inline-block.px-4.py-3.rounded-md.duration-300
 					span.mr-3 Записаться
 					span.inline-block.triangle-to-right
-		img(src=require("./img/"+user), alt="" class="w-5/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
+		img(src=require("./img/"+user), alt="" class="w-6/12 sm_w-5/12 lg_w-6/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
 mixin maed-logo(color, bg, size)
 	.flex.align-items-center
 		if size == 'xl'

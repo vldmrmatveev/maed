@@ -13,7 +13,7 @@
         <div class="container flex justify-between items-center">
           <nav class="hidden sm_block">
                 <ul class="flex flex-wrap">
-                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex items-center header__link" href="#" data-open="headerDesktopHidden"><span class="mr-1 pointer-events-none">Каталог курсов</span><span class="triangle-to-bottom pointer-events-none mb-0.5"></span></a>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex items-center header__link" href="#" data-open="headerDesktopHidden" data-content="headerblock-0"><span class="mr-1 pointer-events-none">Каталог курсов</span><span class="triangle-to-bottom pointer-events-none mb-0.5"></span></a>
                   </li>
                   <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">NIMA</a>
                   </li>
@@ -23,149 +23,262 @@
                   </li>
                   <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Команда</a>
                   </li>
-                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Корпоративное обучение</a>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Корп. обучение</a>
                   </li>
                   <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">MAED magazine</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex items-center header__link" href="#" data-open="headerDesktopHidden" data-content="headerblock-7"><span class="mr-1 pointer-events-none">Бесплатное обучение</span><span class="triangle-to-bottom pointer-events-none mb-0.5"></span></a>
                   </li>
                 </ul>
           </nav>
           <div class="header__logo"><a class="flex align-items-center revert-on-hover" href="#"><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">M</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">A</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">E</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">D</span></a>
           </div>
-          <button class="bg-transparent border-0 relative sm_hidden open-mob-menu outline-none" data-open="headerDesktopHidden"><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span></button>
+          <button class="bg-transparent border-0 relative sm_hidden open-mob-menu outline-none" data-open="headerDesktopHiddenMob"><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span></button>
         </div>
       </div>
-      <div class="bg-white sm_bg-indigo header__container-hidden overflow-scroll" id="headerDesktopHidden">
-        <div class="container pt-8 hidden sm_block">
-          <div class="flex flex-wrap pb-5 border-b border-white md_items-center -mx-3">
-            <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
-                  <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3" src="img/Group_7106.svg" alt="">
-                    <p class="text-white uppercase font-semibold mb-3">Экспресс-курсы</p>
+      <div class="hidden sm_block">
+        <div class="bg-white sm_bg-indigo header__container-hidden overflow-scroll" id="headerDesktopHidden">
+          <div class="hidden header-block-item" id="headerblock-7">
+            <div class="container pt-8 hidden sm_block">
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/science.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">Экспресс-курсы</p>
+                      </div>
+                      <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.</p>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Экспресс-курс для B2B-компаний</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Как нанять интернет-маркетолога</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Основы WEB-аналитики</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Как создать предложение, которое ищут клиенты</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Конкурентная разведка в digital-маркетинге</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">5 шагов к продающему сайту</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Стоит ли выходить на маркетплейсы?</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Реклама в VK: быстрый старт</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">5 шагов к продающему контент-плану</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Библиотека Digital-маркетолога</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Алгоритм создания чат-бота</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Как стать востребованным CRM-маркетологом</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SEO-ГИД 2021</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Турбостарт в SMM</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Вся кухня digital-директора за один вечер</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Account based marketing</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Поисковая реклама в Яндекс.Директ</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Аналитикка с Google data studio</a></li>
+                          </ul>
+                    </div>
                   </div>
-                  <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.</p>
-            </div>
-            <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
-              <div class="-mx-3 flex flex-wrap">
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;digital-маркетингу (NIMA-B-Digital)</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;социальным медиа&nbsp;/ SMM директор</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;Digital B2B-маркетингу</a></li>
-                      </ul>
-                </div>
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Маркетолог-практик (NIMA-A)</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Интернет-маркетолог с нуля</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Трафик-менеджер / performance</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Ведущий интернет-маркетолог</a></li>
-                      </ul>
-                </div>
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM-маркетолог</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">E-commerce маркетолог</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SMM-профи с нуля</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">С нуля до директора по Digital-маркетингу</a></li>
-                      </ul>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="flex flex-wrap pb-5 border-b border-white md_items-center -mx-3 pt-8">
-            <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
-                  <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3" src="img/apple-books.svg" alt="">
-                    <p class="text-white uppercase font-semibold mb-3">методички, чек-листы, инструкции</p>
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/apple-books.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">методички, чек-листы, инструкции</p>
+                      </div>
+                      <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.</p>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Библиотека маркетолога</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Гайд по созданию рекламных креативов</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Регистрация в Google My Business</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM-системы: сравнение</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Лидмагнит по лидмагнитам</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Справочник веб-аналитика</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Полезные сервисы в SMM</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Триггеры доверия</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Типы постов для соцсетей</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Пощаговая инструкция по анализу конкурентов</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Видеокурс по интернет-маркетингу</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Чек-листы по digital-стратегии</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Методички по SEO</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Тесты по маркетингу</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Подписаться на полезную рассылку</a></li>
+                          </ul>
+                    </div>
                   </div>
-                  <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.</p>
-            </div>
-            <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
-              <div class="-mx-3 flex flex-wrap">
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Digital-маркетинг для ТОПов и предпринимателей</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Менеджер по маркетплейсам</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Таргетолог профессионал</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Email-маркетолог профи</a></li>
-                      </ul>
-                </div>
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Мастер контекстной рекламы</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Веб-аналитик</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Мессенджер-маркетолог профи</a></li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Контент-маркетинг от а до я</a></li>
-                      </ul>
-                </div>
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM от А до Я</a>
-                        </li>
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SEO-Маркетолог</a>
-                        </li>
-                        <li class="mb-4 flex"><span class="text-xs text-white font-semibold inline-block leading-tight opacity-50">Скоро: Спец по веб трафику</span>
-                        </li>
-                      </ul>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="flex flex-wrap md_items-center -mx-3 pt-8">
-            <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
-                  <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3" src="img/chalkboard.svg" alt="">
-                    <p class="text-white uppercase font-semibold mb-3">открытые уроки и вебинары</p>
+              <div class="flex flex-wrap-mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/chalkboard.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">открытые уроки и вебинары</p>
+                      </div>
+                      <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления.</p>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Открытые уроки и вебинары</a></li>
+                          </ul>
+                    </div>
                   </div>
-                  <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления.</p>
-            </div>
-            <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
-              <div class="-mx-3 flex flex-wrap">
-                <div class="w-full lg_w-1/3 md_w-1/2 px-3">
-                      <ul class="md_pt-4">
-                        <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Интернет-маркетинг для B2B и сложных рынков</a>
-                        </li>
-                        <li class="mb-4 flex"><span class="text-xs text-white font-semibold inline-block leading-tight opacity-50">Скоро: Спец по веб трафику</span>
-                        </li>
-                      </ul>
                 </div>
               </div>
+              <div class="flex pt-5 justify-end"> <a class="close-header-container border border-red px-10 py-4 rounded-t-3xl text-white font-bold text-xs hover_bg-red duration-300" href="#">Свернуть</a></div>
             </div>
           </div>
-          <div class="flex pt-5 justify-end"> <a class="close-header-container border border-red px-10 py-4 rounded-t-3xl text-white font-bold text-xs hover_bg-red duration-300" href="#">Свернуть</a></div>
+          <div class="hidden header-block-item" id="headerblock-0">
+            <div class="container pt-8 hidden sm_block">
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/Group_7106.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">ПрофесCии</p>
+                      </div>
+                      <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.</p>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;digital-маркетингу (NIMA-B-Digital)</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;социальным медиа&nbsp;/ SMM директор</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;Digital B2B-маркетингу</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Маркетолог-практик (NIMA-A)</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Интернет-маркетолог с нуля</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Трафик-менеджер / performance</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Ведущий интернет-маркетолог</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM-маркетолог</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">E-commerce маркетолог</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SMM-профи с нуля</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">С нуля до директора по Digital-маркетингу</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/Group_7107.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">Инструменты маркеТинга</p>
+                      </div>
+                      <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.</p>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Digital-маркетинг для ТОПов и предпринимателей</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Менеджер по маркетплейсам</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Таргетолог профессионал</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Email-маркетолог профи</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Мастер контекстной рекламы</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Веб-аналитик</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Мессенджер-маркетолог профи</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Контент-маркетинг от а до я</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM от А до Я</a>
+                            </li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SEO-Маркетолог</a>
+                            </li>
+                            <li class="mb-4 flex"><span class="text-xs text-white font-semibold inline-block leading-tight opacity-50">Скоро: Спец по веб трафику</span>
+                            </li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap -mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/Group_7108.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">Отраслевые курсы</p>
+                      </div>
+                      <p class="text-white text-xs opacity-50 lg_mb-2 mb-6">Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления.</p>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="md_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Интернет-маркетинг для B2B и сложных рынков</a>
+                            </li>
+                            <li class="mb-4 flex"><span class="text-xs text-white font-semibold inline-block leading-tight opacity-50">Скоро: Спец по веб трафику</span>
+                            </li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex pt-5 justify-end"> <a class="close-header-container border border-red px-10 py-4 rounded-t-3xl text-white font-bold text-xs hover_bg-red duration-300" href="#">Свернуть</a></div>
+            </div>
+          </div>
         </div>
-        <div class="container pt-8 sm_hidden" id="mobContent">
-              <ul> 
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Каталог курсов</a></li>
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">NIMA</a></li>
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Экосистема обучения</a></li>
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Центр карьеры</a></li>
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Команда</a></li>
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Корпоративное обучение</a></li>
-                <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">MAED magazine</a></li>
-              </ul>
-          <div class="block"><a class="flex items-center justify-between py-4 drop__link" href="#forFree" data-dropdown="true" data-parent="#mobContent"><span class="font-extrabold text-xl drop__link-item text-indigo">Бесплатные знания</span>
-                  <svg class="w-4 ml-4 duration-300 pointer-events-none" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 1L7 6L1 1" stroke="#223549" stroke-width="2"></path>
-                  </svg></a>
-                <div class="drop__collapse" id="forFree">
-                  <ul class="py-3"> 
-                    <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Экспресс-курсы</a>
-                    </li>
-                    <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Инструкции, методички, чек-листы</a>
-                    </li>
-                    <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Открытые уроки и вебинары</a>
-                    </li>
-                  </ul>
-                </div>
+      </div>
+      <div class="sm_hidden">
+        <div class="bg-white sm_bg-indigo header__container-hidden overflow-scroll" id="headerDesktopHiddenMob">
+          <div class="container pt-8 sm_hidden" id="mobContent">
+                <ul> 
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Каталог курсов</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">NIMA</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Экосистема обучения</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Центр карьеры</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Команда</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Корп. обучение</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">MAED magazine</a></li>
+                </ul>
+            <div class="block"><a class="flex items-center justify-between py-4 drop__link" href="#forFree" data-dropdown="true" data-parent="#mobContent"><span class="font-extrabold text-xl drop__link-item text-indigo">Бесплатные знания</span>
+                    <svg class="w-4 ml-4 duration-300 pointer-events-none" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 1L7 6L1 1" stroke="#223549" stroke-width="2"></path>
+                    </svg></a>
+                  <div class="drop__collapse" id="forFree">
+                    <ul class="py-3"> 
+                      <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Экспресс-курсы</a>
+                      </li>
+                      <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Инструкции, методички, чек-листы</a>
+                      </li>
+                      <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Открытые уроки и вебинары</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="pt-32 sm_pt-56 md_pt-48 lg_pt-36 mb-14 z-20 relative overflow-hidden">
-      <div class="container mb-6">
-        <div class="flex items-start flex-wrap"> 
-          <div class="w-full sm_w-7/12 sm_pr-4">
+    <section class="pt-32 sm_pt-56 md_pt-48 mb-14 z-20 relative overflow-hidden">
+      <div class="container mb-6 lg_mb-16">
+        <div class="flex items-start flex-wrap -mx-3">
+          <div class="w-full sm_w-7/12 px-3">
             <h1 class="text-3xl md_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Академия маркетинга международного уровня</h1>
           </div>
-          <div class="w-full sm_w-5/12 sm_pl-4">
+          <div class="w-full sm_w-5/12 px-3 xl_pr-0">
                 <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Все курсы адаптированы под задачи студентов, наполнены актуальными знаниями, при этом не перегружены лишней информацией</p>
           </div>
         </div>
@@ -206,7 +319,7 @@
       <div class="container mb-6">
         <div class="flex items-center flex-wrap"> 
           <div class="w-full sm_w-1/2 sm_pr-4">
-                <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Мы знаем, что нужно именно тебе</h2>
+                <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Мы знаем, <br> что нужно именно тебе</h2>
                 <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Даём актуальное системное образование по всем основным направлениям маркетинга и управления бизнесом.</p>
           </div>
           <div class="hidden sm_block w-full sm_w-1/2 sm_pl-4">
@@ -221,7 +334,7 @@
         <div class="hidden md_flex flex-wrap pt-6 -mx-3">
               <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                 <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-yellow">
-                  <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Новички</h5>
+                  <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Новички</h5>
                   <ul class="pl-3 list-disc">
                     <li class="mb-3 font-semibold text-indigo text-sm">Системные базовые знания</li>
                     <li class="mb-3 font-semibold text-indigo text-sm">Обучение профессии с нуля</li>
@@ -231,7 +344,7 @@
               </div>
               <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                 <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                  <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Маркетологи</h5>
+                  <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Маркетологи</h5>
                   <ul class="pl-3 list-disc">
                     <li class="mb-3 font-semibold text-indigo text-sm">Новые инструменты маркетинга</li>
                     <li class="mb-3 font-semibold text-indigo text-sm">Карьерный рост до руководителя</li>
@@ -241,7 +354,7 @@
               </div>
               <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                 <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                  <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Директора</h5>
+                  <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Директора</h5>
                   <ul class="pl-3 list-disc">
                     <li class="mb-3 font-semibold text-indigo text-sm">Формирование личного бренда</li>
                     <li class="mb-3 font-semibold text-indigo text-sm">Поиск сотрудников  и партнеров</li>
@@ -251,13 +364,13 @@
               </div>
               <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                 <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                  <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Отраслевой маркетинг</h5>
+                  <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Отраслевой маркетинг</h5>
                   <p class="mb-3 font-semibold text-indigo text-sm">Специализированный курс для промышленных компаний из сферы  B2B с сетями диллеров</p>
                 </div>
               </div>
               <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                 <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                  <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Компании</h5>
+                  <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Компании</h5>
                   <ul class="pl-3 list-disc">
                     <li class="mb-3 font-semibold text-indigo text-sm">Обучение вашего маркетингового отдела под задачи бизнеса</li>
                     <li class="mb-3 font-semibold text-indigo text-sm">Переориентирование дилеров и партнёров на digital- инструменты и технологии</li>
@@ -271,7 +384,7 @@
               <div class="swiper-slide">
                     <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                       <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-yellow">
-                        <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Новички</h5>
+                        <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Новички</h5>
                         <ul class="pl-3 list-disc">
                           <li class="mb-3 font-semibold text-indigo text-sm">Системные базовые знания</li>
                           <li class="mb-3 font-semibold text-indigo text-sm">Обучение профессии с нуля</li>
@@ -283,7 +396,7 @@
               <div class="swiper-slide">
                     <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                       <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                        <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Маркетологи</h5>
+                        <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Маркетологи</h5>
                         <ul class="pl-3 list-disc">
                           <li class="mb-3 font-semibold text-indigo text-sm">Новые инструменты маркетинга</li>
                           <li class="mb-3 font-semibold text-indigo text-sm">Карьерный рост до руководителя</li>
@@ -295,7 +408,7 @@
               <div class="swiper-slide">
                     <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                       <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                        <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Директора</h5>
+                        <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Директора</h5>
                         <ul class="pl-3 list-disc">
                           <li class="mb-3 font-semibold text-indigo text-sm">Формирование личного бренда</li>
                           <li class="mb-3 font-semibold text-indigo text-sm">Поиск сотрудников  и партнеров</li>
@@ -307,7 +420,7 @@
               <div class="swiper-slide">
                     <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                       <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                        <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Отраслевой маркетинг</h5>
+                        <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Отраслевой маркетинг</h5>
                         <p class="mb-3 font-semibold text-indigo text-sm">Специализированный курс для промышленных компаний из сферы  B2B с сетями диллеров</p>
                       </div>
                     </div>
@@ -315,7 +428,7 @@
               <div class="swiper-slide">
                     <div class="mb-6 w-full px-3 md_w-4/12 xl_w-1/5">
                       <div class="rounded-xl border border-yellow px-4 py-8 min-h-md h-full bg-white">
-                        <h5 class="text-indigo text-lg font-extrabold leading-tight mb-3">Компании</h5>
+                        <h5 class="text-indigo text-xl lg_text-2xl font-extrabold leading-tight mb-3">Компании</h5>
                         <ul class="pl-3 list-disc">
                           <li class="mb-3 font-semibold text-indigo text-sm">Обучение вашего маркетингового отдела под задачи бизнеса</li>
                           <li class="mb-3 font-semibold text-indigo text-sm">Переориентирование дилеров и партнёров на digital- инструменты и технологии</li>
@@ -332,7 +445,7 @@
     </section>
     <section class="container">
       <div class="w-full sm_w-10/12">
-            <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-6 text-indigo">MAED – единственный официальный представитель NIMA в России с 2013</h2>
+            <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-6 text-indigo">MAED – единственный официальный представитель NIMA в России с 2013</h2>
       </div>
       <div class="flex items-end flex-wrap -mx-3">
         <div class="w-full lg_w-1/2 px-3">
@@ -366,7 +479,7 @@
       </div>
       <div class="bg-indigo">
         <div class="container pb-10 pt-16">
-              <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-8 text-white">Что дают программы NIMA</h2>
+              <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-8 text-white">Что дают программы NIMA</h2>
           <div class="flex flex-wrap -mx-3">
             <div class="md_w-3/12 px-3">
               <h5 class="text-white text-xl font-extrabold mb-4 pt-3 md_pt-0">Европейский диплом и&nbsp;квалификацию</h5>
@@ -392,20 +505,20 @@
       <div class="container mb-6">
         <div class="flex items-center flex-wrap -mx-3">
           <div class="w-full md_w-1/2 px-3">
-                <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Команда MAED</h2>
+                <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Команда MAED</h2>
                 <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">За каждой успешной компанией или брендом стоят люди, которые приводят проект к результату. Поэтому мы сформировали команду профессионалов, которые знают, как работать в маркетинге и умеют этому учить.</p><a class="bg-indigo hover_bg-purple mb-12 inline-flex items-center px-8 md_px-10 py-3 rounded-xl duration-300 text-white" href="#"><span class="font-semibold mr-3">Подробнее о команде</span><span class="triangle-to-right triangle-to-right__big inline-block"></span></a>
           </div>
           <div class="w-full md_w-1/2 px-3">
                 <div class="flex items-center mb-6">
-                  <h5 class="text-indigo text-4xl sm_text-5xl xl_text-6xl font-extrabold mr-4">+300</h5>
+                  <h5 class="text-indigo text-4xl sm_text-5xl font-extrabold mr-4">+45</h5>
                   <p class="text-indigo font-bold text-xl">человек <br> в команде</p>
                 </div>
                 <div class="flex items-center mb-6">
-                  <h5 class="text-indigo text-4xl sm_text-5xl xl_text-6xl font-extrabold mr-4">+120</h5>
+                  <h5 class="text-indigo text-4xl sm_text-5xl font-extrabold mr-4">+120</h5>
                   <p class="text-indigo font-bold text-xl">преподавателей <br> –практиков</p>
                 </div>
                 <div class="flex items-center mb-6">
-                  <h5 class="text-indigo text-4xl sm_text-5xl xl_text-6xl font-extrabold mr-4">+500</h5>
+                  <h5 class="text-indigo text-4xl sm_text-5xl font-extrabold mr-4">+500</h5>
                   <p class="text-indigo font-bold text-xl">проектов в Рунете <br> за плечами у методистов</p>
                 </div>
           </div>
@@ -413,11 +526,11 @@
       </div>
       <div class="container pt-10"> 
         <div class="flex flex-wrap -mx-3">
-          <div class="w-full xl_w-3/12 md_w-1/2 px-3">
-            <blockquote class="text-indigo text-2xl sm_text-3xl xl_text-4xl font-extrabold mb-4 blockquote mb-6 md_mb-0">Даем возможность учиться у&nbsp;лучших</blockquote>
+          <div class="w-full flex justify-center sm_block xl_w-3/12 md_w-1/2 px-3">
+            <blockquote class="text-indigo text-4xl font-extrabold mb-4 blockquote blockquote__max-width mb-6 md_mb-0">Даем возможность учиться у&nbsp;лучших</blockquote>
           </div>
           <div class="flex items-center flex-wrap w-full xl_w-9/12">
-            <div class="mb-5 sm_mb-0 sm_w-1/2 px-3"><img class="w-full xl_max-w-sm max-w-xs block mx-auto" src="img/Group_7021.png" alt=""></div>
+            <div class="mb-5 sm_mb-0 flex justify-center w-full sm_w-1/2 px-3"><img class="w-full xl_max-w-md max-w-xs block mx-auto" src="img/Group_7021.png" alt=""></div>
             <div class="px-3 sm_w-1/2">
               <h4 class="text-indigo text-2xl sm_text-3xl xl_text-4xl font-extrabold mb-5">Андрей Гавриков</h4>
               <p class="text-indigo font-semibold mb-8">Основатель Академии MAED, совладелец и генеральный директор ООО «Комплето», член Гильдии Маркетологов, NLP Practicioner, NLP MBA, телеведущий, бизнес-тренер</p>
@@ -431,7 +544,7 @@
     </section>
     <section class="py-8 sm_py-16 container">
       <div class="w-full md_w-1/2">
-            <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Карьерный трек</h2>
+            <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Карьерный трек</h2>
             <p class="text-lg lg_text-xl text-indigo font-semibold mb-10">Персональная программа обучения в зависимости от точки старта, желаний и возможностей студентов</p>
       </div>
       <div class="flex justify-between items-center sm_items-start relative mb-3 sm_mb-20">
@@ -468,7 +581,7 @@
     <section class="py-16 container">
       <div class="flex flex-wrap items-center mb-8 -mx-3">
         <div class="w-full md_w-1/2 px-3">
-              <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Выпускники MAED</h2>
+              <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Выпускники MAED</h2>
               <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Более 100 компаний, в которых работают наши выпускники. От перспективных стартапов до крупных международных корпораций в разных сферах бизнеса. Масштаб меняется — оплата растет</p>
         </div>
         <div class="w-full md_w-1/2 px-3">
@@ -582,7 +695,7 @@
     <section class="py-8 sm_py-16 container">
       <div class="flex flex-wrap items-center mb-8 -mx-3">
         <div class="w-full md_w-1/2 px-3">
-              <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Кейсы <br> выпускников</h2>
+              <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Кейсы <br> выпускников</h2>
         </div>
         <div class="w-full flex flex-wrap md_w-1/2 px-3">
               <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Журнал о digital, маркетинге, бизнесе и менеджменте. Подробные мануалы, исчерпывающие гайды, инструкции, обзоры и новости в мире маркетинга.</p>
@@ -640,9 +753,11 @@
     </section>
     <section class="py-16 container">
       <div class="flex flex-wrap items-center mb-4 -mx-3">
-        <div class="w-full md_w-1/2 px-3">
-              <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Экосистема MAED</h2>
-              <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Мы погружаем студента в маркетинговую среду MAED, где на каждом этапе его окружают элементы, направленные на повышение профессиональных компетенций и их развитие</p>
+        <div class="w-full md_w-8/12 px-3">
+              <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Экосистема MAED</h2>
+          <div class="max-w-2xl">
+                <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Мы погружаем студента в маркетинговую среду MAED, где на каждом этапе его окружают элементы, направленные на повышение профессиональных компетенций и их развитие</p>
+          </div>
         </div>
       </div>
       <div class="flex flex-wrap relative py-6 -mx-3">
@@ -671,7 +786,7 @@
       <div class="bg-yellow p-4 sm_px-12 sm_py-10 flex flex-wrap items-center rounded-xl mt-16"> 
         <div class="w-full order-2 md_order-1 md_w-1/2 md_pr-4 lg_w-7/12">
           <h3 class="text-indigo text-3xl sm_text-4xl xl_text-5xl font-black mb-2">Masters Education 360&deg; </h3>
-          <p class="text-indigo font-black text-xl mb-6">&mdash;&nbsp;это подход, в&nbsp;котором подготовка специалиста не&nbsp;ограничивается образовательным курсом, а&nbsp;захватывает все сферы, связанные с&nbsp;развитием в&nbsp;выбранном направлении профессиональной деятельности</p><a class="bg-indigo hover_bg-purple mb-4 inline-flex items-center px-8 md_px-10 py-3 rounded-xl duration-300 text-white" href="#"><span class="font-semibold mr-3">Подробнее о подходе</span><span class="triangle-to-right triangle-to-right__big inline-block"></span></a>
+          <p class="text-indigo font-bold sm_font-black sm_text-xl mb-6">&mdash;&nbsp;это подход, в&nbsp;котором подготовка специалиста не&nbsp;ограничивается образовательным курсом, а&nbsp;захватывает все сферы, связанные с&nbsp;развитием в&nbsp;выбранном направлении профессиональной деятельности</p><a class="bg-indigo hover_bg-purple mb-4 inline-flex items-center px-8 md_px-10 py-3 rounded-xl duration-300 text-white" href="#"><span class="font-semibold mr-3">Подробнее о подходе</span><span class="triangle-to-right triangle-to-right__big inline-block"></span></a>
         </div>
         <div class="w-full mb-6 md_mb-0 order-1 md_order-2 md_w-1/2 md_pl-4 lg_w-5/12"><img class="w-full" src="img/maed-ecosystem.svg" alt=""></div>
       </div>
@@ -679,8 +794,8 @@
     <section class="py-8 sm_py-16 container">
       <div class="flex flex-wrap items-center mb-4 -mx-3">
         <div class="w-full md_w-8/12 xl_w-1/2 px-3">
-              <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Центр карьеры</h2>
-              <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Помогаем студентам найти работу мечты, а компаниям- партнерам получить квалифицированных специалистов из сферы digital</p><a class="bg-indigo hover_bg-purple mb-10 inline-flex items-center px-8 md_px-10 py-3 rounded-xl duration-300 text-white" href="#"><span class="font-semibold mr-3">Подробнее о подходе</span><span class="triangle-to-right triangle-to-right__big inline-block"></span></a>
+              <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Центр карьеры</h2>
+              <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">Помогаем студентам найти работу мечты, а компаниям- партнерам получить квалифицированных специалистов из сферы digital</p><a class="bg-indigo hover_bg-purple mb-10 inline-flex items-center px-8 md_px-10 py-3 rounded-xl duration-300 text-white" href="#"><span class="font-semibold mr-3">Узнать больше</span><span class="triangle-to-right triangle-to-right__big inline-block"></span></a>
         </div>
       </div>
       <div class="flex flex-wrap">
@@ -723,7 +838,7 @@
       </div>
     </section>
     <section class="py-8 sm_py-16 container">
-          <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-6 text-indigo">Условия обучения Академии MAED</h2>
+          <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-6 text-indigo">Условия обучения Академии MAED</h2>
       <div class="w-full md_w-8/12 lg_w-7/12">
             <p class="text-lg lg_text-xl text-indigo font-semibold mb-14">Помогаем студентам найти работу мечты, а&nbsp;компаниям- партнерам получить квалифицированных специалистов из&nbsp;сферы digital</p>
       </div>
@@ -744,16 +859,16 @@
         </div>
         <div class="flex flex-wrap -mx-3">
           <div class="mb-6 sm_w-4/12 px-3">
-            <h3 class="text-red text-xl font-extrabold mb-4">Курсы</h3>
-            <p class="text-white text-sm font-semibold">Для резидентов закрытого клуба особые льготные условия на покупку курсов MAED</p>
+            <h3 class="text-red text-2xl font-extrabold mb-4">Курсы</h3>
+            <p class="text-white text-sm font-semibold"><span class="hidden sm_inline-block">Для резидентов закрытого клуба особые льготные условия на покупку курсов MAED</span><span class="sm_hidden"> <span>Доступ к 2-м платным модулям из разных курсов MAED в месяц бесплатно </span><br><a class="text-red font-bold underline" href="#">Подробнее о курсах </a></span></p>
           </div>
           <div class="mb-6 sm_w-4/12 px-3">
-            <h3 class="text-red text-xl font-extrabold mb-4">Материалы</h3>
-            <p class="text-white text-sm font-semibold">Практические материалы и чек-листы для применения в работе</p>
+            <h3 class="text-red text-2xl font-extrabold mb-4">Материалы</h3>
+            <p class="text-white text-sm font-semibold"> <span>Практические материалы и чек-листы для </span><a class="text-red sm_text-white font-bold underline" href="#">применения в работе</a></p>
           </div>
           <div class="mb-6 sm_w-4/12 px-3">
-            <h3 class="text-red text-xl font-extrabold mb-4">Общение</h3>
-            <p class="text-white text-sm font-semibold"><span>Маркетологи-практики делятся </span><a class="font-bold underline" href="#">реальными кейсами, </a><span>победами и провалами</span></p>
+            <h3 class="text-red text-2xl font-extrabold mb-4">Общение</h3>
+            <p class="text-white text-sm font-semibold"><span>Маркетологи-практики делятся </span><a class="text-red sm_text-white font-bold underline" href="#">реальными кейсами</a><span>, </span><span>победами и провалами</span></p>
           </div>
         </div>
         <div class="sm_absolute left-0 right-0 mx-auto flex justify-center -bottom-4"><a class="inline-flex items-center bg-red rounded-lg text-center px-12 py-3 hover_bg-red-dark duration-300" href="#"><span class="underline font-bold text-white">Вступить в клуб </span></a></div>
@@ -762,7 +877,7 @@
     <section class="py-16 container">
       <div class="flex flex-wrap items-start mb-8 -mx-3">
         <div class="w-full md_w-1/2 px-3">
-              <h2 class="text-3xl sm_text-4xl xl_text-5xl font-extrabold mb-4 text-indigo">Сообщество</h2>
+              <h2 class="text-3xl sm_text-4xl xl_text-5xl xl_text-titlemin font-extrabold mb-4 text-indigo">Сообщество</h2>
         </div>
         <div class="w-full md_w-1/2 px-3">
               <p class="text-lg lg_text-xl text-indigo font-semibold mb-6">MAED&nbsp;&mdash; это комьюнити профессионалов, где каждый может найти ответы на&nbsp;свои вопросы, встретить единомышленников и&nbsp;выстроить траекторию собственного развития</p>
@@ -770,27 +885,31 @@
       </div>
       <div class="flex flex-wrap -mx-3">
         <div class="w-full mb-6 md_w-1/2 lg_w-4/12 px-3">
-              <div class="rounded-xl px-8 py-10 flex flex-col justify-between h-full bg-yellow-light">
-                <div class="w-full">
+              <div class="rounded-xl px-4 py-6 sm_px-8 sm_py-10 flex flex-col justify-between h-full bg-yellow-light">
+                <div class="w-full order-2 sm_order-1">
                   <h5 class="text-xl sm_text-2xl xl_text-3xl text-indigo mb-4 font-bold sm_min-h-sm flex items-center">#ТЫЖМАРКЕТОЛОГ</h5>
-                  <p class="text-sm mb-4">Открытая группа для маркетологов-практиков с пользой для дела и общением для души</p><a class="inline-block px-8 md_px-10 py-3 rounded-xl duration-300 bg-indigo text-white hover_bg-purple mb-4" href="#" target="_blank"><span class="font-semibold underline">Facebook</span></a>
-                </div><img class="w-full max-w-xs mx-auto block" src="img/community-1.svg" alt="">
+                  <p class="text-sm mb-4">Открытая группа для маркетологов-практиков с пользой для дела и общением для души</p>
+                  <div class="flex items-start justify-start -mx-1">
+                    <div class="px-1 w-1/2 sm_w-full"><a class="w-full sm_w-initial inline-block px-6 sm_px-8 md_px-10 py-3 rounded-md sm_rounded-xl duration-300 bg-indigo text-white hover_bg-purple sm_mb-4 text-center" href="#" target="_blank"><span class="font-semibold sm_underline">Facebook</span></a></div>
+                    <div class="px-1 w-1/2 sm_hidden"><a class="w-full sm_w-initial sm_hidden inline-block px-6 sm_px-8 md_px-10 py-3 rounded-md sm_rounded-xl duration-300 bg-indigo text-white hover_bg-purple sm_mb-4 px-3 text-center" href="#" target="_blank"><span class="font-semibold sm_underline">Telegram</span></a></div>
+                  </div>
+                </div><img class="w-full max-w-xs mx-auto block order-1 sm_order-2 sm_mb-0 mb-5" src="img/community-1.svg" alt="">
               </div>
         </div>
         <div class="w-full mb-6 md_w-1/2 lg_w-4/12 px-3">
-              <div class="rounded-xl px-8 py-10 flex flex-col justify-between h-full bg-red-light">
-                <div class="w-full">
+              <div class="rounded-xl px-4 py-6 sm_px-8 sm_py-10 flex flex-col justify-between h-full bg-red-light">
+                <div class="w-full order-2 sm_order-1">
                   <h5 class="text-xl sm_text-2xl xl_text-3xl text-indigo mb-4 font-bold sm_min-h-sm flex items-center">Закрытые телеграм-каналы</h5>
-                  <p class="text-sm mb-4">Статьи, анонсы онлайн-занятий и любой полезный контент, который пригодится интернет-маркетологу.</p><a class="inline-block px-8 md_px-10 py-3 rounded-xl duration-300 bg-indigo text-white hover_bg-purple mb-4" href="#" target="_blank"><span class="font-semibold underline">Telegram</span></a>
-                </div><img class="w-full max-w-xs mx-auto block" src="img/community-2.svg" alt="">
+                  <p class="text-sm mb-4">Статьи, анонсы онлайн-занятий и любой полезный контент, который пригодится интернет-маркетологу.</p><a class="w-full sm_w-initial inline-block px-8 md_px-10 py-3 rounded-md sm_rounded-xl duration-300 bg-indigo text-white hover_bg-purple sm_mb-4 text-center" href="#" target="_blank"><span class="hidden sm_inline-block font-semibold underline">Telegram</span><span class="font-semibold sm_hidden">Наш блог</span></a>
+                </div><img class="w-full max-w-xs mx-auto block order-1 sm_order-2 sm_mb-0 mb-5" src="img/community-2.svg" alt="">
               </div>
         </div>
         <div class="w-full mb-6 md_w-1/2 lg_w-4/12 px-3">
-              <div class="rounded-xl px-8 py-10 flex flex-col justify-between h-full bg-blue-lightwave">
-                <div class="w-full">
+              <div class="rounded-xl px-4 py-6 sm_px-8 sm_py-10 flex flex-col justify-between h-full bg-blue-lightwave">
+                <div class="w-full order-2 sm_order-1">
                   <h5 class="text-xl sm_text-2xl xl_text-3xl text-indigo mb-4 font-bold sm_min-h-sm flex items-center">Сообщество <br> студентов</h5>
-                  <p class="text-sm mb-4">Внутренние чаты курсов, доступные после зачисления</p>
-                </div><img class="w-full max-w-xs mx-auto block" src="img/community-3.svg" alt="">
+                  <p class="text-sm mb-4">Внутренние чаты курсов, доступные после зачисления</p><a class="w-full sm_hidden inline-block px-8 md_px-10 py-3 rounded-md sm_rounded-xl duration-300 bg-indigo text-white hover_bg-purple sm_mb-4 text-center" href="#" target="_blank"><span class="font-semibold">Сообщество</span></a>
+                </div><img class="w-full max-w-xs mx-auto block order-1 sm_order-2 sm_mb-0 mb-5" src="img/community-3.svg" alt="">
               </div>
         </div>
       </div>
@@ -813,15 +932,15 @@
             <div class="swiper-slide swiper-slide-1_2">
               <div class="px-2">
                 <div class="bg-blue rounded-xl flex flex-wrap overflow-hidden maed-mag-card mb-5">
-                  <div class="w-full sm_h-full sm_order-1 order-2 sm_w-8/12">
-                    <div class="p-8 flex flex-col justify-between items-start h-full"><span class="text-xs uppercase text-blue-newwave mb-4">Блог</span><a class="text-lg sm_text-xl font-black mb-6 text-indigo hover_text-purple duration-300" href="#">Как начать карьеру интернет-маркетолога</a>
+                  <div class="h-full w-8/12">
+                    <div class="px-4 py-6 sm_p-8 flex flex-col justify-between items-start h-full"><span class="text-xs uppercase text-blue-newwave mb-4">Блог</span><a class="text-lg sm_text-xl font-black mb-6 text-indigo hover_text-purple duration-300" href="#">Как начать карьеру интернет-маркетолога</a>
                       <p class="text-sm mb-6 text-indigo">Карьерный путь, навыки и обязанности начинающего маркетолога.</p><a class="px-4 py-2 bg-indigo hover_bg-purple text-white rounded-lg rounded-lg inline-flex items-center text-center duration-300" href="#"><span class="underline mr-2">Читать</span>
                             <svg class="w-6" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M3 10V11H14V14L18 10.5L14 7V10H3Z"></path>
                             </svg></a>
                     </div>
                   </div>
-                  <div class="hidden sm_block w-full sm_order-2 order-1 sm_w-4/12"><a class="block sm_h-full" href="#"><img class="w-full h-full object-cover" src="img/maed-mag-bg.jpg" alt=""></a></div>
+                  <div class="w-4/12"><a class="block h-full" href="#"><img class="w-full h-full object-cover" src="img/maed-mag-bg.jpg" alt=""></a></div>
                 </div>
               </div>
             </div>
@@ -866,7 +985,7 @@
                 <input class="w-full lg_w-2/4 rounded-md md_rounded-r-none md_rounded-l-xl border border-white px-6 outline-none py-3 mb-4 duration-300 bg-transparent input_email text-white" type="email" name="email" placeholder="Введите свою почту" required>
                 <button class="btn_submit bg-white text-indigo rounded-md md_rounded-l-none md_rounded-r-xl px-4 py-3 hover_bg-blue-light duration-300 font-semibold mb-4 w-full lg_w-1/4" data-text="Ваши данные были успешно отправлены" data-container="#footerFormText">Подписаться</button>
               </form>
-              <div class="text-xs text-white font-bold opacity-50 max-w-md" id="footerFormText">Подпишись на&nbsp;рассылку и&nbsp;получай полезные материалы, анонсы, советы и&nbsp;лайфхаки от&nbsp;экспертов по&nbsp;маркетингу</div>
+              <div class="text-xs text-white font-semibold opacity-50 max-w-md" id="footerFormText">Подпишись на&nbsp;рассылку и&nbsp;получай полезные материалы, анонсы, советы и&nbsp;лайфхаки от&nbsp;экспертов по&nbsp;маркетингу</div>
             </div>
           </div>
           <div class="w-full md_flex justify-between flex-wrap items-center pt-2 order-1 sm_order-2 sm_w-1/2 px-3">
@@ -876,94 +995,84 @@
             <div class="mb-6 sm_mb-3 md_pl-2"><a class="text-white text-xl font-bold hover_text-blue-light duration-300" href="tel:84959847500">+7 (495) 984-7500</a></div>
           </div>
         </div>
-        <div class="flex flex-wrap items-start mt-2 sm_mb-6 border-t sm_border-b border-white">
-          <div class="w-full sm_border-r border-white px-3 sm_w-1/2 md_w-7/12 xl_w-8/12"> 
+        <div class="flex flex-wrap items-start mt-2 sm_mb-6 border-t sm_border-b border-white border-opacity-50">
+          <div class="w-full sm_border-r border-white px-3 border-opacity-50 sm_w-1/2 md_w-7/12 xl_w-8/12"> 
             <div class="flex flex-wrap items-start pt-6 pb-4 -mx-3">
               <div class="w-full sm_px-3 xl_pl-0">
                 <p class="font-semibold text-white text-sm mb-4">Профессии</p>
               </div>
               <div class="w-full md_pr-2 order-1 sm_px-3 xl_pl-0 md_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Директор по digital- маркетингу (NIMA-B-Digital)</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Директор по социальным медиа / SMM директор</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Интернет-маркетолог с нуля</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Директор по digital- маркетингу (NIMA-B-Digital)</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Директор по социальным медиа / SMM директор</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Интернет-маркетолог с нуля</a></li>
                     </ul>
               </div>
               <div class="w-full order-4 xl_order-2 sm_px-3 lg_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Директор по Digital B2B-маркетингу</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">С нуля до директора по Digital-маркетингу</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Директор по Digital B2B-маркетингу</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">С нуля до директора по Digital-маркетингу</a></li>
                     </ul>
               </div>
               <div class="w-full sm_px-3 order-2 xl_order-3 md_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Маркетолог-практик (NIMA-A)</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Ведущий интернет-маркетолог</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Трафик-менеджер/performance</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Маркетолог-практик (NIMA-A)</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Ведущий интернет-маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Трафик-менеджер/performance</a></li>
                     </ul>
               </div>
               <div class="w-full sm_px-3 order-3 xl_order-4 md_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">E-commerce маркетолог</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">SMM-профи с нуля</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">CRM-маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">E-commerce маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">SMM-профи с нуля</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">CRM-маркетолог</a></li>
                     </ul>
               </div>
             </div>
-            <div class="flex flex-wrap items-start pt-6 pb-4 border-t border-white -mx-3">
+            <div class="flex flex-wrap items-start pt-6 pb-4 border-t border-white -mx-3 border-opacity-50">
               <div class="w-full sm_px-3 xl_pl-0">
                 <p class="font-semibold text-white text-sm mb-4">Инструменты маркетинга</p>
               </div>
               <div class="w-full sm_px-3 xl_pl-0 md_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Таргетолог профессионал</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Email-маркетолог профи</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Мастер контекстной рекламы</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Таргетолог профессионал</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Email-маркетолог профи</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Мастер контекстной рекламы</a></li>
                     </ul>
               </div>
               <div class="w-full sm_px-3 md_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Веб-аналитик</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Менеджер по маркетплейсам</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">CRM от А до Я</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Веб-аналитик</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Менеджер по маркетплейсам</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">CRM от А до Я</a></li>
                     </ul>
               </div>
               <div class="w-full sm_px-3 md_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Digital-маркетинг для ТОПов и предпринимателей</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Мессенджер-маркетолог профессионал</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Digital-маркетинг для ТОПов и предпринимателей</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Мессенджер-маркетолог профессионал</a></li>
                     </ul>
               </div>
               <div class="w-full sm_px-3 lg_w-1/2 xl_w-3/12">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">SEO-Маркетолог</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Контент-маркетинг от а до я</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">SEO-Маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Контент-маркетинг от а до я</a></li>
                     </ul>
               </div>
             </div>
-            <div class="flex flex-wrap items-start pt-6 pb-4 border-t border-white sm_border-b-0 border-b -mx-3">
+            <div class="flex flex-wrap items-start pt-6 pb-4 border-t border-white sm_border-b-0 border-b -mx-3 border-opacity-50">
               <div class="w-full sm_px-3 xl_pl-0">
                 <p class="font-semibold text-white text-sm mb-4">Отраслевые курсы</p>
               </div>
               <div class="w-full sm_px-3 xl_pl-0 xl_w-1/3">
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Интернет-маркетинг для B2B и сложных рынков</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Интернет-маркетинг для B2B и сложных рынков</a></li>
                     </ul>
-              </div>
-              <div class="w-full sm_px-3 xl_w-1/3">
-                <ul> 
-                  <li class="mb-2"><span class="text-xxs font-semibold text-white opacity-50">Скоро: Спец по веб трафику</span></li>
-                </ul>
-              </div>
-              <div class="w-full sm_px-3 xl_w-1/3">
-                <ul> 
-                  <li class="mb-2"><span class="text-xxs font-semibold text-white opacity-50">Скоро: Спец по веб трафику</span></li>
-                </ul>
               </div>
             </div>
           </div>
           <div class="w-full sm_w-1/2 md_w-5/12 xl_w-4/12"> 
-            <div class="w-full sm_block hidden"><img class="w-full" src="img/2800.jpg" alt="">
+            <div class="w-full sm_block hidden"><img class="w-full" src="img/img-2800.jpg" alt="">
               <div class="-mt-6 ml-6"><a class="bg-red rounded-lg px-4 py-3 hover_bg-yellow duration-300 font-semibold inline-flex items-center justify-center text-white hover_text-indigo" href="#" download><span class="pointer-events-none inline-flex items-center">
                         <svg class="w-6" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path class="stroke-current" d="M13.7048 4.67524L13.7698 5.03949L14.1118 5.1808C14.8763 5.4967 15.5076 6.0678 15.8984 6.79687C16.2891 7.52594 16.4151 8.3679 16.2548 9.1794C16.0945 9.9909 15.658 10.7218 15.0194 11.2476C14.3811 11.7732 13.5804 12.0614 12.7536 12.0632H11.9035C11.8571 12.0632 11.8126 12.0447 11.7797 12.0119L11.3022 12.4895L11.7797 12.0119C11.7469 11.9791 11.7285 11.9346 11.7285 11.8882C11.7285 11.8417 11.7469 11.7972 11.7797 11.7644C11.8126 11.7316 11.8571 11.7131 11.9035 11.7131H12.7539V11.7132L12.7602 11.7131C13.5412 11.7059 14.2932 11.4156 14.8765 10.8961C15.4598 10.3766 15.8349 9.66314 15.9321 8.88809C16.0293 8.11305 15.842 7.32905 15.4051 6.68157C14.9682 6.0341 14.3112 5.5671 13.5561 5.36723L13.5561 5.36714L13.5454 5.36449C13.5092 5.35555 13.4769 5.33533 13.453 5.30675C13.4292 5.27817 13.4151 5.24273 13.4127 5.20558L13.4122 5.19727L13.4115 5.18898C13.3108 4.04071 12.7735 2.97478 11.9104 2.2108C11.0473 1.44682 9.924 1.04298 8.772 1.08249C7.62 1.12199 6.52702 1.60182 5.71825 2.42313C4.90948 3.24445 4.44651 4.34467 4.42473 5.49714L4.42461 5.49714L4.42461 5.50962C4.42455 5.65643 4.43279 5.80313 4.4493 5.94901L4.44935 5.94937C4.45242 5.97641 4.44915 6.00379 4.43979 6.02934L5.07402 6.26161L4.43979 6.02934C4.43044 6.05489 4.41525 6.0779 4.39544 6.09655L4.39544 6.09655L4.39298 6.09888C4.37402 6.11692 4.35107 6.13024 4.326 6.13775L4.5198 6.78477L4.326 6.13775C4.30093 6.14526 4.27444 6.14675 4.24868 6.14211L4.241 6.14072L4.23329 6.13952C4.09628 6.11807 3.95772 6.10825 3.81908 6.11014C3.07798 6.11154 2.36755 6.40654 1.84342 6.93067L2.28917 7.37643L1.84342 6.93067C1.31803 7.45606 1.02287 8.16863 1.02287 8.91164C1.02287 9.65464 1.31803 10.3672 1.84342 10.8926C2.3688 11.418 3.08137 11.7131 3.82438 11.7131H5.10003C5.14644 11.7131 5.19096 11.7316 5.22378 11.7644C5.2566 11.7972 5.27504 11.8417 5.27504 11.8882C5.27504 11.9346 5.2566 11.9791 5.22378 12.0119L5.70138 12.4895L5.22378 12.0119C5.19096 12.0447 5.14645 12.0632 5.10003 12.0632H3.82483C3.0185 12.0626 2.24305 11.753 1.65805 11.1981C1.07305 10.6432 0.722994 9.88515 0.679926 9.07997C0.636859 8.27479 0.904052 7.48373 1.42652 6.86957C1.949 6.25541 2.687 5.86487 3.48867 5.77832L4.04687 5.71805L4.08963 5.15824C4.17958 3.98071 4.69588 2.87639 5.54175 2.05227C6.38762 1.22814 7.50501 0.740787 8.68449 0.681539C9.86397 0.62229 11.0246 0.995216 11.9488 1.73042C12.873 2.46563 13.4973 3.51265 13.7048 4.67524Z" stroke="white" stroke-width="1.35085"></path>
@@ -974,22 +1083,22 @@
               <div class="w-full pt-6 pb-4 sm_pt-0 sm_pb-0 sm_w-1/2 sm_px-3">
                 <p class="font-semibold text-white text-sm mb-4">Академия</p>
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Каталог курсов</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">NIMA</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Экосистема обучения</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Центр карьеры</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Команда</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Корпоративное обучение</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">MAED magazine</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Каталог курсов</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">NIMA</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Экосистема обучения</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Центр карьеры</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Команда</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Корпоративное обучение</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">MAED magazine</a></li>
                     </ul>
               </div>
               <div class="w-full pb-4 sm_pb-0 sm_w-1/2 sm_px-3">
                 <p class="font-semibold text-white text-sm mb-4">Для студентов</p>
                     <ul> 
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Экспресс - курсы</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Инструкции, методички, чек-листы</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">Открытые уроки и вебинары</a></li>
-                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 underline" href="#">MAED.Клуб</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Экспресс - курсы</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Инструкции, методички, чек-листы</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Открытые уроки и вебинары</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">MAED.Клуб</a></li>
                     </ul>
               </div>
             </div>

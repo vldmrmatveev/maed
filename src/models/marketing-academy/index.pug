@@ -4,12 +4,12 @@ mixin arrow-marketing-academy(year, text)
 		p.text-indigo.text-4xl.font-extrabold.mb-2.md_mb-3= year
 		.w-4.h-4.bg-yellow.rounded-full.md_mb-3.left-0.top-2.md_top-0.absolute.md_relative
 		p.text-indigo.font-bold.text-sm.mb-6.md_mb-0= text
-section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.z-20.relative.overflow-hidden
-	.container.mb-6
-		.flex.items-start.flex-wrap 
-			.w-full(class="sm_w-7/12 sm_pr-4")
+section.pt-32.sm_pt-56.md_pt-48.mb-14.z-20.relative.overflow-hidden
+	.container.mb-6.lg_mb-16
+		.flex.items-start.flex-wrap.-mx-3
+			.w-full(class="sm_w-7/12 px-3")
 				h1.text-3xl.md_text-4xl.xl_text-5xl.font-extrabold.mb-4.text-indigo Академия маркетинга международного уровня
-			.w-full(class="sm_w-5/12 sm_pl-4")
+			.w-full(class="sm_w-5/12 px-3 xl_pr-0")
 				+mainTextSecondary('Все курсы адаптированы под задачи студентов, наполнены актуальными знаниями, при этом не перегружены лишней информацией')
 	.flex.items-center.justify-center.mb-12
 		while num <= 8

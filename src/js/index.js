@@ -2,7 +2,6 @@ import "@/style/libs.scss";
 import "@/style/style.scss";
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 import { Fancybox } from "@fancyapps/ui";
-import noUiSlider from "nouislider";
 import {
 	changeHeaderPadding,
 	closeHeaderHiddenBlock,
@@ -15,22 +14,16 @@ import { ScrollAnimationAsymetric } from "@models/plugins/animation";
 import { createPopover } from "@models/plugins/popover";
 import { ValidateForm } from "@models/plugins/validation";
 import { selectLevel, selectEducation } from "@models/plugins/select";
-import {
-	rangeSlider,
-	rangeSliderSetting,
-	rangeSliderValues,
-} from "@models/plugins/range";
+import { Filter } from "@models/plugins/filter";
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
 document.addEventListener("DOMContentLoaded", () => {
-	Fancybox.bind("[data-fancybox]", {});
-	if (rangeSliderValues[0] != null && rangeSlider != null) {
-		noUiSlider.create(rangeSlider, rangeSliderSetting(1, 6, 12));
-		rangeSlider.noUiSlider.on("slide", function (values, handle) {
-			rangeSliderValues[handle].innerHTML = Math.floor(values[handle]);
-		});
+	if (document.getElementById("filterItem") != null) {
+		const filter = new Filter("filter");
+		filter.filter();
 	}
+	Fancybox.bind("[data-fancybox]", {});
 	new Swiper(".swiper-container", mainOption);
 	new Swiper(".swiper-gallery", galleryOption);
 	getYear();

@@ -1,7 +1,9 @@
 .user-img {
 	width: 12%;
+	min-width: 108px;
 	&:nth-child(2n + 1) {
 		width: 15%;
+		min-width: 132px;
 	}
 }
 

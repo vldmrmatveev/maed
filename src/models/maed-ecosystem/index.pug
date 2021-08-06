@@ -4,9 +4,10 @@ mixin maed-ecosystem-arrow(text)
 		p.text-indigo.font-bold.text-sm.mb-6.md_mb-0.pl-4.md_pl-0= text
 section.py-16.container
 	.flex.flex-wrap.items-center.mb-4.-mx-3
-		.w-full(class="md_w-1/2 px-3")
+		.w-full(class="md_w-8/12 px-3")
 			+mainTitle('Экосистема MAED')
-			+mainTextSecondary('Мы погружаем студента в маркетинговую среду MAED, где на каждом этапе его окружают элементы, направленные на повышение профессиональных компетенций и их развитие')
+			.max-w-2xl
+				+mainTextSecondary('Мы погружаем студента в маркетинговую среду MAED, где на каждом этапе его окружают элементы, направленные на повышение профессиональных компетенций и их развитие')
 	.flex.flex-wrap.relative.py-6.-mx-3
 		.px-3
 			img(src=require("/img/Group_7681.svg"), alt="" class="-mb-5 pb-0.5").hidden.md_block.w-full
@@ -19,7 +20,7 @@ section.py-16.container
 	.bg-yellow.p-4.sm_px-12.sm_py-10.flex.flex-wrap.items-center.rounded-xl.mt-16 
 		.w-full.order-2.md_order-1(class="md_w-1/2 md_pr-4 lg_w-7/12")
 			h3.text-indigo.text-3xl.sm_text-4xl.xl_text-5xl.font-black.mb-2 Masters Education 360&deg; 
-			p.text-indigo.font-black.text-xl.mb-6 &mdash;&nbsp;это подход, в&nbsp;котором подготовка специалиста не&nbsp;ограничивается образовательным курсом, а&nbsp;захватывает все сферы, связанные с&nbsp;развитием в&nbsp;выбранном направлении профессиональной деятельности
+			p.text-indigo.font-bold.sm_font-black.sm_text-xl.mb-6 &mdash;&nbsp;это подход, в&nbsp;котором подготовка специалиста не&nbsp;ограничивается образовательным курсом, а&nbsp;захватывает все сферы, связанные с&nbsp;развитием в&nbsp;выбранном направлении профессиональной деятельности
 			+btnTriangle('indigo', 'purple', 'Подробнее о подходе', '4', false)
 		.w-full.mb-6.md_mb-0.order-1.md_order-2(class="md_w-1/2 md_pl-4 lg_w-5/12")
 			img(src=require("/img/maed-ecosystem.svg"), alt="").w-full

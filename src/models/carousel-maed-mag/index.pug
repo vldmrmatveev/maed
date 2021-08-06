@@ -11,14 +11,14 @@ section.bg-blue-light.bg-opacity-50
 				.swiper-slide.swiper-slide-1_2
 					.px-2
 						.bg-blue.rounded-xl.flex.flex-wrap.overflow-hidden.maed-mag-card.mb-5
-							.w-full.sm_h-full.sm_order-1.order-2(class="sm_w-8/12")
-								.p-8.flex.flex-col.justify-between.items-start.h-full
+							.h-full(class="w-8/12")
+								.px-4.py-6.sm_p-8.flex.flex-col.justify-between.items-start.h-full
 									span.text-xs.uppercase.text-blue-newwave.mb-4 Блог
 									a(href="#").text-lg.sm_text-xl.font-black.mb-6.text-indigo.hover_text-purple.duration-300 Как начать карьеру интернет-маркетолога
 									p.text-sm.mb-6.text-indigo Карьерный путь, навыки и обязанности начинающего маркетолога.
 									+btnArrow('px-4 py-2 bg-indigo hover_bg-purple text-white rounded-lg rounded-lg', 'Читать')
-							.hidden.sm_block.w-full.sm_order-2.order-1(class="sm_w-4/12")
-								a(href="#").block.sm_h-full
+							div(class="w-4/12")
+								a(href="#").block.h-full
 									img(src=require("/img/maed-mag-bg.jpg"), alt="").w-full.h-full.object-cover
 				.swiper-slide.swiper-slide-1_4
 					.px-2

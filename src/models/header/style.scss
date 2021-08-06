@@ -1,5 +1,10 @@
 .header__container-hidden {
 	display: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 	&.open {
 		display: block;
 	}
