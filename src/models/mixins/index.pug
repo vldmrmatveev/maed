@@ -65,7 +65,7 @@ mixin footerList(...lists)
 			li.mb-2
 				a(href="#").text-xxs.font-semibold.text-white.opacity-50.duration-300.hover_text-red.hover_opacity-100.sm_underline= list
 mixin headerList(disabled, ...lists)
-	ul.md_pt-4
+	ul.lg_pt-4
 		each list, index in lists
 			if disabled
 				li.mb-4.flex
@@ -144,8 +144,8 @@ mixin start-card-new(bg, title, desc, user)
 					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
 			img(src=require("./img/"+user), alt="" class="w-5/12 xl_w-6/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
 		p.text-center.font-bold.text-gray.mb-5.opacity-80.duration-300= desc
-mixin course-card(color, bg, title, user)
-	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color data-title=title.toUpperCase())
+mixin course-card(color, bg, title, user, category = 'smm')
+	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color data-title=title data-category=category)
 		if bg == "white"
 			div(class="sm_w-9/12")
 				p.font-bold.text-sm.mb-1.text-indigo Профессия

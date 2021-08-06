@@ -53,6 +53,7 @@ export class Filter {
 	filter() {
 		this.createSlider();
 		this.changeSliderVal();
+		this.getCategoryValue(this.category);
 		this.getSearchText(this.searchInput);
 		console.log(this.prop);
 		console.log(this.textValue);
@@ -87,6 +88,14 @@ export class Filter {
 	getCategoryValue(arr) {
 		arr.forEach((item) => {
 			item.onchange = () => {
+				const cards = document.querySelectorAll(".course-card-main");
+				cards.forEach((el) => {
+					if (el.dataset.category == item.value || item.value == "all") {
+						el.style.display = "flex";
+					} else {
+						el.style.display = "none";
+					}
+				});
 				return item.value;
 			};
 		});
@@ -96,7 +105,8 @@ export class Filter {
 			const val = input.value.toUpperCase().trim();
 			const cards = document.querySelectorAll(".course-card-main");
 			cards.forEach((item) => {
-				if (item.dataset.title.includes(val)) {
+				let itemValue = item.dataset.title.toUpperCase();
+				if (itemValue.includes(val)) {
 					item.style.display = "flex";
 				} else {
 					item.style.display = "none";

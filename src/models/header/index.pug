@@ -1,8 +1,7 @@
-mixin headerDesktopLeft(img, title, text)
+mixin headerDesktopLeft(img, title)
 	.flex.items-center
 		img(src=require("./img/"+img), alt="").w-8.lg_w-16.mr-4.mb-3.lg_h-16.h-8
 		p.text-white.uppercase.font-semibold.mb-3= title
-	p.text-white.text-xs.opacity-50.lg_mb-2.mb-6= text
 mixin headerListTop(...lists)
 	ul.flex.flex-wrap
 		each list, index in lists
@@ -41,7 +40,7 @@ header.fixed.w-full.z-40.bg-white#header
 				.container.pt-8.hidden.sm_block
 					.flex.flex-wrap.pb-5.border-b.border-white.-mx-3
 						.w-full(class="sm_w-1/2 md_w-1/3 lg_w-1/4 px-3")
-							+headerDesktopLeft('science.svg', 'Экспресс-курсы', 'Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.')
+							+headerDesktopLeft('science.svg', 'Экспресс-курсы')
 						.w-full(class="sm_w-1/2 md_w-2/3 lg_w-3/4 px-3")
 							.-mx-3.flex.flex-wrap
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
@@ -52,7 +51,7 @@ header.fixed.w-full.z-40.bg-white#header
 									+headerList(false, 'SEO-ГИД 2021', 'Турбостарт в SMM', 'Вся кухня digital-директора за один вечер', 'Account based marketing', 'Поисковая реклама в Яндекс.Директ', 'Аналитикка с Google data studio')
 					.flex.flex-wrap.pb-5.border-b.border-white.-mx-3.pt-8
 						.w-full(class="sm_w-1/2 md_w-1/3 lg_w-1/4 px-3")
-							+headerDesktopLeft('apple-books.svg', 'методички, чек-листы, инструкции', 'Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.')
+							+headerDesktopLeft('apple-books.svg', 'методички, чек-листы, инструкции')
 						.w-full(class="sm_w-1/2 md_w-2/3 lg_w-3/4 px-3")
 							.-mx-3.flex.flex-wrap
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
@@ -74,7 +73,7 @@ header.fixed.w-full.z-40.bg-white#header
 				.container.pt-8.hidden.sm_block
 					.flex.flex-wrap.pb-5.border-b.border-white.-mx-3
 						.w-full(class="sm_w-1/2 md_w-1/3 lg_w-1/4 px-3")
-							+headerDesktopLeft('Group_7106.svg', 'ПрофесCии', 'Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.')
+							+headerDesktopLeft('Group_7106.svg', 'ПрофесCии')
 						.w-full(class="sm_w-1/2 md_w-2/3 lg_w-3/4 px-3")
 							.-mx-3.flex.flex-wrap
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
@@ -85,7 +84,7 @@ header.fixed.w-full.z-40.bg-white#header
 									+headerList(false, 'CRM-маркетолог', 'E-commerce маркетолог', 'SMM-профи с нуля', 'С нуля до директора по Digital-маркетингу')
 					.flex.flex-wrap.pb-5.border-b.border-white.-mx-3.pt-8
 						.w-full(class="sm_w-1/2 md_w-1/3 lg_w-1/4 px-3")
-							+headerDesktopLeft('Group_7107.svg', 'Инструменты маркеТинга', 'Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления бизнесом,формируем индивидуальные треки обучения для своих студентов.')
+							+headerDesktopLeft('Group_7107.svg', 'Инструменты маркеТинга')
 						.w-full(class="sm_w-1/2 md_w-2/3 lg_w-3/4 px-3")
 							.-mx-3.flex.flex-wrap
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
@@ -93,14 +92,14 @@ header.fixed.w-full.z-40.bg-white#header
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
 									+headerList(false, 'Мастер контекстной рекламы', 'Веб-аналитик', 'Мессенджер-маркетолог профи', 'Контент-маркетинг от а до я')
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
-									+headerList(true, 'CRM от А до Я', 'SEO-Маркетолог', 'Скоро: Спец по веб трафику')
+									+headerList(false, 'CRM от А до Я', 'SEO-Маркетолог')
 					.flex.flex-wrap.-mx-3.pt-8
 						.w-full(class="sm_w-1/2 md_w-1/3 lg_w-1/4 px-3")
-							+headerDesktopLeft('Group_7108.svg', 'Отраслевые курсы', 'Мы даём актуальное системное образование по 26 направлениям в области маркетинга и управления.')
+							+headerDesktopLeft('Group_7108.svg', 'Отраслевые курсы')
 						.w-full(class="sm_w-1/2 md_w-2/3 lg_w-3/4 px-3")
 							.-mx-3.flex.flex-wrap
 								.w-full(class="lg_w-1/3 md_w-1/2 px-3")
-									+headerList(true, 'Интернет-маркетинг для B2B и сложных рынков', 'Скоро: Спец по веб трафику')
+									+headerList(false, 'Интернет-маркетинг для B2B и сложных рынков')
 					.flex.pt-5.justify-end 
 						a(href="#").close-header-container.border.border-red.px-10.py-4.rounded-t-3xl.text-white.font-bold.text-xs.hover_bg-red.duration-300 Свернуть
 	.sm_hidden
