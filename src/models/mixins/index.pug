@@ -35,8 +35,11 @@ mixin btnArrow(className, text)
 			path(fill-rule='evenodd' clip-rule='evenodd' d='M3 10V11H14V14L18 10.5L14 7V10H3Z' class="fill-current")
 mixin catalogTitle(text)
 	h2.text-3xl.sm_text-4xl.xl_text-5xl.font-black.text-white= text
-mixin catalogUnderTitle(color, text)
-	p.text-xl.sm_text-2xl.font-semibold.sm_font-bold.mb-4(class="text-"+color)= text
+mixin catalogUnderTitle(color, text, attr = true)
+	if attr
+		p.text-xl.sm_text-2xl.font-semibold.sm_font-bold.mb-4.catalog-title-item(data-titleitem=text class="text-"+color)= text
+	else 
+		p.text-xl.sm_text-2xl.font-semibold.sm_font-bold.mb-4(class="text-"+color)= text
 mixin graduatesCard(name, title, text, img, video = false)
 	if video
 		a(href="https://youtu.be/AImkPHOsejM" data-fancybox).relative.block.mb-2
@@ -144,8 +147,8 @@ mixin start-card-new(bg, title, desc, user)
 					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
 			img(src=require("./img/"+user), alt="" class="w-5/12 xl_w-6/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
 		p.text-center.font-bold.text-gray.mb-5.opacity-80.duration-300= desc
-mixin course-card(color, bg, title, user, category = 'smm')
-	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color data-title=title data-category=category)
+mixin course-card(color, bg, title, user, category = 'smm', feature = 'employment sale diploma', month = '10', prop = 'middle', spec = 'education')
+	.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color data-title=title data-category=category data-feature=feature data-month=month data-property=prop data-specification=spec)
 		if bg == "white"
 			div(class="sm_w-9/12")
 				p.font-bold.text-sm.mb-1.text-indigo Профессия
