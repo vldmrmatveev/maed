@@ -1,0 +1,28 @@
+mixin diploma-card(img, title, text)
+	.w-full.px-3.mb-8(class="sm_w-1/2")
+		p.text-sm.font-extrabold.text-indigo.mb-3= title
+		img(src=require('/img/'+img), alt="").w-full.mb-4
+		p.text-xs.text-gray-dark= text
+section.pt-16.pb-6.container
+	.flex.flex-wrap.-mx-3.mb-8
+		.w-full.px-3(class="lg_w-1/2")
+			+mainTitle('Квалификационный экзамен')
+			p.text-indigo.font-extrabold.mb-8 Это независимая проверка ваших знаний и умений в области маркетинга, маркетинг-менеджмента, коммуникаций и продаж, в зависимости от профиля обучения
+			p.text-indigo.font-semibold.mb-6 После прохождения одного из курсов для получения диплома NIMA и сертификата EMCQ необходимо успешно сдать теоретическую и практическую часть экзамена
+			.flex.items-center.mb-8
+				.text-indigo.font-bold.text-4xl 55%
+				span.text-indigo.font-extrabold.ml-4 верных ответов нужно для успешной сдачи экзамена NIMA по теории и практике
+			p.text-indigo.mb-1.font-bold Для подготовки к дипломной  работе на курсе вы получаете:
+			ul.list-disc.list-inside.mb-6
+				li.mb-2 требования к экзамену и оценочные критерии экзаменаторов
+				li.mb-2 материалы для подготовки к экзаменам
+			a(href="https://youtu.be/AImkPHOsejM" data-fancybox).py-3.px-6.bg-indigo.hover_bg-purple.text-white.duration-300.rounded-xl.inline-flex.items-center.justify-center.mb-14
+				span.mr-2 Как проходит международная сертификация 
+				span.border-yellow.border-3.rounded-full.w-8.h-8.flex.items-center.justify-center.min-w-8 
+					span.triangle-to-right
+		.w-full.px-3(class="lg_w-1/2")
+			.flex.flex-wrap.-mx-3 
+				+diploma-card('Group_7698.png', 'Диплом Nima-A и диплом EMCQ-классический маркетинг', 'Сдается теоретическая и практическая часть')
+				+diploma-card('Group_7699.png', 'Диплом Nima-B digital и диплом EMCQ-digital', 'Сдается теоретическая и практическая часть')
+				+diploma-card('Group_7700.png', 'Диплом Nima-A и диплом EMCQ', 'Сдается только теоретическая часть')
+				+diploma-card('Group_7701.png', 'Сертификат Nima-B digital и Nima-B', 'Сдается только практическая часть')

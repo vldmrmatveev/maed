@@ -25,6 +25,19 @@
 			}
 		}
 	}
+	.red-pagination {
+		.swiper-pagination-bullet {
+			background-color: $red;
+			opacity: 1;
+			&:before {
+				border-color: $white;
+				border-top-color: $red;
+			}
+			&-active {
+				background-color: $white;
+			}
+		}
+	}
 	.darken {
 		.swiper-pagination-bullet {
 			background-color: #b4bbc2;

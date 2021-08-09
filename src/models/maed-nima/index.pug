@@ -22,3 +22,38 @@ section.container
 					p.text-sm.text-indigo.font-semibold.mb-2 В 2021 году NIMA <br> отмечает свое 55-летие
 					img(src=require("/img/newspapper.png"), alt="").w-full
 					span.rounded-xl.bg-white.text-lg.font-bold.absolute.bottom-24.-left-36.max-w-xs.px-3.py-4.shadow-sm Вырезка из&nbsp;газеты 1966 года с&nbsp;заметкой об&nbsp;открытии института
+
+section.overflow-hidden
+	.swiper-gallery.relative
+		.swiper-wrapper
+			.swiper-slide.w-initial.mr-0
+				img(src=require("/img/img-gallery-1.jpg"), alt="").h-40
+			.swiper-slide.w-initial.mr-0
+				img(src=require("/img/img-gallery-2.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-3.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-4.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-5.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-6.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-7.jpg"), alt="").h-40
+		+swiperNav('yellow', 'bg-white hover_bg-yellow hover_text-white')
+	.bg-indigo
+		.container.pb-10.pt-16
+			+mainTitle('Что дают программы NIMA', '8', 'white')
+			.flex.flex-wrap.-mx-3
+				div(class="md_w-3/12 px-3")
+					h5.text-white.text-xl.font-extrabold.mb-4.pt-3.md_pt-0 Европейский диплом и&nbsp;квалификацию
+					p.text-white.mb-6 Система образования NIMA на протяжении десятилетий пользуется высокой репутацией
+				div(class="md_w-3/12 px-3")
+					h5.text-white.text-xl.font-extrabold.mb-4.pt-3.md_pt-0 Системный подход к&nbsp;маркетингу
+					p.text-white.mb-6 Формирует понимание, как выстроить маркетинг в любой компании
+				div(class="md_w-3/12 px-3")
+					h5.text-white.text-xl.font-extrabold.mb-4.pt-3.md_pt-0 Собственный маркетинговый план
+					p.text-white.mb-6 Создается во время обучения под контролем экспертов (В агентстве – от 300 000 рублей) 
+				div(class="md_w-3/12 px-3")
+					h5.text-white.text-xl.font-extrabold.mb-4.pt-3.md_pt-0 Преимущество перед конкурентами
+					p.text-white.mb-6 Преподаватели с опытом работы в России и за рубежом раскроют секреты эффективного маркетинга 

@@ -1,3 +1,7 @@
+mixin listCheck(text, margin = '8', color = 'red', fontSize = 'xs')
+	.flex.items-start(class="mb-"+margin)
+		span.listcheck-item-check.mr-3(class="text-"+color)
+		span.font-semibold(class="text-"+fontSize)!= text
 mixin mainTitle(text, margin = '4', textColor = 'indigo')
 	h2.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold(class="mb-"+margin + " text-"+textColor)!= text
 mixin mainTextSecondary(text, margin = '6')
@@ -5,6 +9,15 @@ mixin mainTextSecondary(text, margin = '6')
 mixin swiperNav(text, bg = 'bg-gray bg-opacity-30 hover_bg-opacity-20')
 	.swiper-button-prev.duration-300(class="text-"+text + " " + bg)
 	.swiper-button-next.duration-300(class="text-"+text + " " + bg)
+mixin arrowBig(full, colorDesktop, colorMob)
+	if full 
+		.arrow-container.arrow-container-full(class="md_text-"+ colorDesktop + " text-"+colorMob)
+			.arrow-container__item
+			.arrow-container__item
+	else
+		.arrow-container
+			.arrow-container__item
+			.arrow-container__item
 mixin madeByMaed(arr)
 	each val, index in arr
 		if index % 2
@@ -21,6 +34,9 @@ mixin skewBlock(color, position)
 		.skew-block.skew-block__right(class="bg-"+color)
 	else 
 		.skew-block(class="bg-"+color)
+mixin btn(color, hoverColor, text, margin = '6')
+	a(href="#" class="bg-" + color + " hover_bg-" + hoverColor + " mb-" + margin).inline-flex.items-center.justify-center.px-8.md_px-10.py-4.rounded-lg.duration-300.text-white.sm_w-initial.w-full.text-center
+		span.font-semibold.text-sm= text 
 mixin btnTriangle(color, hoverColor, text, margin, underline)
 	a(href="#" class="bg-" + color + " hover_bg-" + hoverColor + " mb-" + margin).inline-flex.items-center.px-8.md_px-10.py-3.rounded-xl.duration-300.text-white
 		if underline == true
@@ -82,7 +98,7 @@ mixin headerList(disabled, ...lists)
 mixin dropdownLink(id, parent, text)
 	a(href=id data-dropdown="true" data-parent=parent).flex.items-center.justify-between.py-4.drop__link
 		span.font-extrabold.text-xl.drop__link-item.text-indigo= text
-		svg(width='14' class="w-4 ml-4 duration-300 pointer-events-none" height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+		svg(width='14' class="min-w-4 w-4 ml-4 duration-300 pointer-events-none" height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg')
 			path(d='M13 1L7 6L1 1' stroke='#223549' stroke-width='2')
 mixin headerListMob(disabled, identity, ...lists)
 	.drop__collapse(id=identity)
@@ -105,30 +121,23 @@ mixin checkbox(link, text)
 	label(for=link).flex.items-center.cursor-pointer
 		span.true-checkbox.border.border-indigo.sm_border-white.rounded-sm.duration-300 
 		span.sm_text-white.text-sm.ml-3.whitespace-nowrap= text
-mixin start-card(color, title, desc, user)
-	a(href="#").carousel-card-start__link
-		.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.carousel-card-start.justify-between.duration-300.overflow-hidden(class=color)
-			.carousel-card-start__content
-				if color != 'bg-yellow' 
-					p.text-white.font-bold.text-sm.mb-3 Старт 29 апреля
-					p.text-white.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
-					p.text-white.font-bold.text-sm.mb-5 Все что нужно знать SMM-щику
-				else
+mixin start-card-min(bg, title, user)
+	a(href="#").block.mb-8
+		.min-h-md.px-4.py-5.flex.flex-col.justify-between.relative.rounded-xl.overflow-hidden.duration-300(class="bg-"+ bg + " hover_bg-"+ bg + "-dark")
+			if bg == 'yellow'
+				div(class="w-10/12 pr-2")
 					p.text-indigo.font-bold.text-sm.mb-3 Старт 29 апреля
 					p.text-indigo.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
-					p.text-indigo.font-bold.text-sm.mb-5 Все что нужно знать SMM-щику
-			.flex.items-center
-				if color != 'bg-yellow' 
-					p.text-2xl.font-extrabold.text-white.mb-0 -40%
-					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
-				else
-					p.text-2xl.font-extrabold.text-indigo -40%
-					p.ml-2.text-indigo.text-xs Скидка <br> до 26 августа
-			img(src=require("./img/"+user), alt="").absolute.right-0.bottom-0.h-full.carousel-card-start__img.object-contain.object-right-bottom
-		p.text-center.font-bold.text-gray.mb-5.opacity-30.carousel-card-start__undertext.duration-300= desc
-mixin start-card-new(bg, title, desc, user)
+					p.text-indigo.font-bold.text-sm Системный курс с международной квалификацией
+			else 
+				div(class="w-10/12 pr-2")
+					p.text-white.font-bold.text-sm.mb-3 Старт 29 апреля
+					p.text-white.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
+					p.text-white.font-bold.text-sm Системный курс с международной квалификацией
+			img(src=require("./img/"+user), alt="" class="w-3/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
+mixin start-card(bg, title, desc, user)
 	a(href="#").block
-		.min-h-md.px-4.py-5.flex.flex-col.justify-between.relative.mb-4.rounded-xl.overflow-hidden.duration-300(class="bg-"+ bg + " hover_bg-"+ bg + "-dark")
+		.min-h-lg.px-4.py-5.flex.flex-col.justify-between.relative.mb-4.rounded-xl.overflow-hidden.duration-300(class="bg-"+ bg + " hover_bg-"+ bg + "-dark")
 			if bg == 'yellow'
 				div(class="w-9/12 pr-2")
 					p.text-indigo.font-bold.text-sm.mb-3 Старт 29 апреля
@@ -195,6 +204,9 @@ mixin maed-logo(color, bg, size)
 		if size == 'xl'
 			each val in ['M', 'A', 'E', 'D']
 				span.flex.items-center.justify-center.w-8.h-8.text-xl.leading-none.mr-1.font-bold(class="bg-"+bg + " text-"+color)= val
+		else if size == '2xl'
+			each val in ['M', 'A', 'E', 'D']
+				span.flex.items-center.justify-center.w-6.h-6.text-md.sm_w-10.sm_h-10.md_w-14.md_h-14.sm_text-2xl.md_text-4xl.leading-none.mr-1.font-bold(class="bg-"+bg + " text-"+color)= val
 		else
 			each val in ['M', 'A', 'E', 'D']
 				span.flex.items-center.justify-center.w-6.h-6.text-md.leading-none.mr-1.font-bold(class="bg-"+bg + " text-"+color)= val

@@ -1,0 +1,26 @@
+.bg-indigo.nima-bg
+	.container.pt-16.pb-12.box-border
+		+mainTitle('Курсы с международной сертификацией:', '8', 'white')
+		.-mx-3
+			.swiper-container.relative.pb-7
+				.swiper-wrapper
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card-min('red', 'Директор по digital-маркетингу', 'user-2.png')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card-min('red', 'Трафик-менеджер', 'user-4.png')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card-min('purple', 'Ведущий интернет-маркетолог', 'user-5.png')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card-min('red', 'Директор по digital-маркетингу', 'user-2.png')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card-min('yellow', 'Трафик-менеджер', 'user-3.png')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card-min('purple', 'Ведущий интернет-маркетолог', 'user-4.png')
+				.swiper-pagination.red-pagination
+				+swiperNav('white', 'bg-red hover_bg-yellow')

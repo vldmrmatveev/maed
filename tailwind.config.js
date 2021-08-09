@@ -14,6 +14,8 @@ module.exports = {
 			"mb-16",
 			"hover_bg-purple-dark",
 			"hover_text-yellow",
+			"md_text-indigo",
+			"text-base",
 		],
 	},
 	darkMode: false, // or 'media' or 'class'
@@ -22,10 +24,23 @@ module.exports = {
 		letterSpacing: {
 			widest: "1.5rem",
 		},
+		borderWidth: {
+			DEFAULT: "1px",
+			"0": "0",
+			"2": "2px",
+			"3": "3px",
+			"4": "4px",
+			"8": "8px",
+		},
+		minWidth: {
+			"4": "1rem",
+			"8": "2rem",
+		},
 		minHeight: {
 			sm: "4.5rem",
-			md: "16.5rem",
-			lg: "22rem",
+			md: "12rem",
+			lg: "16.5rem",
+			xl: "22rem",
 		},
 		fontFamily: {
 			sans: ["Proxima Nova", "Arial", "sans-serif"],
@@ -52,7 +67,11 @@ module.exports = {
 				dark: "#e469bb",
 			},
 			white: "#ffffff",
-			gray: "#F5F5F5",
+			gray: {
+				DEFAULT: "#F5F5F5",
+				base: "#4B5157",
+				dark: "#939699",
+			},
 			indigo: {
 				DEFAULT: "#223549",
 				dark: "#2E2D41",

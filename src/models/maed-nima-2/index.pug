@@ -1,0 +1,62 @@
+mixin maed-nima-card(num, title, text)
+	h5.text-yellow.font-bold.mb-4
+		span.text-3xl.sm_text-5xl= num 
+		br
+		span.text-2xl= title
+	p.text-white.mb-8= text
+.bg-indigo 
+	.bg-yellow.rounded-t-3xl.pt-20
+		section.container
+			.w-full(class="sm_w-10/12")
+				+mainTitle('MAED – единственный официальный представитель NIMA в России с 2013', '6')
+			.flex.items-end.flex-wrap.-mx-3
+				.w-full(class="lg_w-1/2 px-3")
+					.max-w-sm.mb-6
+						img(src=require("/img/nima-logo-white.svg"), alt="" class="w-11/12").sm_w-100
+					+mainTextSecondary('Нидерландский институт маркетинга и международная маркетинговая ассоциация, которая объединяет компании, банки и маркетинговые агентства Европы:', '8')
+					p.text-sm.text-indigo.max-w-sm.font-semibold.mb-5 Phillips, TNS, Ogilvy, Unilever, P&amp;G, IMB, BMW, Heineken, Danone, Campina, Radobank, Shell, Pfizer и&nbsp;многие другие
+					.max-w-sm.flex.flex-wrap.items-center.sm_justify-between.mb-8
+						img(src=require("/img/Frame-7.png"), alt="").h-4.mx-1.mb-2
+						img(src=require("/img/Frame-5.png"), alt="").h-4.mx-1.mb-2
+						img(src=require("/img/Frame-2.png"), alt="").h-4.mx-1.mb-2
+						img(src=require("/img/Frame-1.png"), alt="").h-4.mx-1.mb-2
+						img(src=require("/img/Frame-6.png"), alt="").h-4.mx-1.mb-2
+						img(src=require("/img/Frame-4.png"), alt="").h-4.mx-1.mb-2
+						img(src=require("/img/Frame-3.png"), alt="").h-4.mx-1.mb-2
+					+btnTriangle('indigo', 'purple', 'Подробнее о NIMA', '16', true)
+				.hidden.lg_block.w-full(class="lg_w-1/2 px-3")
+					.flex.justify-end
+						.relative(class="w-11/12")
+							p.text-sm.text-indigo.font-semibold.mb-2 В 2021 году NIMA <br> отмечает свое 55-летие
+							img(src=require("/img/newspapper.png"), alt="").w-full
+							span.rounded-xl.bg-white.text-lg.font-bold.absolute.bottom-24.-left-36.max-w-xs.px-3.py-4.shadow-sm Вырезка из&nbsp;газеты 1966 года с&nbsp;заметкой об&nbsp;открытии института
+
+section.overflow-hidden
+	.swiper-gallery.relative
+		.swiper-wrapper
+			.swiper-slide.w-initial.mr-0
+				img(src=require("/img/img-gallery-1.jpg"), alt="").h-40
+			.swiper-slide.w-initial.mr-0
+				img(src=require("/img/img-gallery-2.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-3.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-4.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-5.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-6.jpg"), alt="").h-40
+			.swiper-slide.w-initial
+				img(src=require("/img/img-gallery-7.jpg"), alt="").h-40
+		+swiperNav('yellow', 'bg-white hover_bg-yellow hover_text-white')
+	.bg-indigo
+		.container.pb-10.pt-16
+			.mb-8(class="w-1/2 sm_w-4/12 md_w-1/4")
+				img(src=require("/img/Group_7101.svg"), alt="").w-full
+			.flex.flex-wrap.-mx-3
+				.px-3(class="sm_w-1/2 md_w-4/12")
+					+maed-nima-card('3000+', 'Человек в составе', 'NIMA — это европейская ассоциация маркетологов, членами которой являются более трех тысяч человек')
+				.px-3(class="sm_w-1/2 md_w-4/12")
+					+maed-nima-card('17', 'Лет в России', 'Более 1000 профессионалов международного уровня подготовлено за это время по программам NIMA')
+				.px-3(class="sm_w-1/2 md_w-4/12")
+					+maed-nima-card('250 000', 'Профессионалов рядом', 'NIMA — член European Marketing Confederation, самой крупной организации для маркетологов в Европе, с составом в 250 000 человек')
