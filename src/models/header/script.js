@@ -124,12 +124,14 @@ function changeHiddenBlockHeight() {
 	if (window.innerWidth < 1024) {
 		let headerHeight = document.querySelector(".header__container")
 			.offsetHeight;
+		let windowWidth = window.innerHeight;
+		let headerShowHeight = windowWidth - headerHeight;
 		document.getElementById(
 			"headerDesktopHidden"
-		).style.height = `calc(100vh - ${headerHeight}px)`;
+		).style.height = `${headerShowHeight}px`;
 		document.getElementById(
 			"headerDesktopHiddenMob"
-		).style.height = `calc(100vh - ${headerHeight}px)`;
+		).style.height = `${headerShowHeight}px`;
 	} else {
 		document.getElementById("headerDesktopHidden").style.height = "";
 		document.getElementById("headerDesktopHiddenMob").style.height = "";
