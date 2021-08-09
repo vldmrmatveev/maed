@@ -41,6 +41,8 @@ a[data-open] {
 
 .modal-opened {
 	position: relative;
+	touch-action: none;
+	-ms-touch-action: none;
 		&:before {
 		content: '';
 		position: absolute;

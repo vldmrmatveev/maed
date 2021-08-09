@@ -5,14 +5,18 @@
 @import "select";
 @import "swiper";
 
-.animated-block {
-	&-1,
-	&-2 {
-		@media (max-width: 1023px) {
-			transform: none !important;
-		}
-	}
+input {
+	-webkit-appearance: none;
 }
+
+// .animated-block {
+// 	&-1,
+// 	&-2 {
+// 		@media (max-width: 1023px) {
+// 			transform: none !important;
+// 		}
+// 	}
+// }
 
 .skew-block {
 	position: absolute;
