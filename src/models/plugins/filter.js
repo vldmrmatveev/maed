@@ -6,7 +6,13 @@ import {
 } from "@models/plugins/range";
 
 export class Filter {
-	constructor(selector) {
+	constructor(selector, cards) {
+		this.cards = document.querySelectorAll(cards);
+		this.errorMessageContainer = document.querySelectorAll(
+			".catalog-title-item"
+		);
+		this.errorMessage =
+			"К сожалению, ничего не найдено. Попробуйте изменить критерии поиска";
 		this.form = document.forms[selector];
 		this.checkboxes = [
 			this.form.elements["free"],
@@ -28,12 +34,6 @@ export class Filter {
 			{ name: "diploma", value: false },
 		];
 
-		this.free = false;
-		this.employment = false;
-		this.sale = false;
-		this.soon = false;
-		this.diploma = false;
-
 		this.rangeMin = null;
 		this.rangeMax = null;
 		this.categoryValue = "all";
@@ -45,13 +45,19 @@ export class Filter {
 		this.form.onsubmit = (e) => {
 			e.preventDefault();
 		};
-		this.createSlider();
-		this.changeSliderVal();
+		this.generateSliderValues();
+		this.getFilterValues();
+	}
+	getFilterValues() {
 		this.getCategoryValue(this.category);
 		this.getSearchText(this.searchInput);
 		this.getCheckBoxValue(this.checkboxes, this.checkboxesVal);
 		this.getSelectValue(this.property);
 		this.getSelectValue(this.specification);
+	}
+	generateSliderValues() {
+		this.createSlider();
+		this.changeSliderVal();
 	}
 	changeSliderVal() {
 		if (rangeSliderValues[0] != null && rangeSlider != null) {
@@ -60,149 +66,93 @@ export class Filter {
 				this.rangeMax = Math.floor(values[1]);
 				rangeSliderValues[handle].innerHTML = Math.floor(values[handle]);
 			});
-			rangeSlider.noUiSlider.on("change", () => this.iterateCardRange());
+			rangeSlider.noUiSlider.on("change", () => this.iterateCards());
 		}
 	}
-	iterateCardRange() {
-		const cards = document.querySelectorAll(".course-card-main");
-		cards.forEach((item) => {
-			const value = item.dataset.title.toUpperCase();
+	iterateCards() {
+		this.cards.forEach((item) => {
 			if (
-				(this.categoryValue == "all" &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					item.dataset.specification == this.spec) ||
-				(item.dataset.category == this.categoryValue &&
-					value.includes(this.textValue) &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					item.dataset.specification == this.spec) ||
-				(item.dataset.category == this.categoryValue &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					item.dataset.specification == this.spec) ||
-				(value.includes(this.textValue) &&
-					this.categoryValue == "all" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					item.dataset.specification == this.spec) ||
-				(this.categoryValue == "all" &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					item.dataset.specification == this.spec) ||
-				(item.dataset.category == this.categoryValue &&
-					value.includes(this.textValue) &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					item.dataset.specification == this.spec) ||
-				(item.dataset.category == this.categoryValue &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					item.dataset.specification == this.spec) ||
-				(value.includes(this.textValue) &&
-					this.categoryValue == "all" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					item.dataset.specification == this.spec) ||
-				(this.categoryValue == "all" &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					this.spec == "all") ||
-				(item.dataset.category == this.categoryValue &&
-					value.includes(this.textValue) &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					this.spec == "all") ||
-				(item.dataset.category == this.categoryValue &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					this.spec == "all") ||
-				(value.includes(this.textValue) &&
-					this.categoryValue == "all" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					this.prop == "all" &&
-					this.spec == "all") ||
-				(this.categoryValue == "all" &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					this.spec == "all") ||
-				(item.dataset.category == this.categoryValue &&
-					value.includes(this.textValue) &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					this.spec == "all") ||
-				(item.dataset.category == this.categoryValue &&
-					this.textValue == "" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					this.spec == "all") ||
-				(value.includes(this.textValue) &&
-					this.categoryValue == "all" &&
-					item.dataset.month >= this.rangeMin &&
-					item.dataset.month <= this.rangeMax &&
-					item.dataset.property == this.prop &&
-					this.spec == "all")
+				this.iterateCardsText(item) &&
+				this.iterateCardsCheckbox(this.checkboxesVal, item) &&
+				this.iterateCardsRadio(item) &&
+				this.iterateCardsRange(item) &&
+				this.iterateCardsSelectProperty(item) &&
+				this.iterateCardsSelectSpecification(item)
 			) {
-				this.iterateCardsCheckbox(this.checkboxesVal, item);
+				item.style.display = "block";
 			} else {
 				item.style.display = "none";
 			}
-			this.checkEmptyContainer(cards);
+			this.checkEmptyContainer();
 		});
 	}
-	checkEmptyContainer(cards) {
-		const hiddenCards = document.querySelectorAll(
-			'.course-card-main[style="display: none;"]'
-		);
-		document.querySelectorAll(".catalog-title-item").forEach((title) => {
-			if (hiddenCards.length === cards.length) {
-				title.textContent =
-					"К сожалению, ничего не найдено. Попробуйте изменить критерии поиска";
+	checkEmptyContainer() {
+		const hiddenCards = [];
+		this.cards.forEach((item, i) => {
+			if (item.style.display == "none") {
+				hiddenCards.push(i);
+			}
+		});
+		this.errorMessageContainer.forEach((title) => {
+			if (hiddenCards.length === this.cards.length) {
+				title.textContent = this.errorMessage;
 			} else {
 				title.textContent = title.dataset.titleitem;
 			}
 		});
 	}
+	iterateCardsSelectProperty(item) {
+		if (this.prop == "all" || item.dataset.property == this.prop) {
+			return true;
+		}
+	}
+	iterateCardsSelectSpecification(item) {
+		if (this.spec == "all" || item.dataset.specification == this.spec) {
+			return true;
+		}
+	}
+	iterateCardsRange(item) {
+		if (
+			item.dataset.month >= this.rangeMin &&
+			item.dataset.month <= this.rangeMax
+		) {
+			return true;
+		}
+	}
+	iterateCardsRadio(item) {
+		if (
+			this.categoryValue == "all" ||
+			item.dataset.category == this.categoryValue
+		) {
+			return true;
+		}
+	}
+	iterateCardsText(item) {
+		const value = item.dataset.title.toUpperCase();
+		if (this.textValue == "" || value.includes(this.textValue)) {
+			return true;
+		}
+	}
 	iterateCardsCheckbox(arr, item) {
-		const newArr = arr.filter((checkbox) => checkbox.value == true);
-		if (newArr.length == 0) {
-			item.style.display = "flex";
-		} else if (newArr.length == 1) {
-			if (newArr.length == 0 || item.dataset.feature.includes(newArr[0].name)) {
-				item.style.display = "flex";
-			} else {
-				item.style.display = "none";
-			}
+		const checkboxesFiltered = arr.filter((checkbox) => checkbox.value == true);
+		const feature = item.dataset.feature;
+		if (checkboxesFiltered.length == 0) {
+			return true;
+		} else if (
+			checkboxesFiltered.length == 1 &&
+			feature.includes(checkboxesFiltered[0].name)
+		) {
+			return true;
 		} else {
-			let cardArr = item.dataset.feature.split(" ");
-			let filterArr = newArr.map((checkbox) => checkbox.name);
-			let filterRes = cardArr.filter(this.fitrateCheckboxValue(filterArr));
-			if (filterRes.length == filterArr.length) {
-				item.style.display = "flex";
-			} else {
-				item.style.display = "none";
+			const featureArr = feature.split(" ");
+			const isCheckedCheckboxArr = checkboxesFiltered.map(
+				(checkbox) => checkbox.name
+			);
+			const featureArrContainsCheckboxes = featureArr.filter(
+				this.fitrateCheckboxValue(isCheckedCheckboxArr)
+			);
+			if (featureArrContainsCheckboxes.length == isCheckedCheckboxArr.length) {
+				return true;
 			}
 		}
 	}
@@ -215,10 +165,10 @@ export class Filter {
 		select.onchange = () => {
 			if (select.name == "specification") {
 				this.spec = select.value;
-				this.iterateCardRange();
+				this.iterateCards();
 			} else if (select.name == "property") {
 				this.prop = select.value;
-				this.iterateCardRange();
+				this.iterateCards();
 			}
 		};
 	}
@@ -236,7 +186,7 @@ export class Filter {
 		arr.forEach((item) => {
 			item.onchange = () => {
 				this.categoryValue = item.value;
-				this.iterateCardRange();
+				this.iterateCards();
 			};
 		});
 	}
@@ -244,7 +194,7 @@ export class Filter {
 		input.oninput = (e) => {
 			e.preventDefault();
 			this.textValue = input.value.toUpperCase().trim();
-			this.iterateCardRange();
+			this.iterateCards();
 		};
 	}
 	getCheckBoxValue(arr, arrValues) {
@@ -252,10 +202,10 @@ export class Filter {
 			item.onchange = () => {
 				if (item.checked) {
 					this.checkCheckbox(arrValues, item, true);
-					this.iterateCardRange();
+					this.iterateCards();
 				} else {
 					this.checkCheckbox(arrValues, item, false);
-					this.iterateCardRange();
+					this.iterateCards();
 				}
 			};
 		});

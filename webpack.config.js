@@ -94,6 +94,12 @@ module.exports = {
 			inject: true,
 			minify: false,
 		}),
+		new HtmlWebpackPlugin({
+			template: "./360.pug",
+			filename: "360.html",
+			inject: true,
+			minify: false,
+		}),
 		new HtmlWebpackPugPlugin(),
 		new ESLintPlugin(),
 		new CopyWebpackPlugin({

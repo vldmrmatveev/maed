@@ -1,4 +1,4 @@
-section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
+section.pt-32.sm_pt-56.md_pt-48.lg_pt-40.mb-14.sm_-mb-28.z-20.relative
 	.container
 		h1.text-3xl.sm_text-4xl.md_text-6xl.font-black.mb-4.text-indigo Каталог курсов
 		.pb-4
@@ -69,7 +69,7 @@ section.pt-32.sm_pt-56.md_pt-48.lg_pt-36.mb-14.sm_-mb-28.z-20.relative
 							option(value="marketing") Маркетинг
 							option(value="education") Обучение
 							option(value="all") Любой
-section#catalog-courses.overflow-hidden
+section.overflow-hidden
 	.bg-white
 		.bg-red.pt-20.sm_pt-40.rounded-t-2xl
 			.container
@@ -84,15 +84,12 @@ section#catalog-courses.overflow-hidden
 		+skewBlock('red', 'right')
 		.container
 			.flex.flex-wrap.-mx-3
-				.animated-block-2.px-3(class="w-full md_w-1/2 lg_w-1/3")
-					+course-card('red', 'white', 'Директор по digital-маркетингу', 'user-4.png', 'profession', 'soon free', '14', 'senior', 'business')
-					+course-card('red', 'white', 'Ведущий интернет маркетолог', 'user-2.png', 'performance', 'free' , '6', 'elementary', 'marketing')
-					+course-card('red', 'red', 'Мессенджер маркетолог профи', 'user-3.png', 'content', 'soon free', '8', 'middle', 'education')
-				.px-3(class="w-full md_w-1/2 lg_w-1/3")
-					+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png', 'ecomerce', 'soon free', '12', 'middle', 'education')
-					+course-card('red', 'white', 'E-commerce маркетолог', 'user-vector.svg', 'b2b', 'soon free')
-					+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-4.png', 'finance', 'soon')
-				.animated-block-1.px-3(class="w-full md_w-1/2 lg_w-1/3")
-					+course-card('red', 'white', 'Директор по социальным медиа / smm-директор', 'user-4.png', 'realty', 'soon free')
-					+course-card('red', 'white', 'Мессенджер маркетолог профи', 'user-3.png', 'auto')
-					+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-vector-2.svg', 'smm', 'soon free')
+				+course-card('red', 'white', 'Директор по digital-маркетингу', 'user-4.png', 'profession', 'soon free', '14', 'senior', 'business')
+				+course-card('red', 'white', 'Ведущий интернет маркетолог', 'user-2.png', 'performance', 'free' , '6', 'elementary', 'marketing')
+				+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-5.png', 'ecomerce', 'soon free', '12', 'middle', 'education')
+				+course-card('red', 'white', 'E-commerce маркетолог', 'user-vector.svg', 'b2b', 'soon free')
+				+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-4.png', 'finance', 'soon')
+				+course-card('red', 'red', 'Мессенджер маркетолог профи', 'user-3.png', 'content', 'soon free', '8', 'middle', 'education')
+				+course-card('red', 'white', 'Директор по социальным медиа / smm-директор', 'user-4.png', 'realty', 'soon free')
+				+course-card('red', 'white', 'Мессенджер маркетолог профи', 'user-3.png', 'auto')
+				+course-card('red', 'white', 'Digital-маркетинг и разработка стратегии для b2b', 'user-vector-2.svg', 'smm', 'soon free')

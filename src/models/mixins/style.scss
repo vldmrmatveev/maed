@@ -171,14 +171,10 @@
 			margin: auto;
 		}
 		&:before {
-			// width: 8px;
-			// transform: rotate(45deg) translate(-3px, 4px);
 			width: 14px;
 			transform: rotate(45deg) translate(0, 5px);
 		}
 		&:after {
-			// width: 16px;
-			// transform: rotate(-45deg) translate(2px, 2px);
 			width: 20px;
 			transform: rotate(-45deg) translate(4px, 4px);
 		}

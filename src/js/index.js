@@ -10,7 +10,6 @@ import {
 } from "@models/header/script";
 import { getYear } from "@models/footer/script";
 import { mainOption, galleryOption } from "@models/carousel-start/script";
-import { ScrollAnimationAsymetric } from "@models/plugins/animation";
 import { createPopover } from "@models/plugins/popover";
 import { ValidateForm } from "@models/plugins/validation";
 import { selectLevel, selectEducation } from "@models/plugins/select";
@@ -20,7 +19,7 @@ Swiper.use([Navigation, Pagination, Autoplay]);
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (document.getElementById("filterItem") != null) {
-		const filter = new Filter("filter");
+		const filter = new Filter("filter", ".course-card-main__block");
 		filter.filter();
 	}
 	Fancybox.bind("[data-fancybox]", {});
@@ -39,15 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", () => {
 	changeHeaderPadding("#header");
-});
-
-window.addEventListener("scroll", function () {
-	const tools = new ScrollAnimationAsymetric("#marketing-tools");
-	const coursesSpecial = new ScrollAnimationAsymetric("#courses-special");
-	const coursesCatalog = new ScrollAnimationAsymetric("#catalog-courses");
-	if (window.innerWidth >= 1024) {
-		tools.createAnimation();
-		coursesSpecial.createAnimation();
-		coursesCatalog.createAnimation();
-	}
 });
