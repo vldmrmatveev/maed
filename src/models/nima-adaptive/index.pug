@@ -1,6 +1,6 @@
 mixin arrowItemsAdaptive(text, img, num)
 	.w-full.relative.text-center.md_text-left(class="md_w-1/4 px-3")
-		img(src=require('/img/'+img), alt="").w-20.h-20.md_w-14.md_h-14.lg_w-20.lg_h-20.object-contain.mb-4.mx-auto.md_ml-0
+		img(src=require('/img/'+img), alt="").w-full.h-20.md_h-14.lg_h-20.object-contain.object-left.mb-4.mx-auto.md_ml-0
 		.hidden.md_flex.w-8.h-8.bg-yellow.items-center.justify-center.rounded-full.xl_-ml-8.font-bold.mb-6= num
 		p.text-indigo.font-extrabold.mb-6= text
 section.py-8.container
