@@ -16,6 +16,7 @@ module.exports = {
 			"hover_text-yellow",
 			"md_text-indigo",
 			"text-base",
+			"sm_text-xl",
 		],
 	},
 	darkMode: false, // or 'media' or 'class'

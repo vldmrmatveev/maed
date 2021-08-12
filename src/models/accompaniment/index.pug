@@ -1,0 +1,14 @@
+mixin accompaniment-card(title, text, img)
+	.px-3.w-full.mb-10(class="sm_w-1/2 lg_w-1/3")
+		img(src=require("/img/"+img), alt="").w-full.h-56.object-contain.mb-4
+		h5.text-indigo.font-black.text-2xl.mb-3!= title 
+		p.text-indigo.font-semibold= text
+section.py-8.sm_py-16.container
+	+360MainTitle('3', 'Сопровождение', '10')
+	.flex.flex-wrap.-mx-3
+		+accompaniment-card('Служба кураторства', 'Персональный куратор сориентирует и направит в любое время, а мастер группы с наставником помогут найти ответы на все вопросы', 'accompaniment-1.svg')
+		+accompaniment-card('База знаний Maed', 'Дополнительные материалы для расширения профессионального кругозора', 'accompanimen-2.svg')
+		+accompaniment-card('Мощная lms в основе', 'Платформа геткурс — одно из лучших решений на рынке, которое обеспечивает бесперебойный доступ ко всем учебным материалам', 'accompanimen-3.svg')
+		+accompaniment-card('Экспертный фидбэк', 'Проверка работ и все другие формы экспертной обратной связи от преподавателей, консультантов и кураторов в постоянном доступе', 'accompanimen-4.svg')
+		+accompaniment-card('Геймификация', 'Продуманный алгоритм мотивации студентов при помощи балльной системы вознаграждения', 'accompanimen-5.svg')
+

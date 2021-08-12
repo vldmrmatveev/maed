@@ -1,7 +1,14 @@
-mixin listCheck(text, margin = '8', color = 'red', fontSize = 'xs')
-	.flex.items-start(class="mb-"+margin)
+mixin 360MainTitle(num, text, margin = '6', textColor = 'indigo')
+	.flex.items-end(class="mb-"+margin)
+		.text-5xl.text-red.font-extrabold.mr-2= num + '.'
+		h2.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold(class="lg_pb-0.5 text-"+textColor)!= text
+mixin listCheck(text, margin = '8', color = 'red', fontSize = 'xs', position = 'start', fontWeight = 'semibold')
+	.flex.items-start(class="mb-"+margin + " items-"+position)
 		span.listcheck-item-check.mr-3(class="text-"+color)
-		span.font-semibold(class="text-"+fontSize)!= text
+		if fontSize == 'xl'
+			span.text-indigo.font-bold(class="text-base sm_text-"+fontSize +" sm_font-"+fontWeight)!= text
+		else
+			span.text-indigo(class="text-"+fontSize +" font-"+fontWeight)!= text
 mixin mainTitle(text, margin = '4', textColor = 'indigo')
 	h2.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold(class="mb-"+margin + " text-"+textColor)!= text
 mixin mainTextSecondary(text, margin = '6')
@@ -149,7 +156,7 @@ mixin start-card-xs(bg, title, user)
 					p.text-white.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3= title 
 					p.text-white.font-bold.text-xxs Все что нужно знать SMM-щику
 			img(src=require("./img/"+user), alt="" class="w-4/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom.z-10
-mixin start-card(bg, title, desc, user)
+mixin start-card(bg, title, desc, user, undertext = 'gray')
 	a(href="#").block
 		.min-h-lg.px-4.py-5.flex.flex-col.justify-between.relative.mb-4.rounded-xl.overflow-hidden.duration-300(class="bg-"+ bg + " hover_bg-"+ bg + "-dark")
 			if bg == 'yellow'
@@ -169,7 +176,7 @@ mixin start-card(bg, title, desc, user)
 					p.text-2xl.font-extrabold.text-white -40%
 					p.ml-2.text-white.text-xs Скидка <br> до 26 августа
 			img(src=require("./img/"+user), alt="" class="w-5/12 xl_w-6/12").absolute.right-0.bottom-0.h-full.object-contain.object-right-bottom
-		p.text-center.font-bold.text-gray.mb-5.opacity-80.duration-300= desc
+		p.text-center.font-bold.mb-5.opacity-80.duration-300(class="text-"+undertext)= desc
 mixin course-card(color, bg, title, user, category = 'smm', feature = 'employment sale diploma', month = '10', prop = 'middle', spec = 'education')
 	.px-3.course-card-main__block(class="w-full md_w-1/2 lg_w-1/3" data-title=title data-category=category data-feature=feature data-month=month data-property=prop data-specification=spec)
 		.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color)

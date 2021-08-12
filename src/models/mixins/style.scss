@@ -249,3 +249,80 @@ input {
 		}
 	}
 }
+
+.animated_img {
+	animation: spinArrows 40s ease infinite normal both;
+	z-index: 1;
+}
+
+.animated__text {
+	position: absolute;
+	z-index: 2;
+	line-height: 1;
+	&-0 {
+		top: 7%;
+		left: 9%;
+	}
+	&-1 {
+		top: 7%;
+		left: 63%;
+	}
+	&-2 {
+		top: 48%;
+		right: -7%;
+	}
+	&-3 {
+		bottom: 0;
+		right: 17%;
+	}
+	&-4 {
+		bottom: 4%;
+		left: 10%;
+	}
+	&-5 {
+		left: -4%;
+		top: 48%;
+	}
+}
+
+@keyframes spinArrows {
+	0% {
+		transform: rotate(0);
+	}
+	10% {
+		transform: rotate(-10deg);
+	}
+	40% {
+		transform: rotate(180deg);
+	}
+	50% {
+		transform: rotate(170deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.tab-carousel {
+	.tab {
+		&__item {
+			&-active {
+				border-bottom-color: transparent;
+				color: $red;
+			}
+		}
+	}
+}
+
+
+.collapse {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+.test-block-mobile {
+	min-height: 370px;
+	margin-bottom: 20px;
+}

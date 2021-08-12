@@ -9,7 +9,13 @@ import {
 	dropdownClick,
 } from "@models/header/script";
 import { getYear } from "@models/footer/script";
-import { mainOption, galleryOption } from "@models/carousel-start/script";
+import { Tab } from "@models/plugins/tabs";
+import { testDesktop, SwiperTest } from "@models/plugins/test";
+import {
+	mainOption,
+	galleryOption,
+	testOption,
+} from "@models/carousel-start/script";
 import { createPopover } from "@models/plugins/popover";
 import { ValidateForm } from "@models/plugins/validation";
 import { selectLevel, selectEducation } from "@models/plugins/select";
@@ -22,9 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		const filter = new Filter("filter", ".course-card-main__block");
 		filter.filter();
 	}
+	new Tab(".tab").init();
+	testDesktop.test();
 	Fancybox.bind("[data-fancybox]", {});
 	new Swiper(".swiper-container", mainOption);
 	new Swiper(".swiper-gallery", galleryOption);
+	const testSwiper = new Swiper(".swiper-test", testOption);
+	if (document.querySelector(".swiper-test") != null) {
+		new SwiperTest(testSwiper).test();
+	}
 	getYear();
 	createPopover();
 	const validateBtn = new ValidateForm(".btn_submit");

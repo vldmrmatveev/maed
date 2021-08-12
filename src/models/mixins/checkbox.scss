@@ -47,3 +47,13 @@
 		color: $white;
 	}
 }
+
+.true-radio-item__dot {
+	opacity: 0;
+}
+
+.checkbox-hidden:checked + label .true-radio-item {
+	.true-radio-item__dot {
+		opacity: 1;
+	}
+}

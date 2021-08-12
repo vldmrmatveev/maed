@@ -1,0 +1,147 @@
+mixin radioTest(id, val, name, checked, namedCollection)
+	input(type="radio" value=val name=namedCollection id="radio-test-"+id checked=checked).checkbox-hidden
+	label(for="radio-test-"+id).flex.items-center.cursor-pointer.mb-3
+		span.true-radio-item.rounded-full.duration-300.bg-gray.w-4.h-4.flex.items-center.justify-center.mr-2
+			span.true-radio-item__dot.w-2.h-2.rounded-full.bg-red.duration-300
+		span.text-indigo.font-extrabold!= name
+section.py-8.sm_py-16.container
+	.flex.flex-wrap.items-center.-mx-3.mb-16
+		.w-full.px-3
+			+360MainTitle('1', 'Программы академии', '10')
+		.px-3.w-full(class="md_w-1/2 lg_w-1/3")
+			+listCheck('Котируются в профессиональном сообществе', '8', 'red', 'base', 'center')
+			+listCheck('Отвечают требованиям сертификационных экзаменов и регламентов сервисов', '8', 'red', 'base', 'center')
+		.px-3.w-full(class="md_w-1/2 lg_w-1/3")
+			+listCheck('Формируют необходимые для работодателей компетенции', '8', 'red', 'base', 'center')
+			+listCheck('Соответствуют базовым принципам  педагогического дизайна', '8', 'red', 'base', 'center')
+		.px-3.w-full(class="md_w-1/2 lg_w-1/3")
+			+listCheck('Обновляются 2 раза в год', '8', 'red', 'base', 'center')
+			+listCheck('Доступны онлайн из любой точки мира без привязки ко времени', '8', 'red', 'base', 'center')
+		.px-3.w-full.flex.justify-center 
+			+btnTriangle('indigo', 'purple', 'Подобрать курс', '4', false)
+	.text-center.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold.text-red.mb-2 Давайте узнаем какой курс вам подойдет
+	.text-center.text-indigo.mb-10.text-2xl.font-semibold Ответьте на несколько вопросов 
+	.hidden.sm_block.border-4.border-red.px-6.sm_px-10.py-4.sm_py-8.rounded-2xl.relative
+		.absolute.-bottom-6.left-0.right-0.mx-auto.flex.justify-center.absolute-btn-container
+			button#showResult.inline-flex.items-center.px-8.md_px-10.py-3.rounded-xl.duration-300.text-white.bg-red.hover_bg-red-dark
+				span.font-semibold.mr-3 Подобрать курс
+				span.triangle-to-right.triangle-to-right__big.inline-block
+			button#hideResult.hidden.items-center.px-8.md_px-10.py-3.rounded-xl.duration-300.text-white.bg-red.hover_bg-red-dark
+				span.font-semibold.mr-3 Еще раз
+				span.triangle-to-right.triangle-to-right__big.inline-block
+		.hidden#testContainerResult
+			.text-center.text-indigo.font-extrabold.text-4xl.mb-3 Результат
+			.text-center.text-indigo.font-semibold.mb-8.text-xl Для вас подойдёт курс: 
+				a(href="#" target="_blank")#generatedLink.text-red.underline.hover_text-red-dark.duration-300 Электронный маркетинг для B2B и сложных рынков
+		.flex.flex-wrap.-mx-3#testContainerMain
+			.w-full.px-3.mb-4(class="sm_w-1/2 lg_w-1/4")
+				.min-h-sm.items-center.flex
+					h5.text-indigo.font-extrabold.text-2xl.mb-3 Кем вы работаете?
+				+radioTest('1', '1,2,3', 'Интернет маркетолог', false, 'testRadio1')
+				+radioTest('2', '0,2,3', 'SMM-специалист', false, 'testRadio1')
+				+radioTest('3', '1,3,5', 'Диджитал директор', true, 'testRadio1')
+				+radioTest('4', '2,3,5', 'PR менеджер', false, 'testRadio1')
+				+radioTest('5', '0,2,4', 'Аналитик', false, 'testRadio1')
+				+radioTest('6', '1,3', 'Контент менеджер', false, 'testRadio1')
+				+radioTest('7', '1,2,4', 'SMM-директор', false, 'testRadio1')
+			.w-full.px-3.mb-4(class="sm_w-1/2 lg_w-1/4")
+				.min-h-sm.items-center.flex
+					h5.text-indigo.font-extrabold.text-2xl.mb-3 В чем хотите развиваться?
+				+radioTest('21', '1,2,3', 'Аналитика', false, 'testRadio2')
+				+radioTest('22', '1,2,3', 'Биг дата', true, 'testRadio2')
+				+radioTest('23', '0,3,5', 'Блокчейн', false, 'testRadio2')
+				+radioTest('24', '2,3,5', 'Перформанс', false, 'testRadio2')
+				+radioTest('25', '1', 'Менеджмент', false, 'testRadio2')
+				+radioTest('26', '1,3', 'Контент', false, 'testRadio2')
+				+radioTest('27', '1,2,4', 'Диджитал', false, 'testRadio2')
+			.w-full.px-3.mb-4(class="sm_w-1/2 lg_w-1/4")
+				.min-h-sm.items-center.flex
+					h5.text-indigo.font-extrabold.text-2xl.mb-3 Желаемая зарплата
+				+radioTest('31', '1,2,3', '40&nbsp;000&nbsp;₽', false, 'testRadio3')
+				+radioTest('32', '1,2,3', '60&nbsp;000&nbsp;₽', false, 'testRadio3')
+				+radioTest('33', '0,3,5', '90&nbsp;000&nbsp;₽', false, 'testRadio3')
+				+radioTest('34', '2,3,5', '120&nbsp;000&nbsp;₽', false, 'testRadio3')
+				+radioTest('35', '1', '150&nbsp;000&nbsp;₽', false, 'testRadio3')
+				+radioTest('36', '1,3', '300&nbsp;000&nbsp;₽', false, 'testRadio3')
+				+radioTest('37', '1,2,4', '400&nbsp;000&nbsp;₽ и более', true, 'testRadio3')
+			.w-full.px-3.mb-4(class="sm_w-1/2 lg_w-1/4")
+				.min-h-sm.items-center.flex
+					h5.text-indigo.font-extrabold.text-2xl.mb-3 Ваш опыт работы
+				+radioTest('41', '0,2,3', 'Менее 1 года', false, 'testRadio4')
+				+radioTest('42', '1,2,3', '1-3 года', false, 'testRadio4')
+				+radioTest('43', '1,3,5', '3-6 года', false, 'testRadio4')
+				+radioTest('44', '2,3,5', '7-10 года', true, 'testRadio4')
+				+radioTest('45', '1', '10-15 года', false, 'testRadio4')
+				+radioTest('46', '1,3', 'Более 15 лет', false, 'testRadio4')
+	.block.sm_hidden
+		.swiper-test.relative.pb-10.overflow-hidden
+			.swiper-wrapper
+				.swiper-slide
+					.px-2
+						.test-block-mobile.border-4.border-red.px-6.py-4.rounded-xl
+							.min-h-sm.items-center.flex
+								h5.text-indigo.font-extrabold.text-2xl.mb-3 Кем вы работаете?
+							+radioTest('1-mob', '1,2,3', 'Интернет маркетолог', false, 'testRadio1Mob')
+							+radioTest('2-mob', '1,2,3', 'SMM-специалист', false, 'testRadio1Mob')
+							+radioTest('3-mob', '1,3,5', 'Диджитал директор', true, 'testRadio1Mob')
+							+radioTest('4-mob', '2,3,5', 'PR менеджер', false, 'testRadio1Mob')
+							+radioTest('5-mob', '1', 'Аналитик', false, 'testRadio1Mob')
+							+radioTest('6-mob', '1,3', 'Контент менеджер', false, 'testRadio1Mob')
+							+radioTest('7-mob', '1,2,4', 'SMM-директор', false, 'testRadio1Mob')
+				.swiper-slide
+					.px-2
+						.test-block-mobile.border-4.border-red.px-6.py-4.rounded-xl
+							.min-h-sm.items-center.flex
+								h5.text-indigo.font-extrabold.text-2xl.mb-3 В чем хотите развиваться?
+							+radioTest('21-mob', '1,2,3', 'Аналитика', false, 'testRadio2Mob')
+							+radioTest('22-mob', '1,2,3', 'Биг дата', true, 'testRadio2Mob')
+							+radioTest('23-mob', '1,3,5', 'Блокчейн', false, 'testRadio2Mob')
+							+radioTest('24-mob', '2,3,5', 'Перформанс', false, 'testRadio2Mob')
+							+radioTest('25-mob', '1', 'Менеджмент', false, 'testRadio2Mob')
+							+radioTest('26-mob', '1,3', 'Контент', false, 'testRadio2Mob')
+							+radioTest('27-mob', '1,2,4', 'Диджитал', false, 'testRadio2Mob')
+				.swiper-slide
+					.px-2
+						.test-block-mobile.border-4.border-red.px-6.py-4.rounded-xl
+							.min-h-sm.items-center.flex
+								h5.text-indigo.font-extrabold.text-2xl.mb-3 Желаемая зарплата
+							+radioTest('31-mob', '1,2,3', '40&nbsp;000&nbsp;₽', false, 'testRadio3Mob')
+							+radioTest('32-mob', '1,2,3', '60&nbsp;000&nbsp;₽', false, 'testRadio3Mob')
+							+radioTest('33-mob', '0,3,5', '90&nbsp;000&nbsp;₽', false, 'testRadio3Mob')
+							+radioTest('34-mob', '2,3,5', '120&nbsp;000&nbsp;₽', false, 'testRadio3Mob')
+							+radioTest('35-mob', '1', '150&nbsp;000&nbsp;₽', false, 'testRadio3Mob')
+							+radioTest('36-mob', '1,3', '300&nbsp;000&nbsp;₽', false, 'testRadio3Mob')
+							+radioTest('37-mob', '1,2,4', '400&nbsp;000&nbsp;₽ и более', true, 'testRadio3Mob')
+				.swiper-slide
+					.px-2
+						.test-block-mobile.border-4.border-red.px-6.py-4.rounded-xl
+							.min-h-sm.items-center.flex
+								h5.text-indigo.font-extrabold.text-2xl.mb-3 Ваш опыт работы
+							+radioTest('41-mob', '0,2,3', 'Менее 1 года', false, 'testRadio4Mob')
+							+radioTest('42-mob', '1,2,3', '1-3 года', false, 'testRadio4Mob')
+							+radioTest('43-mob', '1,3,5', '3-6 года', false, 'testRadio4Mob')
+							+radioTest('44-mob', '2,3,5', '7-10 года', true, 'testRadio4Mob')
+							+radioTest('45-mob', '1', '10-15 года', false, 'testRadio4Mob')
+							+radioTest('46-mob', '1,3', 'Более 15 лет', false, 'testRadio4Mob')
+				.swiper-slide
+					.px-2
+						.test-block-mobile.border-4.border-red.px-6.py-4.rounded-xl
+							.min-h-sm.items-center.justify-center.flex
+								h5.text-indigo.font-extrabold.text-2xl.mb-3.text-center Результат:
+							.text-center.text-indigo.font-semibold.mb-8.text-xl Для вас подойдёт курс: 
+								a(href="#" target="_blank").generated-link.text-red.underline.hover_text-red-dark.duration-300 Электронный маркетинг для B2B и сложных рынков
+			.swiper-button-prev.duration-300.text-white.bg-red
+			.swiper-button-next.duration-300.text-white.bg-red
+			.absolute.left-0.right-0.mx-auto.pointer-event-none.text-center.text-indigo.font-extrabold(class="bottom-2.5")
+				span.swiper-test__undertext Вопрос 
+					span.swiper-test__undertext-num 1
+					span 
+					span из 4
+				span.swiper-test__undertext-hidden.hidden Результат
+
+
+
+
+
+
+

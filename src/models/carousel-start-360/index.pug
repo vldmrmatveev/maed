@@ -1,0 +1,90 @@
+mixin tabs(id, margin, ...lists)
+	ul.tab.flex.items-center.justify-center(class="mb-"+margin)
+		each list, i in lists 
+			if i === 0
+				li.mx-2.sm_mx-4
+					a(href="#"+id+"-"+i).text-base.sm_text-3xl.font-bold.text-gray-dark.tab__item.tab__item-active.hover_text-red.duration-300.border-b-2.border-dashed.border-current.inline-flex.items-center
+						span.pointer-events-none= list
+			else if i === 1
+				li.mx-2.sm_mx-4
+					a(href="#"+id+"-"+i).text-base.sm_text-3xl.font-bold.text-gray-dark.tab__item.hover_text-red.duration-300.border-b-2.border-dashed.border-current.inline-flex.items-center.relative
+						span.pointer-events-none= list
+						sup.pointer-events-none.rounded-full.w-4.h-4.bg-pink-dark.text-white.font-bold.inline-flex.items-center.justify-center.text-xs.ml-1.absolute.-right-3.-top-2 !
+			else if i === 2
+				li.mx-2.sm_mx-4
+					a(href="#"+id+"-"+i).text-base.sm_text-3xl.font-bold.text-gray-dark.tab__item.hover_text-red.duration-300.border-b-2.border-dashed.border-current.inline-flex.items-center.relative
+						span.pointer-events-none= list
+						sup.pointer-events-none.rounded-full.w-4.h-4.bg-blue-wave.text-white.font-bold.inline-flex.items-center.justify-center.text-xs.ml-1.absolute.-right-3.-top-2 +3
+.container.pt-16.pb-12.box-border
+	+mainTitle('Самое время начать!', '10')
+	.tab-carousel.tab-content
+		+tabs('start-cards-container', '10', 'Акции', 'New', 'Выбор студентов')
+		#start-cards-container-0.collapse.active
+			.swiper-container.relative.pb-7
+				.swiper-wrapper
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('red', 'Директор по социальным медиа / smm-директор', 'Все что нужно знать SMM-щику', 'user-2.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('yellow', 'Мессенджер маркетолог профи', 'Крутой курс по управлению', 'user-3.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('purple', 'Директор по digital-маркетингу', 'Bestseller!', 'user-4.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('red', 'Директор по социальным медиа / smm-директор', 'Все что нужно знать SMM-щику', 'user-2.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('yellow', 'Мессенджер маркетолог профи', 'Крутой курс по управлению', 'user-3.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('purple', 'Директор по digital-маркетингу', 'Bestseller!', 'user-4.png', 'gray-dark')
+				.swiper-pagination.darken-red
+				+swiperNav('white', 'bg-red hover_bg-yellow')
+		#start-cards-container-1.collapse
+			.swiper-container.relative.pb-7
+				.swiper-wrapper
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('red', 'Директор по социальным медиа / smm-директор', 'Все что нужно знать SMM-щику', 'user-2.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('purple', 'Директор по digital-маркетингу', 'Bestseller!', 'user-4.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('red', 'Директор по социальным медиа / smm-директор', 'Все что нужно знать SMM-щику', 'user-2.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('yellow', 'Мессенджер маркетолог профи', 'Крутой курс по управлению', 'user-3.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('yellow', 'Мессенджер маркетолог профи', 'Крутой курс по управлению', 'user-3.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('purple', 'Директор по digital-маркетингу', 'Bestseller!', 'user-4.png', 'gray-dark')
+				.swiper-pagination.darken-red
+				+swiperNav('white', 'bg-red hover_bg-yellow')
+		#start-cards-container-2.collapse
+			.swiper-container.relative.pb-7
+				.swiper-wrapper
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('yellow', 'Мессенджер маркетолог профи', 'Крутой курс по управлению', 'user-3.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('red', 'Директор по социальным медиа / smm-директор', 'Все что нужно знать SMM-щику', 'user-2.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('yellow', 'Мессенджер маркетолог профи', 'Крутой курс по управлению', 'user-3.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('purple', 'Директор по digital-маркетингу', 'Bestseller!', 'user-4.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('red', 'Директор по социальным медиа / smm-директор', 'Все что нужно знать SMM-щику', 'user-2.png', 'gray-dark')
+					.swiper-slide.swiper-slide-1_3
+						.px-2 
+							+start-card('purple', 'Директор по digital-маркетингу', 'Bestseller!', 'user-4.png', 'gray-dark')
+				.swiper-pagination.darken-red
+				+swiperNav('white', 'bg-red hover_bg-yellow')

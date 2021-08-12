@@ -1,5 +1,5 @@
 class CarouselOption {
-	constructor(space, autoplayTiming) {
+	constructor(space, autoplay, loop) {
 		this.pagination = {
 			el: ".swiper-pagination",
 			type: "bullets",
@@ -9,15 +9,18 @@ class CarouselOption {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		};
-		this.autoplay = {
-			delay: autoplayTiming,
-			pauseOnMouseEnter: false,
-		};
+		if (autoplay != false) {
+			this.autoplay = {
+				delay: 5000,
+				pauseOnMouseEnter: false,
+			};
+		}
 		this.slidesPerView = "auto";
 		this.spaceBetween = space;
-		this.loop = true;
+		this.loop = loop;
 	}
 }
 
-export const mainOption = new CarouselOption(10, 5000);
-export const galleryOption = new CarouselOption(0, 5000);
+export const mainOption = new CarouselOption(10, true, true);
+export const galleryOption = new CarouselOption(0, true, true);
+export const testOption = new CarouselOption(0, false, false);

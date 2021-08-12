@@ -47,8 +47,8 @@ module.exports = {
 	context: path.resolve(__dirname, "src"),
 	mode: "development",
 	entry: {
-		main: "@/js/index.js",
 		libs: "@babel/polyfill",
+		main: "@/js/index.js",
 	},
 	output: {
 		filename: "[name].js",
@@ -157,6 +157,10 @@ module.exports = {
 			},
 			{
 				test: /\.(ttf|woff|woff2|eot)$/i,
+				type: "asset/resource",
+			},
+			{
+				test: /\.json$/,
 				type: "asset/resource",
 			},
 			{

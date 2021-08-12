@@ -1,0 +1,22 @@
+mixin 360-main-circle(...items)
+	each item, index in items 
+		p.text-indigo.animated__text.font-black.text-sm.sm_text-xl.bg-white(class="animated__text-"+index)!= item
+section.pb-16.pt-32.sm_pt-56.md_pt-48.z-20.relative.overflow-hidden
+	.container
+		.flex.flex-wrap.items-center.justify-center.-mx-3
+			.w-full(class="lg_w-1/2 px-3")
+				h1.text-3xl.md_text-4xl.font-extrabold.text-indigo.xl_text-titlemin.mb-6 Экосистема MAED
+				.hidden.lg_block
+					+mainTextSecondary('Вы погрузитесь в маркетинговую среду MAED, где каждый ваш шаг направлен на повышение профессиональных компетенций и их развитие. Будете работать над проектами вместе с кураторами и преподавателями, общаться с экспертами в маркетинге и друг с другом.')
+			.w-full.mb-8(class="md_w-10/12 lg_w-1/2 px-8 lg_pl-3 lg_pr-8")
+				.p-16.sm_p-24.relative
+					+360-main-circle('Преподаватели', 'Сопровождение', 'Подготовка <br> выпускиника', 'Центр <br> карьеры', 'Сообщество', 'Программа')
+					img(src=require('/img/Group_7488.svg'), alt="").w-full.absolute.top-0.left-0.h-full.animated_img
+					.block
+						img(src=require('/img/Group_7480.svg'), alt="").w-full
+			.w-full.px-3.lg_hidden
+				+mainTextSecondary('Вы погрузитесь в маркетинговую среду MAED, где каждый ваш шаг направлен на повышение профессиональных компетенций и их развитие. Будете работать над проектами вместе с кураторами и преподавателями, общаться с экспертами в маркетинге и друг с другом.')
+		.mt-8.lg_-mt-20
+			+mainTitle('Методология <br> Masters Education 360&deg;', '6', 'red')
+		.rounded-xl.border-4.border-red.sm_px-16.sm_py-12.px-6.py-4
+			p.text-xl.sm_text-3xl.text-indigo.font-bold Masters Education 360° – это подход, в котором подготовка специалиста не ограничивается образовательным курсом, а захватывает все сферы, связанные с развитием в выбранном направлении профессиональной деятельности.
