@@ -10,11 +10,11 @@ import {
 } from "@models/header/script";
 import { getYear } from "@models/footer/script";
 import { Tab } from "@models/plugins/tabs";
-import { testDesktop, SwiperTest } from "@models/plugins/test";
+// import { testDesktop, SwiperTest } from "@models/plugins/test";
 import {
 	mainOption,
 	galleryOption,
-	testOption,
+	// testOption,
 } from "@models/carousel-start/script";
 import { createPopover } from "@models/plugins/popover";
 import { ValidateForm } from "@models/plugins/validation";
@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		filter.filter();
 	}
 	new Tab(".tab").init();
-	testDesktop.test();
+	// testDesktop.test();
 	Fancybox.bind("[data-fancybox]", {});
 	new Swiper(".swiper-container", mainOption);
 	new Swiper(".swiper-gallery", galleryOption);
-	const testSwiper = new Swiper(".swiper-test", testOption);
-	if (document.querySelector(".swiper-test") != null) {
-		new SwiperTest(testSwiper).test();
-	}
+	// const testSwiper = new Swiper(".swiper-test", testOption);
+	// if (document.querySelector(".swiper-test") != null) {
+	// 	new SwiperTest(testSwiper).test();
+	// }
 	getYear();
 	createPopover();
 	const validateBtn = new ValidateForm(".btn_submit");
