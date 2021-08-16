@@ -1,0 +1,87 @@
+mixin modalInput(typeInput, placeholder, nameInput)
+	if nameInput == "name"
+		input(type=typeInput name=nameInput placeholder=placeholder required minlength="2").rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom
+	else if nameInput == "phone"
+		input(type=typeInput name=nameInput placeholder=placeholder required maxlength="17" minlength="17").rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom.input__phone
+	else
+		input(type=typeInput name=nameInput placeholder=placeholder required).rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom
+mixin career-start-num(num, text)
+	.px-3.w-full.flex.items-center.md_flex-col.md_justify-center(class="md_w-1/3")
+		.text-yellow.font-black.text-5xl.mb-1.mr-4.md_mr-0= num 
+		p.text-white.font-extrabold.mb-2= text
+section.py-8.sm_py-16
+	.container
+		+mainTitle('Старт карьеры в компаниях-партнерах')
+		p.text-lg.lg_text-xl.font-semibold.mb-8 Опыт работы 
+			a(href="#").text-purple.duration-300.hover_text-purple-dark получите у нас
+	.bg-purple 
+		.container.py-16
+			.border.border-white.p-4
+				.flex.flex-wrap.items-center.-mx-3
+					.px-3(class="w-1/2 md_w-1/4")
+						img(src=require('/img/webolut.png'), alt="").w-24.h-24.object-contain.block.mx-auto
+					.px-3(class="w-1/2 md_w-1/4")
+						img(src=require('/img/sgs.png'), alt="").w-24.h-24.object-contain.block.mx-auto
+					.px-3(class="w-1/2 md_w-1/4")
+						img(src=require('/img/completo.png'), alt="").w-24.h-24.object-contain.block.mx-auto
+					.px-3(class="w-1/2 md_w-1/4")
+						img(src=require('/img/rmaa.png'), alt="").w-24.h-24.object-contain.block.mx-auto
+			.flex.flex-wrap.-mx-3.my-10 
+				+career-start-num('3', 'месяца')
+				+career-start-num('20', 'часов в неделю')
+				+career-start-num('$', 'со 2 месяца')
+			.sm_border.sm_border-white.sm_px-6.sm_pt-8.sm_mb-10.mb-2
+				.flex.flex-wrap.-mx-3
+					.w-full.px-3.mb-4(class="sm_w-1/2 md_w-1/3")
+						h5.text-white.font-extrabold.text-2xl.mb-3 Направления <br> стажировки:
+						.flex.items-center.mb-6.md_mt-10
+							img(src=require('/img/im.svg'), alt="").w-8.h-8.object-contain.mr-3
+							p.text-white.font-semibold Интернет-маркетинг
+						.flex.items-center.mb-6
+							img(src=require('/img/homework-A.svg'), alt="").w-8.h-8.object-contain.mr-3
+							p.text-white.font-semibold Offline-реклама
+					.w-full.px-3.mb-4(class="sm_w-1/2 md_w-2/3")
+						.flex.flex-wrap.items-center.-mx-3 
+							.w-full.px-3 
+								h5.text-white.font-extrabold.text-2xl.mb-3 Требования
+							.w-full.px-3(class="md_w-1/2")
+								+listCheck('Профильное образование', '8', 'yellow', 'base', 'start', 'semibold', 'white')
+								+listCheck('Заинтересованность в профессиональном росте', '8', 'yellow', 'base', 'start', 'semibold', 'white')
+								+listCheck('Желание заниматься медиапланированием', '8', 'yellow', 'base', 'start', 'semibold', 'white')
+							.w-full.px-3(class="md_w-1/2")
+								+listCheck('Успешное прохождение интервью', '8', 'yellow', 'base', 'start', 'semibold', 'white')
+								+listCheck('Стремление развиваться в Digital', '8', 'yellow', 'base', 'start', 'semibold', 'white')
+								+listCheck('Готовность работать в режиме многозадачности', '8', 'yellow', 'base', 'start', 'semibold', 'white')
+			.flex.flex-wrap.-mx-3
+				.w-full.px-3.mb-6.order-2.md_order-1(class="md_w-1/3")
+					a(href="#modalForm" data-modal).inline-flex.items-center.px-8.md_px-10.py-3.rounded-xl.duration-300.text-white.bg-yellow.hover_bg-yellow-dark.text-indigo.hover_text-white
+						span.font-semibold.mr-3.pointer-events-none Узнать подробнее
+						span.triangle-to-right.triangle-to-right__big.inline-block.pointer-events-none
+				.w-full.px-3.mb-6.order-1.md_order-2(class="md_w-2/3")
+					p.text-white.font-semibold После успешного прохождения стажировки в компании студент получает приоритет на трудоустройство при наличии профильной вакансии
+
+.modal__bg
+	.modal.modal__xl.container.px-0.border-3.border-indigo#modalForm
+		.modal__body.px-10.py-12
+			.modal__close 
+			.flex.flex-wrap.-mx-3.mt-6
+				.w-full.px-3(class="md_w-1/2")
+					p.text-indigo.font-extrabold.text-4xl.mb-6 Успей оставить заявку
+					p.text-indigo.font-bold.mb-8 Мы свяжемся с вами, чтобы рассказать о помощи в трудоустройстве подробнее
+					img(src=require('/img/form-modal.svg'), alt="").w-56.absolute.bottom-0.left-10.lg_w-80.md_block.hidden
+				.w-full.px-3(class="md_w-1/2")
+					.flex.flex-wrap.justify-center
+						.form_container.text-center(class="md_w-10/12")
+							form.form(action="https://jsonplaceholder.typicode.com/users")
+								.mb-2
+									+modalInput('text', 'Имя', 'name')
+									+modalInput('text', 'Телефон', 'phone')
+									+modalInput('email', 'E-mail', 'email')
+								input(type="text" name="promo" placeholder="Есть промокод?").w-full.px-0.py-2.border-0.border-b.border-indigo.outline-none.duration-300.mb-8.input_custom
+								.mb-8.flex.justify-center
+									+checkbox-form('emailSubscribe', 'Предпочитаю сообщения по почте')
+								button.btn_submit.bg-indigo.rounded-md.px-4.py-3.hover_bg-purple.duration-300.font-semibold.text-white.mb-4.w-full(data-text="Ваши данные были успешно отправлены") Оставить заявку
+								p.mb-4.text-indigo.text-center.text-xs Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных
+
+
+

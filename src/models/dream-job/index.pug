@@ -1,0 +1,20 @@
+mixin dream-job-list(...lists)
+	ul.list-dream-job.text-sm.font-bold.h-full.flex.flex-col.justify-between
+		each list in lists 
+			li.list-dream-job__item= list
+section.py-8.sm_py-16.container
+	.flex.flex-wrap.lg_justify-around.-mx-3
+		.w-full.px-3.order-2.md_order-1
+			+mainTitle('Проведем к работе мечты', '8')
+			+mainTextSecondary('Центр карьеры готов помочь в получении долгожданного оффера, но мы несем ответственность перед компаниями-партнерами, поэтому тщательно проверяем готовность каждого студента к стажировке или трудоустройству. Успешный студент – успешная карьера.', '16')
+		.px-3.w-full.order-3.md_order-2.mb-4(class='md_w-1/3 lg_w-3/12')
+			+dream-job-list('Начинаете обучение', 'Изучаете 100% теории', 'Выполняете более 70% заданий', 'Заполняете анкету после защиты дипломной работы', 'Проходите собеседование с HR-ром MAED', 'Получаете дополнительное резюме от HR', 'Выходите на собеседования в компании')
+		.px-3.w-full.order-1.md_order-3.flex.items-center.mb-4(class='md_w-1/3')
+			img(src=require("/img/dream-job.svg"), alt="").w-full.mb-6.max-w-sm.mx-auto.block
+		.px-3.w-full.order-4.mb-4(class='md_w-1/3 lg_w-3/12')
+			+dream-job-list('Начинаете обучение', 'Изучаете треть теории', 'Применяете знания на стажировке от MAED', 'Развиваетесь под контролем наставника', 'Нарабатываете опыт по специальности', 'У вас на руках рекомендательное письмо', 'Получаете приоритет в трудоустройстве')
+		.w-full.px-3.flex.md_justify-center.order-5
+			.md_w-80.mt-6.md_mt-0
+				.hidden.md_block.w-8.h-8.rounded-full.bg-red.mx-auto.mb-4
+				p.md_text-center.text-indigo.font-extrabold.text-sm.md_text-2xl.mb-2.list-dream-job__item-custom Начинаете карьерный рост на работе мечты
+				img(src=require('/img/star.svg'), alt="").w-16.md_block.mx-auto.hidden

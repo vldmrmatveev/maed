@@ -1,8 +1,4 @@
-export async function postData(email, url) {
-	const obj = {
-		email,
-		time: createDate(),
-	};
+export async function postData(url, obj) {
 	try {
 		const response = await fetch(url, {
 			method: "POST",
@@ -19,15 +15,4 @@ export async function postData(email, url) {
 		console.error("Ошибка: " + err);
 		return false;
 	}
-}
-
-function createDate() {
-	const date = new Date();
-	const hours = date.getHours();
-	const minutes = date.getMinutes();
-	const day = date.getDate();
-	const month =
-		date.getMonth() > 9 ? date.getMonth() + 1 : "0" + (date.getMonth() + 1);
-	const year = date.getFullYear();
-	return `${hours}:${minutes} ${day}.${month}.${year}`;
 }

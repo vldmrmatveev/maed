@@ -24,7 +24,12 @@
 		margin: auto;
 		opacity: 0;
 		@media (max-width: 639px) {
-			background-image: url('../img/check-white.svg')
+			background-image: url('../img/check-white.svg');
+		}
+	}
+	&__form {
+		&:before {
+			background-image: url('../img/check-white.svg');
 		}
 	}
 }
@@ -37,6 +42,10 @@
 	@media (max-width: 639px) {
 		background-color: $indigo;
 	}
+}
+
+.checkbox-hidden:checked + label .true-checkbox__form {
+	background-color: $indigo;
 }
 
 .checkbox-hidden:checked + label .true-radio {

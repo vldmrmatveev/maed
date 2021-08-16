@@ -20,6 +20,7 @@ import { createPopover } from "@models/plugins/popover";
 import { ValidateForm } from "@models/plugins/validation";
 import { selectLevel, selectEducation } from "@models/plugins/select";
 import { Filter } from "@models/plugins/filter";
+import { Modal } from "@models/plugins/modal";
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const filter = new Filter("filter", ".course-card-main__block");
 		filter.filter();
 	}
+	new Modal("data-modal").init();
 	new Tab(".tab").init();
 	// testDesktop.test();
 	Fancybox.bind("[data-fancybox]", {});

@@ -2,17 +2,17 @@ mixin 360MainTitle(num, text, margin = '6', textColor = 'indigo')
 	.flex.items-end(class="mb-"+margin)
 		.text-5xl.text-red.font-extrabold.mr-2= num + '.'
 		h2.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold(class="lg_pb-0.5 text-"+textColor)!= text
-mixin listCheck(text, margin = '8', color = 'red', fontSize = 'xs', position = 'start', fontWeight = 'semibold')
+mixin listCheck(text, margin = '8', color = 'red', fontSize = 'xs', position = 'start', fontWeight = 'semibold', textColor = 'indigo')
 	.flex.items-start(class="mb-"+margin + " items-"+position)
 		span.listcheck-item-check.mr-3(class="text-"+color)
 		if fontSize == 'xl'
-			span.text-indigo.font-bold(class="text-base sm_text-"+fontSize +" sm_font-"+fontWeight)!= text
+			span.font-bold(class="text-base sm_text-"+fontSize +" sm_font-"+fontWeight + " text-" + textColor)!= text
 		else
-			span.text-indigo(class="text-"+fontSize +" font-"+fontWeight)!= text
+			span(class="text-"+fontSize +" font-"+fontWeight + " text-" + textColor)!= text
 mixin mainTitle(text, margin = '4', textColor = 'indigo')
 	h2.text-3xl.sm_text-4xl.xl_text-5xl.xl_text-titlemin.font-extrabold(class="mb-"+margin + " text-"+textColor)!= text
-mixin mainTextSecondary(text, margin = '6')
-	p.text-lg.lg_text-xl.text-indigo.font-semibold(class="mb-"+margin)!= text
+mixin mainTextSecondary(text, margin = '6', textColor = 'indigo')
+	p.text-lg.lg_text-xl.font-semibold(class="mb-"+margin +" text-"+textColor)!= text
 mixin swiperNav(text, bg = 'bg-gray bg-opacity-30 hover_bg-opacity-20')
 	.swiper-button-prev.duration-300(class="text-"+text + " " + bg)
 	.swiper-button-next.duration-300(class="text-"+text + " " + bg)
@@ -128,6 +128,11 @@ mixin checkbox(link, text)
 	label(for=link).flex.items-center.cursor-pointer
 		span.true-checkbox.border.border-indigo.sm_border-white.rounded-sm.duration-300 
 		span.sm_text-white.text-sm.ml-3.whitespace-nowrap= text
+mixin checkbox-form(link, text)
+	input(type="checkbox" name=link id=link checked).checkbox-hidden
+	label(for=link).flex.items-center.cursor-pointer
+		span.true-checkbox.true-checkbox__form.border.border-indigo.rounded-sm.duration-300 
+		span.text-indigo.ml-3.whitespace-nowrap= text
 mixin start-card-min(bg, title, user)
 	a(href="#").block.mb-8
 		.min-h-md.px-4.py-5.flex.flex-col.justify-between.relative.rounded-xl.overflow-hidden.duration-300(class="bg-"+ bg + " hover_bg-"+ bg + "-dark")

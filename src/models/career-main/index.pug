@@ -1,0 +1,31 @@
+mixin career-main-card(num, title, text)
+	.px-3.w-full.mb-8(class="md_w-1/2 lg_w-1/4")
+		.text-yellow.font-black.text-5xl.mb-1= num 
+		p.text-white.font-black.text-2xl.mb-2!= title
+		p.text-white.text-sm= text
+section.pb-16.pt-32.sm_pt-56.md_pt-44.lg_pt-36.z-20.relative.overflow-hidden
+	.container
+		.flex.flex-wrap.items-center.justify-center.-mx-3
+			.w-full.order-2.lg_order-1(class="lg_w-1/2 px-3")
+				h1.text-3xl.md_text-4xl.font-extrabold.text-indigo.xl_text-titlemin.mb-6 Центр карьеры MAED
+				+mainTextSecondary('Ты осваиваешь профессию — <br> мы подбираем вакансию для старта', '12')
+				.flex
+					.w-full(class="lg_w-7/12")
+						blockquote.text-indigo.text-3xl.font-extrabold.mb-4.blockquote.md_mb-0.text-red 
+							span.text-indigo Наша задача&nbsp;&mdash; провести каждого студента по&nbsp;пути от&nbsp;новых знаний к&nbsp;их&nbsp;монетизации
+			.w-full.mb-8.order-1.lg_order-2(class="md_w-10/12 lg_w-1/2 px-8 lg_pl-3 lg_pr-8")
+				img(src=require('/img/career-center.svg'), alt="").w-full.mb-6.lg_mb-0
+img(src=require('/img/maed-full.jpg'), alt="").w-full.sm_block.hidden
+img(src=require('/img/maed-full-mob.jpg'), alt="").w-full.sm_hidden
+section.bg-indigo.py-10
+	.container
+		.flex.flex-wrap.-mx-3.mb-4
+			.w-full.px-3(class="md_w-1/2")
+				+mainTitle('Центр карьеры', '6', 'white')
+			.w-full.px-3(class="md_w-1/2")
+				+mainTextSecondary('Это проект MAED, который помогает студентам найти работу мечты, а компаниям-партнерам — получить квалифицированных специалистов из сферы digital', '6', 'white')
+		.flex.flex-wrap.-mx-3 
+			+career-main-card('1', 'Консультации <br> с HR-ром', 'На вебинарах по трудоустройству с HR-ром можно обсудить стратерию поиска работы, тонкости составления резюме и прохождения собеседования')
+			+career-main-card('2', 'Закрытые <br> вакансии', 'После выпуска студентам MAED открывается доступ к закрытым группам, где публикуются актуальные вакансии в сфере маркетинга')
+			+career-main-card('3', 'Помощь <br> на всех этапах', 'Специалисты Центра карьеры сопровождают выпускников от заполнения анкеты до оффера мечты')
+			+career-main-card('4', 'Проверенные <br> работодатели', 'Выпускник трудоустраивается в компанию с надежной репутацией и длительной историей сотрудничества с MAED')

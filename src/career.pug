@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title MAED | Центр Карьеры
+		link(rel='shortcut icon' href='favicon.ico')
+	body.font-sans
+		include models/mixins/index.pug
+		include models/header/index.pug
+		include models/career-main/index.pug
+		include models/dream-job/index.pug
+		include models/career-start/index.pug
+		include models/graduates/index.pug
+		include models/carousel-start-360/index.pug
+		.container.pb-16
+			.flex.justify-center 
+				+btnTriangle('red', 'red-dark', 'Подобрать курс', '0', false)
+		include models/community/index.pug
+		include models/footer/index.pug
