@@ -1,0 +1,22 @@
+section.py-8.container
+	.flex.flex-wrap.items-center.mb-8
+		.w-full(class="md_w-8/12")
+			+mainTitle('Центр карьеры')
+			+mainTextSecondary('Подбор вакансий, помощь в составлении резюме, практические советы по трудоустройству на работу и по стажировке – со всем этим вам помогут сотрудники Центра карьеры.')
+	.block
+		.swiper-container.relative.pb-8.sm_pb-12.swiper-container-yellow
+			.swiper-wrapper
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', false, '#instagram', '#vk')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', false, '#vk')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', '#instagram', false)
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', '#instagram', '#vk')
+			.hidden.sm_block.swiper-pagination.darken-revert-purple
+			+swiperNav('white', 'bg-indigo hover_bg-purple')

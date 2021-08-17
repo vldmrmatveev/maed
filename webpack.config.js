@@ -89,6 +89,12 @@ module.exports = {
 			minify: false,
 		}),
 		new HtmlWebpackPlugin({
+			template: "./team.pug",
+			filename: "team.html",
+			inject: true,
+			minify: false,
+		}),
+		new HtmlWebpackPlugin({
 			template: "./nima.pug",
 			filename: "nima.html",
 			inject: true,

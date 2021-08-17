@@ -403,6 +403,11 @@ input {
 	background-color: $white;
 	overflow: scroll;
 	max-height: 100%;
+	-ms-overflow-style: none;
+  scrollbar-width: none;
+	::-webkit-scrollbar {
+		display: none;
+	}
 	&__xl {
 		max-width: 955px;
 		margin: 0 auto;
@@ -465,4 +470,30 @@ input {
 
 .bg-indigo-dark .text-revert-bg {
 	color: $white;
+}
+
+.user-card {
+	color: $indigo;
+	.user-card__link {
+		&:hover {
+			background-color: $indigo;
+			color: $white;
+		}
+	}
+}
+
+.bg-indigo .user-card {
+	color: $white;
+	.user-card__link {
+		&:hover {
+			background-color: $white;
+			color: $indigo;
+		}
+	}
+}
+
+[modal-facebook='false'],
+[modal-vk='false'],
+[modal-instagram='false'] {
+	display: none;
 }

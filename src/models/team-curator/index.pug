@@ -1,0 +1,23 @@
+.bg-indigo
+	section.py-16.container
+		.flex.flex-wrap.items-center.mb-8
+			.w-full(class="md_w-8/12")
+				+mainTitle('Кураторы', '4', 'white')
+				+mainTextSecondary('Эти люди поддерживают постоянную связь с нашими студентами  и знают изнутри, что такое маркетинг. Многие из них сами были на месте наших учеников, поэтому отлично понимают, что нужно для успешного обучения.', '4', 'white')
+		.block
+			.swiper-container.relative.pb-8.sm_pb-12.swiper-container-yellow
+				.swiper-wrapper
+					.swiper-slide.swiper-slide-1_4
+						.sm_px-2
+							+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', false, '#instagram', '#vk')
+					.swiper-slide.swiper-slide-1_4
+						.sm_px-2
+							+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', false, '#vk')
+					.swiper-slide.swiper-slide-1_4
+						.sm_px-2
+							+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', '#instagram', false)
+					.swiper-slide.swiper-slide-1_4
+						.sm_px-2
+							+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', '#instagram', '#vk')
+				.hidden.sm_block.swiper-pagination.lighten-revert-purple
+				+swiperNav('indigo', 'bg-white hover_bg-purple hover_text-white')

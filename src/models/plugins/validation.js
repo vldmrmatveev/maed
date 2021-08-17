@@ -154,5 +154,7 @@ class ValidatePhone {
 	}
 }
 
-const phoneInput = new ValidatePhone(".input__phone");
-phoneInput.validatePhone();
+if (document.querySelectorAll(".input__phone") != null) {
+	const phoneInput = new ValidatePhone(".input__phone");
+	phoneInput.validatePhone();
+}

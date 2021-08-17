@@ -38,6 +38,23 @@
 			}
 		}
 	}
+	.lighten {
+		&-revert {
+			&-purple {
+				.swiper-pagination-bullet {
+					background-color: $purple;
+					opacity: 1;
+					&:before {
+						border-color: $purple;
+						border-top-color: $white;
+					}
+					&-active {
+						background-color: $white;
+					}
+				}
+			}
+		}
+	}
 	.darken {
 		.swiper-pagination-bullet {
 			background-color: #b4bbc2;
@@ -62,6 +79,19 @@
 			}
 		}
 		&-revert {
+			&-purple {
+				.swiper-pagination-bullet {
+					background-color: $indigo;
+					opacity: 1;
+					&:before {
+						border-color: $indigo;
+						border-top-color: $purple;
+					}
+					&-active {
+						background-color: $purple;
+					}
+				}
+			}
 			.swiper-pagination-bullet {
 				background-color: $indigo;
 				opacity: 1;

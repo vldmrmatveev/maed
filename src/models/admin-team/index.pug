@@ -1,0 +1,22 @@
+section.pt-16.pb-24.container
+	.flex.flex-wrap.items-center.mb-8
+		.w-full(class="md_w-8/12")
+			+mainTitle('Административная команда MAED')
+			+mainTextSecondary('Самые незаметные, но одни из самых важных людей в Академии MAED. Благодаря им функционируют сайты, появляются новые проекты и решаются все орг вопросы.')
+	.block
+		.swiper-container.relative.pb-8.sm_pb-12.swiper-container-yellow
+			.swiper-wrapper
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', false, '#instagram', '#vk')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', false, '#vk')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', '#instagram', false)
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCard('user-carousel-1.jpg', 'Константинов Константин', 'Генеральный директор кампании MAED', '#facebook', '#instagram', '#vk')
+			.hidden.sm_block.swiper-pagination.darken-revert-purple
+			+swiperNav('white', 'bg-indigo hover_bg-purple')

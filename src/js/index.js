@@ -10,6 +10,7 @@ import {
 } from "@models/header/script";
 import { getYear } from "@models/footer/script";
 import { Tab } from "@models/plugins/tabs";
+import { showHiddenBlocks } from "@models/plugins/hidden";
 // import { testDesktop, SwiperTest } from "@models/plugins/test";
 import {
 	mainOption,
@@ -25,6 +26,7 @@ import { Modal } from "@models/plugins/modal";
 Swiper.use([Navigation, Pagination, Autoplay]);
 
 document.addEventListener("DOMContentLoaded", () => {
+	showHiddenBlocks();
 	if (document.getElementById("filterItem") != null) {
 		const filter = new Filter("filter", ".course-card-main__block");
 		filter.filter();

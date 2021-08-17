@@ -1,15 +1,3 @@
-export function openModal() {
-	document.addEventListener("click", (e) => {
-		if (e.target.hasAttribute("data-modal")) {
-			e.preventDefault();
-			const link = e.target.getAttribute("href");
-			const modal = document.querySelector(link);
-			console.log(link, modal);
-			modal.closest(".modal__bg").classList.add("open");
-		}
-	});
-}
-
 export class Modal {
 	constructor(dataAttr) {
 		this.attr = dataAttr;
@@ -22,12 +10,55 @@ export class Modal {
 		document.addEventListener("click", (e) => {
 			if (e.target.hasAttribute(this.attr)) {
 				e.preventDefault();
+				this.userModal(e);
 				const link = e.target.getAttribute("href");
 				const modal = document.querySelector(link);
 				modal.closest(".modal__bg").classList.add("open");
 				this.bodyClassList();
 			}
 		});
+	}
+	userModal(e) {
+		const res = this.generateObj(e);
+		this.changeModalData(e, res);
+	}
+	changeModalData(e, obj) {
+		const parentModal = document.querySelector(e.target.getAttribute("href"));
+		for (let key in obj) {
+			let keyElement = parentModal.querySelector(`[${key}]`);
+			if (parentModal.querySelector(`[${key}]`) != null) {
+				keyElement.setAttribute(key, obj[key]);
+				switch (keyElement.tagName) {
+					case "IMG":
+						keyElement.setAttribute("src", obj[key]);
+						break;
+					case "A":
+						keyElement.setAttribute("href", obj[key]);
+						break;
+					default:
+						keyElement.textContent = obj[key];
+				}
+			}
+		}
+	}
+	generateObj(e) {
+		if (e.target.dataset.modal == "user") {
+			let res = {
+				"modal-facebook": false,
+				"modal-vk": false,
+				"modal-instagram": false,
+			};
+			const attrs = e.target.attributes;
+			for (let i = 0; i < attrs.length; i++) {
+				if (
+					attrs[i].name.split("-")[0] == "data" &&
+					attrs[i].name.split("-")[1] != "modal"
+				) {
+					res["modal-" + attrs[i].name.split("-")[1]] = attrs[i].value;
+				}
+			}
+			return res;
+		}
 	}
 	closeModal() {
 		document.addEventListener("click", (e) => {

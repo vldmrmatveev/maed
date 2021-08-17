@@ -12,8 +12,8 @@ mixin career-start-num(num, text)
 section.py-8.sm_py-16
 	.container
 		+mainTitle('Старт карьеры в компаниях-партнерах')
-		p.text-lg.lg_text-xl.font-semibold.mb-8 Опыт работы 
-			a(href="#").text-purple.duration-300.hover_text-purple-dark получите у нас
+		p.text-lg.lg_text-xl.font-semibold.mb-8 Опыт работы получите у нас
+			//- a(href="#").text-purple.duration-300.hover_text-purple-dark получите у нас
 	.bg-purple 
 		.container.py-16
 			.border.border-white.p-4
@@ -77,7 +77,7 @@ section.py-8.sm_py-16
 									+modalInput('text', 'Имя', 'name')
 									+modalInput('text', 'Телефон', 'phone')
 									+modalInput('email', 'E-mail', 'email')
-								input(type="text" name="promo" placeholder="Есть промокод?").w-full.px-0.py-2.border-0.border-b.border-indigo.outline-none.duration-300.mb-8.input_custom
+								input(type="text" name="promo" placeholder="Есть промокод?").w-full.px-0.py-2.border-0.border-b.border-indigo.outline-none.duration-300.mb-8.input_custom.rounded-none
 								.mb-8.flex.justify-center
 									+checkbox-form('emailSubscribe', 'Предпочитаю сообщения по почте')
 								button.btn_submit.bg-indigo.rounded-md.px-4.py-3.hover_bg-purple.duration-300.font-semibold.text-white.mb-4.w-full(data-text="Ваши данные были успешно отправлены") Оставить заявку

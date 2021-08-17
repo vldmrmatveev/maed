@@ -5,16 +5,18 @@ mixin career-main-card(num, title, text)
 		p.text-white.text-sm= text
 section.pb-16.pt-32.sm_pt-56.md_pt-44.lg_pt-36.z-20.relative.overflow-hidden
 	.container
-		.flex.flex-wrap.items-center.justify-center.-mx-3
+		.flex.flex-wrap.items-start.justify-center.-mx-3
 			.w-full.order-2.lg_order-1(class="lg_w-1/2 px-3")
-				h1.text-3xl.md_text-4xl.font-extrabold.text-indigo.xl_text-titlemin.mb-6 Центр карьеры MAED
+				+h1Title('Центр карьеры MAED')
 				+mainTextSecondary('Ты осваиваешь профессию — <br> мы подбираем вакансию для старта', '12')
 				.flex
 					.w-full(class="lg_w-7/12")
 						blockquote.text-indigo.text-3xl.font-extrabold.mb-4.blockquote.md_mb-0.text-red 
 							span.text-indigo Наша задача&nbsp;&mdash; провести каждого студента по&nbsp;пути от&nbsp;новых знаний к&nbsp;их&nbsp;монетизации
 			.w-full.mb-8.order-1.lg_order-2(class="md_w-10/12 lg_w-1/2 px-8 lg_pl-3 lg_pr-8")
-				img(src=require('/img/career-center.svg'), alt="").w-full.mb-6.lg_mb-0
+				.flex.justify-center 
+					.w-full(class="lg_w-10/12")
+						img(src=require('/img/career-center.svg'), alt="").w-full.mb-6.lg_mb-0
 img(src=require('/img/maed-full.jpg'), alt="").w-full.sm_block.hidden
 img(src=require('/img/maed-full-mob.jpg'), alt="").w-full.sm_hidden
 section.bg-indigo.py-10

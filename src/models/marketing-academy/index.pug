@@ -7,9 +7,9 @@ mixin arrow-marketing-academy(year, text)
 section.pt-32.sm_pt-56.md_pt-48.mb-14.z-20.relative.overflow-hidden
 	.container.mb-6.lg_mb-16
 		.flex.items-start.flex-wrap.-mx-3
-			.w-full(class="sm_w-7/12 px-3")
-				h1.text-3xl.md_text-4xl.xl_text-5xl.font-extrabold.mb-4.text-indigo Академия маркетинга международного уровня
-			.w-full(class="sm_w-5/12 px-3 xl_pr-0")
+			.w-full(class="md_w-7/12 px-3")
+				+h1Title('Академия маркетинга международного уровня')
+			.w-full(class="md_w-5/12 px-3 xl_pr-0")
 				+mainTextSecondary('Все курсы адаптированы под задачи студентов, наполнены актуальными знаниями, при этом не перегружены лишней информацией')
 	.flex.items-center.justify-center.mb-12
 		while num <= 8
