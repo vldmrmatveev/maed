@@ -17,6 +17,7 @@ module.exports = {
 			"md_text-indigo",
 			"text-base",
 			"sm_text-xl",
+			"text-gray",
 		],
 	},
 	darkMode: false, // or 'media' or 'class'
