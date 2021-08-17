@@ -44,9 +44,9 @@ export class Modal {
 	generateObj(e) {
 		if (e.target.dataset.modal == "user") {
 			let res = {
-				"modal-facebook": false,
-				"modal-vk": false,
-				"modal-instagram": false,
+				"data-facebook-modal": false,
+				"data-vk-modal": false,
+				"data-instagram-modal": false,
 			};
 			const attrs = e.target.attributes;
 			for (let i = 0; i < attrs.length; i++) {
@@ -54,7 +54,7 @@ export class Modal {
 					attrs[i].name.split("-")[0] == "data" &&
 					attrs[i].name.split("-")[1] != "modal"
 				) {
-					res["modal-" + attrs[i].name.split("-")[1]] = attrs[i].value;
+					res[attrs[i].name + "-modal"] = attrs[i].value;
 				}
 			}
 			return res;

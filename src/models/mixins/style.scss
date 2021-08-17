@@ -492,8 +492,8 @@ input {
 	}
 }
 
-[modal-facebook='false'],
-[modal-vk='false'],
-[modal-instagram='false'] {
+[data-facebook-modal='false'],
+[data-vk-modal='false'],
+[data-instagram-modal='false'] {
 	display: none;
 }
