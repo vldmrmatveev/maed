@@ -1,0 +1,28 @@
+section.py-8.container
+	.flex.flex-wrap.items-center.mb-8
+		.w-full(class="md_w-8/12")
+			+mainTitle('Маркетинг')
+			+mainTextSecondary('Генерируют полезный контент, развлекают вас в соцсетях, организовывают образовательные ивенты. Эта команда помогает рассказать вам о курсах.')
+	.block
+		.swiper-container.relative.pb-8.sm_pb-12.swiper-container-yellow
+			.swiper-wrapper
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCardMin('Rectangle2117ds.jpg', 'Владимир Давыдов', 'директор по маркетингу')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCardMin('Rectangle2117ds-1.jpg', 'Галина Ребрик', 'руководитель отдела контента')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCardMin('Rectangle2117ds-2.jpg', 'Екатерина Филиппова', 'руководитель блока  Ивент-менеджмента')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCardMin('Rectangle2117ds-3.jpg', 'Ната Заяць', 'главный редактор')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCardMin('Rectangle2117ds-4.jpg', 'Наталья Иванова', 'smm-специалист')
+				.swiper-slide.swiper-slide-1_4
+					.sm_px-2
+						+userCardMin('Rectangle2117ds-5.jpg', 'Виталий Павлов', 'специалист по&nbsp;контенкстной рекламе')
+			.hidden.sm_block.swiper-pagination.darken-revert-purple
+			+swiperNav('white', 'bg-indigo hover_bg-purple')

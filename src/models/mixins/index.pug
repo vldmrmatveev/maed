@@ -1,13 +1,18 @@
 mixin h1Title(text, color = 'indigo', margin = '6')
 	h1.text-3xl.md_text-4xl.lg_text-5xl.font-extrabold.text-indigo(class="text-"+color + " mb-"+margin)!= text
+mixin userCardMin(img, name, title)
+	.user-card.mb-10
+		img(src=require("./img/" + img), alt="").w-full.mb-6
+		p.font-extrabold.text-2xl.mb-2!= name
+		p.text-xs!= title
 mixin userCard(img, name, title, facebook, instagram, vk)
 	.user-card.mb-10
 		img(src=require("./img/" + img), alt="").w-full.mb-6
 		.min-h-sm.flex.items-center.mb-2
-			p.font-extrabold.text-2xl= name
+			p.font-extrabold.text-2xl!= name
 		.flex.items-center.-mx-3
 			.px-3(class="w-1/2")
-				p.text-xs= title
+				p.text-xs!= title
 			.px-3.flex.justify-end.-mx-1(class="w-1/2")
 				if facebook 
 					a(href=facebook target="_blank").h-8.w-8.min-w-8.rounded-full.border.border-current.flex.items-center.justify-center.mx-1.duration-300.user-card__link
