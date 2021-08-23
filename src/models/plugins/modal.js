@@ -1,4 +1,4 @@
-export class Modal {
+class Modal {
 	constructor(dataAttr) {
 		this.attr = dataAttr;
 	}
@@ -77,3 +77,9 @@ export class Modal {
 		document.body.classList.toggle("modal-opened");
 	}
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	if (document.querySelector("[data-modal]")) {
+		new Modal("data-modal").init();
+	}
+});

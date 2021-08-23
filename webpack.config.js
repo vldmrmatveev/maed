@@ -95,6 +95,12 @@ module.exports = {
 			minify: false,
 		}),
 		new HtmlWebpackPlugin({
+			template: "./pay.pug",
+			filename: "pay.html",
+			inject: true,
+			minify: false,
+		}),
+		new HtmlWebpackPlugin({
 			template: "./nima.pug",
 			filename: "nima.html",
 			inject: true,

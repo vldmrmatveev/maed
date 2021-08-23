@@ -1,4 +1,4 @@
-export function createPopover() {
+function createPopover() {
 	let popoverBlock = null;
 	document.addEventListener("mouseover", (e) => {
 		if (e.target.dataset.popover) {
@@ -20,3 +20,7 @@ export function createPopover() {
 		}
 	});
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	createPopover();
+});

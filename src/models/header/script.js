@@ -1,4 +1,4 @@
-export function changeHeaderPadding(selector) {
+function changeHeaderPadding(selector) {
 	let lastTopPosition = 0;
 	const headerContainer = document.querySelector(
 		selector + " .header__container"
@@ -15,7 +15,7 @@ export function changeHeaderPadding(selector) {
 	});
 }
 
-export function closeHeaderHiddenBlock() {
+function closeHeaderHiddenBlock() {
 	document.addEventListener("click", (e) => {
 		if (e.target.classList.contains("close-header-container")) {
 			e.preventDefault();
@@ -31,7 +31,7 @@ export function closeHeaderHiddenBlock() {
 	});
 }
 
-export function openHeaderHiddenBlock() {
+function openHeaderHiddenBlock() {
 	document.addEventListener("click", (e) => {
 		if (e.target.dataset.open) {
 			changeHiddenBlockHeight();
@@ -42,11 +42,6 @@ export function openHeaderHiddenBlock() {
 					resizeHead(e);
 				});
 			} else {
-				// document.querySelectorAll("ul [data-open]").forEach((item) => {
-				// 	if (item.classList.contains("opened")) {
-				// 		// changeValueHeader(item);
-				// 	}
-				// });
 				showHeaderMenuMob(e.target);
 				window.addEventListener("resize", () => {
 					resizeHeadMob(e);
@@ -138,7 +133,7 @@ function changeHiddenBlockHeight() {
 	}
 }
 
-export function dropdownClick() {
+function dropdownClick() {
 	document.addEventListener("click", (e) => {
 		if (e.target.dataset.dropdown) {
 			e.preventDefault();
@@ -164,3 +159,13 @@ export function dropdownClick() {
 		}
 	});
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	closeHeaderHiddenBlock();
+	openHeaderHiddenBlock();
+	dropdownClick();
+});
+
+window.addEventListener("load", () => {
+	changeHeaderPadding("#header");
+});

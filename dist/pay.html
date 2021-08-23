@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAED | Оплата</title>
+    <link rel="shortcut icon" href="favicon.ico">
+  <script defer src="libs.js"></script><script defer src="456.js"></script><script defer src="main.js"></script><link href="css/456.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"></head>
+  <body class="font-sans">
+    <header class="fixed w-full z-40 bg-white" id="header">
+      <div class="header__container border-b border-gray py-8 sm_py-8 duration-300">
+        <div class="container flex justify-between items-center">
+          <nav class="hidden sm_block">
+                <ul class="flex flex-wrap">
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex items-center header__link" href="#" data-open="headerDesktopHidden" data-content="headerblock-0"><span class="mr-1 pointer-events-none">Каталог курсов</span><span class="triangle-to-bottom pointer-events-none mb-0.5"></span></a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">NIMA</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Экосистема обучения</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Центр карьеры</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Команда</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">Корп. обучение</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex header__link" href="#">MAED magazine</a>
+                  </li>
+                  <li class="mr-5 my-1 lg_my-0"><a class="text-indigo py-2 font-bold text-sm duration-300 hover_text-red inline-flex items-center header__link" href="#" data-open="headerDesktopHidden" data-content="headerblock-7"><span class="mr-1 pointer-events-none">Бесплатное обучение</span><span class="triangle-to-bottom pointer-events-none mb-0.5"></span></a>
+                  </li>
+                </ul>
+          </nav>
+          <div class="header__logo"><a class="flex align-items-center revert-on-hover" href="#"><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">M</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">A</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">E</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-header bg-indigo text-white">D</span></a>
+          </div>
+          <button class="bg-transparent border-0 relative sm_hidden open-mob-menu outline-none" data-open="headerDesktopHiddenMob"><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span><span class="open-mob-menu-item"></span></button>
+        </div>
+      </div>
+      <div class="hidden sm_block">
+        <div class="bg-white sm_bg-indigo header__container-hidden overflow-scroll" id="headerDesktopHidden">
+          <div class="hidden header-block-item" id="headerblock-7">
+            <div class="container pt-8 hidden sm_block">
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/science.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">Экспресс-курсы</p>
+                      </div>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Экспресс-курс для B2B-компаний</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Как нанять интернет-маркетолога</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Основы WEB-аналитики</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Как создать предложение, которое ищут клиенты</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Конкурентная разведка в digital-маркетинге</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">5 шагов к продающему сайту</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Стоит ли выходить на маркетплейсы?</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Реклама в VK: быстрый старт</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">5 шагов к продающему контент-плану</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Библиотека Digital-маркетолога</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Алгоритм создания чат-бота</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Как стать востребованным CRM-маркетологом</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SEO-ГИД 2021</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Турбостарт в SMM</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Вся кухня digital-директора за один вечер</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Account based marketing</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Поисковая реклама в Яндекс.Директ</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Аналитикка с Google data studio</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/apple-books.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">методички, чек-листы, инструкции</p>
+                      </div>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Библиотека маркетолога</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Гайд по созданию рекламных креативов</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Регистрация в Google My Business</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM-системы: сравнение</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Лидмагнит по лидмагнитам</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Справочник веб-аналитика</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Полезные сервисы в SMM</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Триггеры доверия</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Типы постов для соцсетей</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Пощаговая инструкция по анализу конкурентов</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Видеокурс по интернет-маркетингу</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Чек-листы по digital-стратегии</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Методички по SEO</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Тесты по маркетингу</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Подписаться на полезную рассылку</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap-mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/chalkboard.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">открытые уроки и вебинары</p>
+                      </div>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Открытые уроки и вебинары</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex pt-5 justify-end"> <a class="close-header-container border border-red px-10 py-4 rounded-t-3xl text-white font-bold text-xs hover_bg-red duration-300" href="#">Свернуть</a></div>
+            </div>
+          </div>
+          <div class="hidden header-block-item" id="headerblock-0">
+            <div class="container pt-8 hidden sm_block">
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/Group_7106.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">ПрофесCии</p>
+                      </div>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;digital-маркетингу (NIMA-B-Digital)</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;социальным медиа&nbsp;/ SMM директор</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Директор по&nbsp;Digital B2B-маркетингу</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Маркетолог-практик (NIMA-A)</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Интернет-маркетолог с нуля</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Трафик-менеджер / performance</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Ведущий интернет-маркетолог</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM-маркетолог</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">E-commerce маркетолог</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SMM-профи с нуля</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">С нуля до директора по Digital-маркетингу</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap pb-5 border-b border-white -mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/Group_7107.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">Инструменты маркеТинга</p>
+                      </div>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Digital-маркетинг для ТОПов и предпринимателей</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Менеджер по маркетплейсам</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Таргетолог профессионал</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Email-маркетолог профи</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Мастер контекстной рекламы</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Веб-аналитик</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Мессенджер-маркетолог профи</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Контент-маркетинг от а до я</a></li>
+                          </ul>
+                    </div>
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">CRM от А до Я</a></li>
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">SEO-Маркетолог</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap -mx-3 pt-8">
+                <div class="w-full sm_w-1/2 md_w-1/3 lg_w-1/4 px-3">
+                      <div class="flex items-center"><img class="w-8 lg_w-16 mr-4 mb-3 lg_h-16 h-8" src="img/Group_7108.svg" alt="">
+                        <p class="text-white uppercase font-semibold mb-3">Отраслевые курсы</p>
+                      </div>
+                </div>
+                <div class="w-full sm_w-1/2 md_w-2/3 lg_w-3/4 px-3">
+                  <div class="-mx-3 flex flex-wrap">
+                    <div class="w-full lg_w-1/3 md_w-1/2 px-3">
+                          <ul class="lg_pt-4">
+                            <li class="mb-4 flex"><a class="text-xs text-white font-semibold hover_text-red duration-300 inline-block leading-tight" href="#">Интернет-маркетинг для B2B и сложных рынков</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex pt-5 justify-end"> <a class="close-header-container border border-red px-10 py-4 rounded-t-3xl text-white font-bold text-xs hover_bg-red duration-300" href="#">Свернуть</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sm_hidden">
+        <div class="bg-white sm_bg-indigo header__container-hidden overflow-scroll" id="headerDesktopHiddenMob">
+          <div class="container pt-8 sm_hidden" id="mobContent">
+                <ul> 
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Каталог курсов</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">NIMA</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Экосистема обучения</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Центр карьеры</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Команда</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">Корп. обучение</a></li>
+                  <li class="border-b border-indigo"><a class="block py-4 font-extrabold text-xl text-indigo" href="#">MAED magazine</a></li>
+                </ul>
+            <div class="block"><a class="flex items-center justify-between py-4 drop__link" href="#forFree" data-dropdown="true" data-parent="#mobContent"><span class="font-extrabold text-xl drop__link-item text-indigo">Бесплатные знания</span>
+                    <svg class="min-w-4 w-4 ml-4 duration-300 pointer-events-none" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 1L7 6L1 1" stroke="#223549" stroke-width="2"></path>
+                    </svg></a>
+                  <div class="drop__collapse" id="forFree">
+                    <ul class="py-3"> 
+                      <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Экспресс-курсы</a>
+                      </li>
+                      <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Инструкции, методички, чек-листы</a>
+                      </li>
+                      <li class="mb-3"> <a class="text-indigo text-sm font-semibold" href="#">Открытые уроки и вебинары</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="pb-16 pt-32 sm_pt-56 md_pt-44 lg_pt-40 z-20 relative overflow-hidden" id="paySection">
+      <div class="container">
+        <div class="flex flex-wrap items-center -mx-3">
+          <div class="w-full px-3 mb-6 lg_w-3/12 xl_w-1/3">
+            <h1 class="text-3xl md_text-4xl font-extrabold text-indigo">Оплата обучения</h1>
+          </div>
+          <div class="w-full px-3 md_w-1/2 lg_w-5/12 xl_w-1/3">
+            <div class="flex flex-wrap -mx-3">
+              <div class="w-full px-3 mb-6 sm_w-1/2">
+                <input class="checkbox-hidden" type="checkbox" name="entity" id="entity">
+                <label class="inline-flex items-center cursor-pointer" for="entity"><span class="true-checkbox true-checkbox__form border border-indigo rounded-sm duration-300"> </span><span class="text-indigo text-sm ml-3 whitespace-nowrap">Юридическое лицо</span></label>
+              </div>
+              <div class="w-full px-3 mb-6 sm_w-1/2">
+                <input class="checkbox-hidden" type="checkbox" name="installment" id="installment">
+                <label class="inline-flex items-center cursor-pointer" for="installment"><span class="true-checkbox true-checkbox__form border border-indigo rounded-sm duration-300"> </span><span class="text-indigo text-sm ml-3 whitespace-nowrap">Рассрочка</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 mb-6 md_w-1/2 lg_w-4/12 xl_w-1/3">
+            <div class="flex installment-block">
+              <input class="md_w-7/12 w-1/2 sm_w-2/3 rounded-none sm_rounded-r-none sm_rounded-l-xl border-b sm_border border-indigo sm_px-6 px-0 outline-none sm_py-3 py-1 duration-300 bg-white text-indigo text-xs" type="number" id="correctNumber" name="correctNumber" placeholder="Сумма первого взноса" disabled>
+              <button class="bg-indigo rounded-none py-1 sm_py-3 text-white text-xs duration-300 hover_bg-purple sm_rounded-r-xl sm_rounded-l-none md_w-5/12 w-1/2 sm_w-1/3" id="correctNumberBtn" disabled>Скорректировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="form_container" id="basicForm">
+          <form class="form flex flex-wrap -mx-3 pt-4">
+            <div class="w-full px-3 lg_w-1/3 sm_w-1/2">
+              <input class="installment-value-input" type="hidden" name="installmentValue" value="false">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="surname" required minlength="2" placeholder="Фамилия">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="name" required minlength="2" placeholder="Имя">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="secondName" required minlength="2" placeholder="Отчество">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="email" name="email" required placeholder="E-mail">
+              <input class="input__phone px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="phone" required minlength="17" maxlength="17" placeholder="Телефон">
+            </div>
+            <div class="w-full px-3 lg_w-1/3 sm_w-1/2">
+              <div class="flex flex-col justify-between h-full">
+                <div class="block">
+                  <div class="select-container custom-select-list">
+                    <select class="custom-select px-6 py-3 w-full rounded-lg border border-indigo mb-6 text-indigo" name="courses" id="selectCourses">
+                      <option value="Курс: SEO-маркетолог" selected>Курс: SEO-маркетолог</option>
+                      <option value="Курс: SMM профи">Курс: SMM профи</option>
+                      <option value="Курс: Менеджер по маркетплейсам">Курс: Менеджер по маркетплейсам</option>
+                      <option value="Курс: SEO-маркетолог">Курс: SEO-маркетолог</option>
+                      <option value="Курс: SMM профи">Курс: SMM профи</option>
+                      <option value="Курс: Менеджер по маркетплейсам">Курс: Менеджер по маркетплейсам</option>
+                    </select>
+                  </div>
+                  <div class="mb-6">
+                    <div id="paymentMethods">
+                      <div class="flex -mx-1 flex-wrap"> 
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/mir-logo.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/apple-pay.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/google-pay.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/qiwi.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/Beeline-2.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/iomoney.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/webmoney.svg" alt=""></div>
+                            </div>
+                            <div class="w-full px-1 text-xs text-indigo opacity-50">Способы оплаты</div>
+                      </div>
+                    </div>
+                    <div class="hidden" id="banksPartners">
+                      <div class="flex -mx-1 flex-wrap">
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/sber.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/gui.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/tink.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/alfa.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/otp.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/rus-bank.svg" alt=""></div>
+                            </div>
+                            <div class="px-1 mb-3 w-1/2 sm_w-1/3 md_w-1/4">
+                              <div class="rounded border border-indigo p-3 h-12"><img class="w-full h-full object-contain" src="img/psb.svg" alt=""></div>
+                            </div>
+                            <div class="w-full px-1 text-xs text-indigo opacity-50">Банки-партнеры</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block">
+                  <p class="text-xl font-bold text-indigo mb-6">Итоговая сумма: <span class="price-value" data-value="39 901">39 901</span><span> </span><span>руб</span></p>
+                  <button class="btn_submit w-full py-4 px-4 text-white rounded-lg font-semibold text-sm bg-red hover_bg-red-dark duration-300 mb-6 no-submit">Оплатить обучение</button>
+                </div>
+              </div>
+            </div>
+            <div class="hidden lg_block px-3 lg_w-1/3"></div>
+            <div class="w-full px-3 lg_w-1/3 sm_w-1/2"></div>
+            <div class="w-full px-3 lg_w-1/3 sm_w-1/2">
+              <input class="checkbox-hidden" type="checkbox" name="checboxConfirm" id="checboxConfirm" checked required>
+              <label class="flex items-start cursor-pointer" for="checboxConfirm"><span class="true-checkbox-min rounded-sm"></span><span class="text-indigo ml-3 text-xs opacity-50"><span> Согласен(-на) с условиями </span><a class="duration-300 underline hover_text-red" href="#" target="_blank">оферты </a><span>и ознакомлен с </span><a class="duration-300 underline hover_text-red" href="#" target="_blank">правилами </a><span>обработки персональных данных</span></span></label>
+            </div>
+          </form>
+        </div>
+        <div class="form_container hidden" id="entityForm">
+          <form class="form flex flex-wrap -mx-3 pt-4">
+            <div class="w-full px-3 lg_w-1/3 sm_w-1/2">
+              <input class="installment-value-input" type="hidden" name="installmentValue" value="false">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="name" required minlength="2" placeholder="ФИО плательщика">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="companyName" placeholder="Организация">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="head" placeholder="Руководитель">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="position" placeholder="Должность подписанта">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="dateOfBirth" placeholder="Дата рождения (для физ. лиц)">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="statute" placeholder="Действующий на основаниии Устава/Доверенности">
+              <div class="flex mb-6">
+                <div class="w-6 h-6 bg-gray duration-300 hover_bg-red border-0 text-indigo hover_text-white btn_minus inline-flex items-center justify-center rounded-md cursor-pointer">-</div>
+                <input class="mx-3 w-8 text-center border-0 outline-none bg-white" type="text" value="1" required disabled id="numOfPerson">
+                <div class="w-6 h-6 bg-gray duration-300 hover_bg-red border-0 text-indigo hover_text-white btn_plus inline-flex items-center justify-center rounded-md cursor-pointer">+</div>
+              </div>
+            </div>
+            <div class="w-full px-3 lg_w-1/3 sm_w-1/2">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="address" placeholder="Почтовый адрес">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="inn" required placeholder="ИНН">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="kpp" required placeholder="КПП">
+              <input class="px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="email" name="email" required placeholder="E-mail">
+              <input class="input__phone px-6 py-3 w-full rounded-lg border border-indigo duration-300 mb-6 outline-none" type="text" name="phone" required minlength="17" maxlength="17" placeholder="Телефон">
+              <div class="select-container custom-select-list">
+                <select class="custom-select px-6 py-3 w-full rounded-lg border border-indigo mb-6 text-indigo" name="courses" id="selectCourses3">
+                  <option value="Курс: SEO-маркетолог" selected>Курс: SEO-маркетолог</option>
+                  <option value="Курс: SMM профи">Курс: SMM профи</option>
+                  <option value="Курс: Менеджер по маркетплейсам">Курс: Менеджер по маркетплейсам</option>
+                  <option value="Курс: SEO-маркетолог">Курс: SEO-маркетолог</option>
+                  <option value="Курс: SMM профи">Курс: SMM профи</option>
+                  <option value="Курс: Менеджер по маркетплейсам">Курс: Менеджер по маркетплейсам</option>
+                </select>
+              </div>
+            </div>
+            <div class="w-full px-3 pt-4 mb-8">
+              <div class="hidden sm_block">
+                <table class="w-full">
+                  <tr> 
+                    <th class="bg-indigo rounded-l-lg py-6 px-2 text-center text-white font-bold text-xxs text-opacity-50">№</th>
+                    <th class="bg-indigo py-6 px-2 text-white font-bold text-xxs text-opacity-50 text-left">Наименование, характеристика услуг </th>
+                    <th class="bg-indigo py-6 px-2 text-white font-bold text-xxs text-opacity-50 text-center">Ед.измерения</th>
+                    <th class="bg-indigo py-6 px-2 text-white font-bold text-xxs text-opacity-50 text-center">Количество</th>
+                    <th class="bg-indigo py-6 px-2 text-white font-bold text-xxs text-opacity-50 text-left">Цена</th>
+                    <th class="rounded-r-lg bg-indigo py-6 px-2 text-white font-bold text-xxs text-opacity-50 text-left">Сумма</th>
+                  </tr>
+                  <tr> 
+                    <td class="py-4 border-b border-gray-border text-xs xl_text-sm text-center px-2">1</td>
+                    <td class="py-4 border-b border-gray-border text-xs xl_text-sm px-2">Предоставление права доступа (права использования) <br> Платформы и&nbsp;Курса: &laquo;SEO-маркетолог&raquo;</td>
+                    <td class="py-4 border-b border-gray-border text-xs xl_text-sm text-center px-2">-</td>
+                    <td class="px-2 py-4 border-b border-gray-border text-xs xl_text-sm text-center">1</td>
+                    <td class="px-2 py-4 border-b border-gray-border text-xs xl_text-sm">39 901 руб </td>
+                    <td class="px-2 py-4 border-b border-gray-border text-xs xl_text-sm">39 901 руб </td>
+                  </tr>
+                  <tr> 
+                    <td class="px-2 border-b border-gray-border py-4" colspan="6"><span class="flex justify-end"><span class="block"><span class="flex items-center mb-2"><span class="w-32 xl_text-sm text-xs font-bold mr-3">Скидка:</span><span class="xl_text-sm text-xs text-green">-9 975, 25 руб (25%)</span></span><span class="flex items-center mb-2"><span class="w-32 xl_text-sm text-xs font-bold mr-3">Итого к оплате:</span><span class="xl_text-sm text-xs font-extrabold">29 925, 75 руб</span></span><span class="flex items-center mb-2"><span class="w-32 xl_text-sm text-xs font-bold mr-3">Без налога (НДС):</span><span class="xl_text-sm text-xs font-extrabold">0 руб</span></span></span></span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="sm_hidden">
+                <div class="py-5 rounded-lg bg-indigo text-white text-opacity-50 font-bold px-4">Наименование, характеристика услуг</div>
+                <div class="px-4 py-5 text-indigo"><span class="block">1. Предоставление права доступа (права использования) Платформы и&nbsp;Курса: &laquo;SEO-маркетолог&raquo;</span></div>
+                <div class="py-5 rounded-lg bg-indigo text-white text-opacity-50 font-bold px-4">Ед.измерения</div>
+                <div class="px-4 py-5 text-indigo"> <span class="block">1. - </span></div>
+                <div class="py-5 rounded-lg bg-indigo text-white text-opacity-50 font-bold px-4">Количество</div>
+                <div class="px-4 py-5 text-indigo"> <span class="block">1. 1</span></div>
+                <div class="py-5 rounded-lg bg-indigo text-white text-opacity-50 font-bold px-4">Цена</div>
+                <div class="px-4 py-5 text-indigo"> <span class="block">1. 39 901 руб</span></div>
+                <div class="py-5 rounded-lg bg-indigo text-white text-opacity-50 font-bold px-4">Сумма</div>
+                <div class="px-4 py-5 text-indigo"> <span class="block">1. 39 901 руб </span></div>
+                <div class="bg-gray px-4 py-5 rounded-lg">
+                  <div class="flex -mx-2 mb-2"> 
+                    <div class="px-2 text-xxs font-bold w-1/2">Скидка:</div>
+                    <div class="px-2 text-xxs text-green w-1/2">-9 975, 25 руб (25%)</div>
+                  </div>
+                  <div class="flex -mx-2 mb-2"> 
+                    <div class="px-2 text-xxs font-bold w-1/2">Итого к оплате:</div>
+                    <div class="px-2 text-xxs font-extrabold w-1/2">29 925, 75 руб</div>
+                  </div>
+                  <div class="flex -mx-2 mb-2"> 
+                    <div class="px-2 text-xxs font-bold w-1/2">Без налога (НДС):</div>
+                    <div class="px-2 text-xxs font-extrabold w-1/2">0 руб</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-3">
+              <div class="flex flex-wrap -mx-3"> 
+                <div class="w-full px-3 mb-6 lg_w-5/12 md_w-1/3">
+                  <p class="text-sm mb-2">Всего наименований: 1, на сумму: 29 925, 75 руб</p>
+                  <p class="font-bold">Тридцать девять тысяч девятьсот один рубль 00 копеек</p>
+                </div>
+                <div class="w-full px-3 mb-6 lg_w-3/12 md_w-1/3">
+                  <input class="checkbox-hidden" type="checkbox" name="checboxConfirm2" id="checboxConfirm2" checked required>
+                  <label class="flex items-start cursor-pointer" for="checboxConfirm2"><span class="true-checkbox-min rounded-sm"></span><span class="text-indigo ml-3 text-xs opacity-50"><span> Согласен(-на) с условиями </span><a class="duration-300 underline hover_text-red" href="#" target="_blank">оферты </a><span>и ознакомлен с </span><a class="duration-300 underline hover_text-red" href="#" target="_blank">правилами </a><span>обработки персональных данных</span></span></label>
+                </div>
+                <div class="w-full px-3 mb-6 lg_w-4/12 md_w-1/3">
+                  <button class="btn_submit w-full py-4 px-4 text-white rounded-lg font-semibold text-sm bg-red hover_bg-red-dark duration-300 mb-6 no-submit">Сформировать счет на оплату</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-indigo"> 
+      <div class="container"> 
+        <div class="flex flex-wrap items-start pt-10 pb-6 -mx-3">
+          <div class="w-full sm_pr-4 order-2 sm_order-1 sm_w-1/2 px-3">
+            <div class="form_container">
+              <form class="form flex flex-wrap md_flex-nowrap" action="https://jsonplaceholder.typicode.com/users">
+                <input class="w-full lg_w-2/4 rounded-md md_rounded-r-none md_rounded-l-xl border border-white px-6 outline-none py-3 mb-4 duration-300 bg-transparent input_custom text-white" type="email" name="email" placeholder="Введите свою почту" required>
+                <button class="btn_submit bg-white text-indigo rounded-md md_rounded-l-none md_rounded-r-xl px-4 py-3 hover_bg-blue-light duration-300 font-semibold mb-4 w-full lg_w-1/4" data-text="Ваши данные были успешно отправлены" data-container="#footerFormText">Подписаться</button>
+              </form>
+              <div class="text-xs text-white font-semibold opacity-50 max-w-md" id="footerFormText">Подпишись на&nbsp;рассылку и&nbsp;получай полезные материалы, анонсы, советы и&nbsp;лайфхаки от&nbsp;экспертов по&nbsp;маркетингу</div>
+            </div>
+          </div>
+          <div class="w-full md_flex justify-between flex-wrap items-center pt-2 order-1 sm_order-2 sm_w-1/2 px-3">
+            <div class="mb-3 md_pr-2"><a class="flex align-items-center revert-on-hover" href="#"><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-footer bg-white text-indigo">M</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-footer bg-white text-indigo">A</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-footer bg-white text-indigo">E</span><span class="flex items-center justify-center w-6 h-6 text-md leading-none mr-1 font-bold duration-300 revert-on-hover__item-footer bg-white text-indigo">D</span></a>
+              <div class="md_hidden text-white font-bold mb-4 pt-3">Академия <br> маркетинга</div>
+            </div>
+            <div class="mb-6 sm_mb-3 md_pl-2"><a class="text-white text-xl font-bold hover_text-blue-light duration-300" href="tel:84959847500">+7 (495) 984-7500</a></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-start mt-2 sm_mb-6 border-t sm_border-b border-white border-opacity-50">
+          <div class="w-full sm_border-r border-white px-3 border-opacity-50 sm_w-1/2 md_w-7/12 xl_w-8/12"> 
+            <div class="flex flex-wrap items-start pt-6 pb-4 -mx-3">
+              <div class="w-full sm_px-3 xl_pl-0">
+                <p class="font-semibold text-white text-sm mb-4">Профессии</p>
+              </div>
+              <div class="w-full md_pr-2 order-1 sm_px-3 xl_pl-0 md_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Директор по digital- маркетингу (NIMA-B-Digital)</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Директор по социальным медиа / SMM директор</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Интернет-маркетолог с нуля</a></li>
+                    </ul>
+              </div>
+              <div class="w-full order-4 xl_order-2 sm_px-3 lg_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Директор по Digital B2B-маркетингу</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">С нуля до директора по Digital-маркетингу</a></li>
+                    </ul>
+              </div>
+              <div class="w-full sm_px-3 order-2 xl_order-3 md_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Маркетолог-практик (NIMA-A)</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Ведущий интернет-маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Трафик-менеджер/performance</a></li>
+                    </ul>
+              </div>
+              <div class="w-full sm_px-3 order-3 xl_order-4 md_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">E-commerce маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">SMM-профи с нуля</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">CRM-маркетолог</a></li>
+                    </ul>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-start pt-6 pb-4 border-t border-white -mx-3 border-opacity-50">
+              <div class="w-full sm_px-3 xl_pl-0">
+                <p class="font-semibold text-white text-sm mb-4">Инструменты маркетинга</p>
+              </div>
+              <div class="w-full sm_px-3 xl_pl-0 md_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Таргетолог профессионал</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Email-маркетолог профи</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Мастер контекстной рекламы</a></li>
+                    </ul>
+              </div>
+              <div class="w-full sm_px-3 md_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Веб-аналитик</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Менеджер по маркетплейсам</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">CRM от А до Я</a></li>
+                    </ul>
+              </div>
+              <div class="w-full sm_px-3 md_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Digital-маркетинг для ТОПов и предпринимателей</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Мессенджер-маркетолог профессионал</a></li>
+                    </ul>
+              </div>
+              <div class="w-full sm_px-3 lg_w-1/2 xl_w-3/12">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">SEO-Маркетолог</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Контент-маркетинг от а до я</a></li>
+                    </ul>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-start pt-6 pb-4 border-t border-white sm_border-b-0 border-b -mx-3 border-opacity-50">
+              <div class="w-full sm_px-3 xl_pl-0">
+                <p class="font-semibold text-white text-sm mb-4">Отраслевые курсы</p>
+              </div>
+              <div class="w-full sm_px-3 xl_pl-0 xl_w-1/3">
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Интернет-маркетинг для B2B и сложных рынков</a></li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+          <div class="w-full sm_w-1/2 md_w-5/12 xl_w-4/12"> 
+            <div class="w-full sm_block hidden"><img class="w-full" src="img/img-2800.jpg" alt="">
+              <div class="-mt-6 ml-6"><a class="bg-red rounded-lg px-4 py-3 hover_bg-yellow duration-300 font-semibold inline-flex items-center justify-center text-white hover_text-indigo" href="#" download><span class="pointer-events-none inline-flex items-center">
+                        <svg class="w-6" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="stroke-current" d="M13.7048 4.67524L13.7698 5.03949L14.1118 5.1808C14.8763 5.4967 15.5076 6.0678 15.8984 6.79687C16.2891 7.52594 16.4151 8.3679 16.2548 9.1794C16.0945 9.9909 15.658 10.7218 15.0194 11.2476C14.3811 11.7732 13.5804 12.0614 12.7536 12.0632H11.9035C11.8571 12.0632 11.8126 12.0447 11.7797 12.0119L11.3022 12.4895L11.7797 12.0119C11.7469 11.9791 11.7285 11.9346 11.7285 11.8882C11.7285 11.8417 11.7469 11.7972 11.7797 11.7644C11.8126 11.7316 11.8571 11.7131 11.9035 11.7131H12.7539V11.7132L12.7602 11.7131C13.5412 11.7059 14.2932 11.4156 14.8765 10.8961C15.4598 10.3766 15.8349 9.66314 15.9321 8.88809C16.0293 8.11305 15.842 7.32905 15.4051 6.68157C14.9682 6.0341 14.3112 5.5671 13.5561 5.36723L13.5561 5.36714L13.5454 5.36449C13.5092 5.35555 13.4769 5.33533 13.453 5.30675C13.4292 5.27817 13.4151 5.24273 13.4127 5.20558L13.4122 5.19727L13.4115 5.18898C13.3108 4.04071 12.7735 2.97478 11.9104 2.2108C11.0473 1.44682 9.924 1.04298 8.772 1.08249C7.62 1.12199 6.52702 1.60182 5.71825 2.42313C4.90948 3.24445 4.44651 4.34467 4.42473 5.49714L4.42461 5.49714L4.42461 5.50962C4.42455 5.65643 4.43279 5.80313 4.4493 5.94901L4.44935 5.94937C4.45242 5.97641 4.44915 6.00379 4.43979 6.02934L5.07402 6.26161L4.43979 6.02934C4.43044 6.05489 4.41525 6.0779 4.39544 6.09655L4.39544 6.09655L4.39298 6.09888C4.37402 6.11692 4.35107 6.13024 4.326 6.13775L4.5198 6.78477L4.326 6.13775C4.30093 6.14526 4.27444 6.14675 4.24868 6.14211L4.241 6.14072L4.23329 6.13952C4.09628 6.11807 3.95772 6.10825 3.81908 6.11014C3.07798 6.11154 2.36755 6.40654 1.84342 6.93067L2.28917 7.37643L1.84342 6.93067C1.31803 7.45606 1.02287 8.16863 1.02287 8.91164C1.02287 9.65464 1.31803 10.3672 1.84342 10.8926C2.3688 11.418 3.08137 11.7131 3.82438 11.7131H5.10003C5.14644 11.7131 5.19096 11.7316 5.22378 11.7644C5.2566 11.7972 5.27504 11.8417 5.27504 11.8882C5.27504 11.9346 5.2566 11.9791 5.22378 12.0119L5.70138 12.4895L5.22378 12.0119C5.19096 12.0447 5.14645 12.0632 5.10003 12.0632H3.82483C3.0185 12.0626 2.24305 11.753 1.65805 11.1981C1.07305 10.6432 0.722994 9.88515 0.679926 9.07997C0.636859 8.27479 0.904052 7.48373 1.42652 6.86957C1.949 6.25541 2.687 5.86487 3.48867 5.77832L4.04687 5.71805L4.08963 5.15824C4.17958 3.98071 4.69588 2.87639 5.54175 2.05227C6.38762 1.22814 7.50501 0.740787 8.68449 0.681539C9.86397 0.62229 11.0246 0.995216 11.9488 1.73042C12.873 2.46563 13.4973 3.51265 13.7048 4.67524Z" stroke="white" stroke-width="1.35085"></path>
+                          <path class="stroke-current" d="M10.0743 14.3206L9.8308 14.5641L8.67777 15.7171V14.0865V10.1864C8.67777 10.14 8.65934 10.0954 8.62651 10.0626C8.59369 10.0298 8.54918 10.0114 8.50276 10.0114C8.45635 10.0114 8.41183 10.0298 8.37901 10.0626M10.0743 14.3206L8.37901 10.0626M10.0743 14.3206C10.107 14.2903 10.15 14.2736 10.1947 14.274C10.2406 14.2744 10.2845 14.2928 10.3169 14.3252C10.3494 14.3577 10.3678 14.4016 10.3682 14.4475C10.3686 14.4921 10.3519 14.5352 10.3216 14.5679L8.6265 16.263C8.59368 16.2958 8.54917 16.3142 8.50276 16.3142C8.45639 16.3142 8.41192 16.2958 8.3791 16.2631C8.37908 16.263 8.37906 16.263 8.37903 16.263L6.68395 14.5679C6.65366 14.5352 6.63696 14.4921 6.63734 14.4475C6.63774 14.4016 6.65615 14.3577 6.6886 14.3252C6.72105 14.2928 6.76494 14.2744 6.81083 14.274C6.85549 14.2736 6.89856 14.2903 6.93127 14.3206L7.17473 14.5641L8.32775 15.7171V14.0865V10.1864C8.32775 10.14 8.34619 10.0954 8.37901 10.0626M10.0743 14.3206L7.90142 9.58502L8.37901 10.0626" stroke="white" stroke-width="1.35085"></path>
+                        </svg><span class="underline ml-2 text-sm lg_text-md">Скачать бесплатно</span></span></a></div>
+            </div>
+            <div class="flex flex-wrap sm_py-8 sm_px-2">
+              <div class="w-full pt-6 pb-4 sm_pt-0 sm_pb-0 sm_w-1/2 sm_px-3">
+                <p class="font-semibold text-white text-sm mb-4">Академия</p>
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Каталог курсов</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">NIMA</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Экосистема обучения</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Центр карьеры</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Команда</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Корпоративное обучение</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">MAED magazine</a></li>
+                    </ul>
+              </div>
+              <div class="w-full pb-4 sm_pb-0 sm_w-1/2 sm_px-3">
+                <p class="font-semibold text-white text-sm mb-4">Для студентов</p>
+                    <ul> 
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Экспресс - курсы</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Инструкции, методички, чек-листы</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">Открытые уроки и вебинары</a></li>
+                      <li class="mb-2"><a class="text-xxs font-semibold text-white opacity-50 duration-300 hover_text-red hover_opacity-100 sm_underline" href="#">MAED.Клуб</a></li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between py-6">
+          <p class="text-white opacity-50 text-sm mb-4 pr-4 sm_order-1 order-2"><span>&copy;</span><span> </span><span class="date">2019</span><span> </span><span>MAED Academy все права защищены</span></p>
+              <ul class="flex items-center mb-4 sm_order-2 order-1">
+                <li class="mx-2"><a class="w-10 h-10 inline-flex items-center justify-center text-white hover_text-blue-light duration-300" href="#" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M14.6234 1.00375L12.2249 1C9.5302 1 7.78878 2.73871 7.78878 5.42982V7.47227H5.37715C5.16875 7.47227 5 7.63668 5 7.83949V10.7988C5 11.0016 5.16895 11.1658 5.37715 11.1658H7.78878V18.633C7.78878 18.8358 7.95753 19 8.16593 19H11.3124C11.5208 19 11.6896 18.8356 11.6896 18.633V11.1658H14.5093C14.7177 11.1658 14.8865 11.0016 14.8865 10.7988L14.8876 7.83949C14.8876 7.74211 14.8478 7.64886 14.7772 7.57994C14.7066 7.51103 14.6103 7.47227 14.5103 7.47227H11.6896V5.74086C11.6896 4.90868 11.8933 4.48622 13.0073 4.48622L14.623 4.48566C14.8312 4.48566 15 4.32124 15 4.11863V1.37077C15 1.16835 14.8314 1.00412 14.6234 1.00375Z" fill="white"></path>
+                    </svg></a></li>
+                <li class="mx-2"> <a class="w-10 h-10 inline-flex items-center justify-center text-white hover_text-blue-light duration-300" href="#" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M10 1.5C12.3085 1.5 12.5979 1.50978 13.5045 1.55115C14.4093 1.59242 15.0272 1.73612 15.5678 1.94626C16.1268 2.16345 16.6008 2.45409 17.0734 2.92663C17.5459 3.3992 17.8366 3.87323 18.0538 4.43218C18.2639 4.97284 18.4076 5.59073 18.4488 6.49546C18.4902 7.40208 18.5 7.69154 18.5 10C18.5 12.3085 18.4902 12.5979 18.4488 13.5045C18.4076 14.4093 18.2639 15.0272 18.0538 15.5678C17.8366 16.1268 17.5459 16.6008 17.0734 17.0734C16.6008 17.5459 16.1268 17.8366 15.5678 18.0538C15.0272 18.2639 14.4093 18.4076 13.5045 18.4488C12.5979 18.4902 12.3085 18.5 10 18.5C7.69154 18.5 7.40208 18.4902 6.49546 18.4488C5.59073 18.4076 4.97284 18.2639 4.43218 18.0538C3.87323 17.8366 3.3992 17.5459 2.92663 17.0734C2.45409 16.6008 2.16345 16.1268 1.94626 15.5678C1.73612 15.0272 1.59242 14.4093 1.55115 13.5045C1.50978 12.5979 1.5 12.3085 1.5 10C1.5 7.69154 1.50978 7.40208 1.55115 6.49546C1.59242 5.59073 1.73612 4.97284 1.94626 4.43218C2.16345 3.87323 2.45409 3.3992 2.92663 2.92663C3.3992 2.45409 3.87323 2.16345 4.43218 1.94626C4.97284 1.73612 5.59073 1.59242 6.49546 1.55115C7.40208 1.50978 7.69154 1.5 10 1.5ZM9.99734 12.8298C11.5616 12.8298 12.8298 11.5616 12.8298 9.99734C12.8298 8.433 11.5616 7.16488 9.99734 7.16488C8.433 7.16488 7.16488 8.433 7.16488 9.99734C7.16488 11.5616 8.433 12.8298 9.99734 12.8298ZM9.99734 5.63383C12.4072 5.63383 14.3608 7.58742 14.3608 9.99734C14.3608 12.4072 12.4072 14.3608 9.99734 14.3608C7.58742 14.3608 5.63383 12.4072 5.63383 9.99734C5.63383 7.58742 7.58742 5.63383 9.99734 5.63383ZM15.8556 5.37224C15.8556 5.94601 15.3904 6.41111 14.8166 6.41111C14.2429 6.41111 13.7778 5.94601 13.7778 5.37224C13.7778 4.79847 14.2429 4.33333 14.8166 4.33333C15.3904 4.33333 15.8556 4.79847 15.8556 5.37224Z" fill="white"></path>
+                    </svg></a></li>
+                <li class="mx-2"> <a class="w-10 h-10 inline-flex items-center justify-center text-white hover_text-blue-light duration-300" href="#" target="_blank">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M20 11C20 16.5228 15.5228 21 10 21C4.47715 21 0 16.5228 0 11C0 5.47715 4.47715 1 10 1C15.5228 1 20 5.47715 20 11ZM10.3584 8.38245C9.38572 8.78701 7.44179 9.62434 4.52659 10.8944C4.0532 11.0827 3.80522 11.2669 3.78265 11.4469C3.7445 11.7513 4.1256 11.8711 4.64457 12.0343C4.71516 12.0565 4.7883 12.0795 4.86329 12.1038C5.37387 12.2698 6.0607 12.464 6.41775 12.4717C6.74163 12.4787 7.10312 12.3452 7.50221 12.0711C10.226 10.2325 11.632 9.30318 11.7203 9.28315C11.7825 9.26902 11.8688 9.25124 11.9273 9.30321C11.9858 9.35518 11.98 9.45361 11.9738 9.48001C11.9361 9.64096 10.4401 11.0318 9.66594 11.7515C9.42459 11.9759 9.2534 12.135 9.21841 12.1714C9.14001 12.2528 9.06011 12.3298 8.98333 12.4038C8.50898 12.8611 8.15327 13.204 9.00302 13.764C9.41137 14.0331 9.73813 14.2556 10.0641 14.4776C10.4201 14.7201 10.7752 14.9619 11.2347 15.2631C11.3517 15.3398 11.4635 15.4195 11.5724 15.4971C11.9867 15.7925 12.359 16.0579 12.8188 16.0155C13.086 15.9909 13.3621 15.7397 13.5022 14.9903C13.8335 13.2193 14.4847 9.38206 14.6352 7.80082C14.6484 7.66228 14.6318 7.48498 14.6185 7.40715C14.6052 7.32932 14.5773 7.21843 14.4761 7.13634C14.3563 7.03912 14.1714 7.01862 14.0886 7.02008C13.7125 7.0267 13.1355 7.22736 10.3584 8.38245Z" fill="white"></path>
+                    </svg></a></li>
+                <li class="mx-2"> <a class="w-10 h-10 inline-flex items-center justify-center text-white hover_text-blue-light duration-300" href="#" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-current" fill-rule="evenodd" clip-rule="evenodd" d="M10 2.80078C7.102 2.80078 3.3406 3.53013 3.3406 3.53013L3.33113 3.54099C2.01123 3.75303 1 4.89226 1 6.27775V13.7225C1.00266 15.0907 1.99367 16.2531 3.33789 16.466L3.3406 16.4701C3.3406 16.4701 7.102 17.2008 10 17.2008C12.898 17.2008 16.6594 16.4701 16.6594 16.4701C18.0065 16.2562 18.9986 15.0922 19 13.7238V6.27775C18.998 4.91034 18.0068 3.74719 16.6621 3.5342C16.6594 3.53013 12.898 2.80078 10 2.80078ZM8.2 6.85078L13.6 10.0008L8.2 13.1508V6.85078Z" fill="white"></path>
+                    </svg></a></li>
+              </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

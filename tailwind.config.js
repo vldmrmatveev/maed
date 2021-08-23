@@ -36,6 +36,7 @@ module.exports = {
 		},
 		minWidth: {
 			"4": "1rem",
+			"5": "1.25rem",
 			"8": "2rem",
 		},
 		minHeight: {
@@ -68,11 +69,13 @@ module.exports = {
 				DEFAULT: "#E37FC1",
 				dark: "#e469bb",
 			},
+			green: "#3DC47E",
 			white: "#ffffff",
 			gray: {
 				DEFAULT: "#F5F5F5",
 				base: "#4B5157",
 				dark: "#939699",
+				border: "#D9DADB",
 			},
 			indigo: {
 				DEFAULT: "#223549",

@@ -10,6 +10,29 @@
 	height: 20px;
 	display: block;
 	position: relative;
+	&-min {
+		width: 14px;
+		height: 14px;
+		min-width: 14px;
+		border: 1px solid #D9DADB;
+		display: block;
+		position: relative;
+		&:before {
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-radius: 2px;
+			background-color: #D9DADB;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			opacity: 0;
+			transition: 0.3s ease all;
+		}
+	}
 	&:before {
 		content: '';
 		width: 14px;
@@ -46,6 +69,15 @@
 
 .checkbox-hidden:checked + label .true-checkbox__form {
 	background-color: $indigo;
+}
+
+.checkbox-hidden:checked + label .true-checkbox-min {
+	&:before {
+		opacity: 1;
+	}
+}
+.checkbox-hidden.border-red + label .true-checkbox-min {
+	border-color: $red !important;
 }
 
 .checkbox-hidden:checked + label .true-radio {

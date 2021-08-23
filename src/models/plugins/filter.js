@@ -5,7 +5,7 @@ import {
 	rangeSliderValues,
 } from "@models/plugins/range";
 
-export class Filter {
+class Filter {
 	constructor(selector, cards) {
 		this.cards = document.querySelectorAll(cards);
 		this.errorMessageContainer = document.querySelectorAll(
@@ -218,3 +218,10 @@ export class Filter {
 		});
 	}
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	if (document.getElementById("filterItem")) {
+		const filter = new Filter("filter", ".course-card-main__block");
+		filter.filter();
+	}
+});

@@ -1,4 +1,4 @@
-export function showHiddenBlocks() {
+function showHiddenBlocks() {
 	document.addEventListener("click", (e) => {
 		if (e.target.dataset.showitems) {
 			e.preventDefault();
@@ -29,3 +29,7 @@ function checkAttr(parent, attr) {
 	});
 	return resArr.every((item) => item == "true");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	showHiddenBlocks();
+});

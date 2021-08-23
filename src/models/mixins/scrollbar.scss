@@ -1,0 +1,8 @@
+.custom-select-list {
+	.simplebar-scrollbar {
+		&:before {
+			background-color: $red;
+			opacity: 1;
+		}
+	}
+}

@@ -1,34 +1,14 @@
 @import "colors";
 @import "popover";
+@import "skew";
 @import "checkbox";
 @import "slide-range";
 @import "select";
 @import "swiper";
+@import "scrollbar";
 
 input {
 	-webkit-appearance: none;
-}
-
-// .animated-block {
-// 	&-1,
-// 	&-2 {
-// 		@media (max-width: 1023px) {
-// 			transform: none !important;
-// 		}
-// 	}
-// }
-
-.skew-block {
-	position: absolute;
-	left: 0;
-	top: -150px;
-	z-index: auto;
-	width: 100%;
-	height: 354px;
-	transform: skew(0deg, -5deg);
-	&__right {
-		transform: skew(0deg, 5deg);
-	}
 }
 
 .blockquote {
@@ -496,4 +476,15 @@ input {
 [data-vk-modal='false'],
 [data-instagram-modal='false'] {
 	display: none;
+}
+
+.installment-block {
+	input:disabled {
+		border-color:aliceblue;
+	}
+	button:disabled {
+		background-color: aliceblue !important;
+		color: $blue-gray;
+		cursor: default;
+	}
 }

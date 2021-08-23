@@ -1,5 +1,5 @@
 mixin h1Title(text, color = 'indigo', margin = '6')
-	h1.text-3xl.md_text-4xl.lg_text-5xl.font-extrabold.text-indigo(class="text-"+color + " mb-"+margin)!= text
+	h1.text-3xl.md_text-4xl.lg_text-5xl.font-extrabold(class="text-"+color + " mb-"+margin)!= text
 mixin userCardMin(img, name, title)
 	.user-card.mb-10
 		img(src=require("./img/" + img), alt="").w-full.mb-6

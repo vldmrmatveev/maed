@@ -1,6 +1,6 @@
 import { postData } from "./send-data";
 
-export class ValidateForm {
+class ValidateForm {
 	constructor(selector) {
 		this.selector = document.querySelectorAll(selector);
 	}
@@ -20,23 +20,10 @@ export class ValidateForm {
 		const url = form.getAttribute("action");
 		const allRequiredInputs = form.querySelectorAll("input:required");
 		const validationResult = this.validate(allRequiredInputs);
-		if (validationResult) {
+		if (validationResult && !target.classList.contains("no-submit")) {
 			this.postAction(url, target, allInputs);
 		}
 	}
-	// validatePhone(inputs) {
-	// 	inputs.forEach((input) => {
-	// 		if (input.getAttribute("name") == "phone") {
-	// 			input.addEventListener("input", () => {
-	// 				if (input.value[0] == "8") {
-	// 					input.value = "+7" + input.value.slice(1);
-	// 				}
-	// 				input.value.replace(/\w/gi, "~");
-	// 				console.log(input.value.match(/\w/gi, "~"));
-	// 			});
-	// 		}
-	// 	});
-	// }
 	validateOnChange(input) {
 		input.addEventListener("change", () => {
 			if (input.validity.valid) {
@@ -154,7 +141,11 @@ class ValidatePhone {
 	}
 }
 
-if (document.querySelectorAll(".input__phone") != null) {
+if (document.querySelector(".input__phone")) {
 	const phoneInput = new ValidatePhone(".input__phone");
 	phoneInput.validatePhone();
+}
+if (document.querySelector(".btn_submit")) {
+	const validateBtn = new ValidateForm(".btn_submit");
+	validateBtn.doValidate();
 }

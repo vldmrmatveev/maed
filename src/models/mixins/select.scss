@@ -6,14 +6,10 @@
 	&__list {
 		position: absolute;
 		left: 0;
-		top: 29px;
+		top: 100%;
 		width: 100%;
 		z-index: 3;
 		background-color: $indigo;
-		display: none;
-		&.active {
-			display: block;
-		}
 		&-item {
 			color: $white;
 			padding: 8px;
@@ -28,45 +24,71 @@
 			}
 		}
 	}
-	&-item {
-		width: 100%;
-		border-bottom: 1px solid $white;
-		color: $white;
-		height: 29px;
+	&__item {
 		position: relative;
-		padding-left: 10px;
-		padding-right: 10px;
 		cursor: pointer;
-		display: flex;
-		align-items: center;
-		padding-bottom: 4px;
-		@media (max-width: 639px) {
-			color: $indigo;
-			border-bottom-color: $indigo;
-			svg path {
-				stroke: $indigo;
-			}
-		}
-		&:before {
-			content: '';
-			width: 10px;
-			height: 10px;
-			background-image: url('../img/arrow-down.svg');
-			background-repeat: no-repeat;
-			background-size: contain;
+		&-angle {
 			position: absolute;
-			right: 10px;
 			top: 0;
 			bottom: 0;
+			right: 0;
 			margin: auto;
+			width: 10px;
+			height: 10px;
 			transition: 0.3s ease all;
-			@media (max-width: 639px) {
-				background-image: url('../img/arrow-down-dark.svg');
+			&:before,
+			&:after {
+				content: '';
+				width: 8px;
+				height: 2px;
+				background-color: currentColor;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+			}
+			&:before {
+				transform: rotate(-45deg);
+				margin-left: 2px;
+			}
+			&:after {
+				transform: rotate(45deg);
+				margin-left: -2px;
 			}
 		}
-		&.dropped {
-			&:before {
-				transform: rotate(180deg);
+	}
+	&-active {
+		.select-container__item-angle {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.custom-select-list.select-container {
+	.select-container__list {
+		background-color: #DBDCDD;
+		border-radius: 0.5rem;
+		max-height: 310px;
+		padding: 10px 15px 10px 10px;
+		// overflow-y: scroll;
+		// -ms-overflow-style: none;
+		// scrollbar-width: none;
+		// ::-webkit-scrollbar {
+		// 	display: none;
+		// }
+		&-item {
+			background-color: $white;
+			border-radius: 0.5rem;
+			padding: 1rem 0.75rem;
+			color: $indigo;
+			margin-bottom: 10px;
+			&:hover {
+				color: $red;
+			}
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}

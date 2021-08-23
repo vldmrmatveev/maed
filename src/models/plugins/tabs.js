@@ -1,4 +1,4 @@
-export class Tab {
+class Tab {
 	constructor(selector) {
 		this.item = document.querySelectorAll(selector);
 	}
@@ -38,3 +38,9 @@ export class Tab {
 		});
 	}
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	if (document.querySelector(".tab")) {
+		new Tab(".tab").init();
+	}
+});
