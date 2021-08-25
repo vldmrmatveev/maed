@@ -1,0 +1,19 @@
+mixin listInstallmentPlan(...lists)
+	ul.installment.md_flex.items-center
+		each list in lists 
+			li.installment__item.text-white.font-semibold.text-base.md_text-xs.lg_text-base!= list
+section.py-8.sm_py-16.bg-indigo
+	.container
+		.mb-10
+			+maed-logo('indigo', 'white')
+		.flex.flex-wrap.-mx-3 
+			.w-full.px-3(class="md_w-1/2 lg_w-5/12")
+				+mainTitle('Рассрочка', '6', 'white')
+				+mainTextSecondary('Мы хотим, чтобы наше обучение было доступно каждому, поэтому разработали программы рассрочки с ведущими банками', '10', 'white')
+			.w-full.px-3(class="md_w-1/2 lg_w-7/12")
+				.flex.-mx-1.flex-wrap
+					+payImagesWhite('Банки-партнеры', 'sber-white.svg', 'gui-white.svg', 'tink-white.svg', 'alta-bank-white.svg', 'otp-bank-white.svg', 'rus-bank-white.svg', 'psb-bank.svg')
+			.w-full.px-3.pt-6.md_pt-0(class="md_w-1/2 lg_w-5/12")
+				+btn('red', 'red-dark', 'Получить рассрочку')
+			.w-full.px-3.pt-6
+				+listInstallmentPlan('Поговорите с&nbsp;менеджером MAED', 'Ознакомьтесь с&nbsp;условиями кредитования', 'Заполните форму для оформления счета на&nbsp;странице оплаты', 'Подайте заявку на&nbsp;кредит', 'Получите одобрение', 'Дождитесь звонка менеджера')

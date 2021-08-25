@@ -1,9 +1,3 @@
-mixin payImages(text, ...images)
-	each img in images 
-		.px-1.mb-3(class="w-1/2 sm_w-1/3 md_w-1/4")
-			.rounded.border.border-indigo.p-3.h-12
-				img(src=require('/img/'+img), alt="").w-full.h-full.object-contain
-	.w-full.px-1.text-xs.text-indigo.opacity-50= text
 section.pb-16.pt-32.sm_pt-56.md_pt-44.lg_pt-40.z-20.relative.overflow-hidden#paySection
 	.container
 		.flex.flex-wrap.items-center.-mx-3
