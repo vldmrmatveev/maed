@@ -1,76 +1,25 @@
-mixin community-card(title, text, bg, img, btn, num)
-	.rounded-xl.px-4.py-6.sm_px-8.sm_py-10.flex.flex-col.justify-between.h-full(class="bg-"+bg)
-		.w-full.order-2.sm_order-1
-			h5.text-xl.sm_text-2xl.xl_text-3xl.text-indigo.mb-4.font-bold.sm_min-h-sm.flex.items-center!= title
-			p.text-sm.mb-4= text 
-			if num == "1"
-				.flex.items-start.justify-start.-mx-1
-					.px-1(class="w-1/2 sm_w-full")
-						a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-6.sm_px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.sm_mb-4.text-center
-							span.font-semibold.sm_underline= btn
-					.px-1(class="w-1/2 sm_hidden")
-						a(href="#" target="_blank").w-full.sm_w-initial.sm_hidden.inline-block.px-6.sm_px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.sm_mb-4.px-3.text-center
-							span.font-semibold.sm_underline Telegram
-			if num == "2"
-				a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.sm_mb-4.text-center
-					span.hidden.sm_inline-block.font-semibold.underline= btn
-					span.font-semibold.sm_hidden Наш блог
-			if num == "3"
-				a(href="#" target="_blank").w-full.sm_hidden.inline-block.px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.sm_mb-4.text-center
-					span.font-semibold= btn
-		img(src=require("./img/"+img), alt="").w-full.max-w-xs.mx-auto.block.order-1.sm_order-2.sm_mb-0.mb-5
+mixin community-card-360(title, text, img, btn)
+	.rounded-xl.px-4.py-6.sm_px-6.sm_py-8.flex.flex-col.justify-between.h-full.bg-white.border-2.border-red
+		.flex.flex-wrap.items-end.-mx-3 
+			.w-full(class="lg_w-7/12 px-3").order-2.lg_order-1
+				.min-h-sm.items-center.flex.mb-3.lg_mb-6
+					h5.text-xl.sm_text-2xl.xl_text-3xl.text-indigo.mb-4.font-bold.sm_min-h-sm.flex.items-center!= title
+				p.text-indigo.text-sm.font-semibold.mb-6= text 
+				if btn
+					a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-6.sm_px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.sm_mb-4.text-center
+						span.font-semibold.sm_underline= btn
+			.w-full(class="lg_w-5/12 px-3").order-1.lg_order-2
+				img(src=require('/img/'+img), alt="").w-full.h-56.object-contain.mb-6.lg_mb-0.object-bottom
 section.py-8.sm_py-16.container
 	+360MainTitle('6', 'Сообщество', '8')
 	.w-full(class="md_w-1/2")
 		+mainTextSecondary('MAED – это комьюнити профессионалов, где каждый может найти ответы на свои вопросы, встретить единомышленников и выстроить траекторию собственного развития', '10')
 	.flex.flex-wrap.-mx-3
 		.w-full.mb-6(class="md_w-1/2 px-3")
-			.rounded-xl.px-4.py-6.sm_px-6.sm_py-8.flex.flex-col.justify-between.h-full.bg-white.border-2.border-red
-				.flex.flex-wrap.items-end.-mx-3 
-					.w-full(class="lg_w-7/12 px-3").order-2.lg_order-1
-						.min-h-sm.items-center.flex.mb-3.lg_mb-6
-							h5.text-2xl.xl_text-3xl.text-indigo.font-bold #ТЫЖМАРКЕТОЛОГ
-						p.text-indigo.text-sm.font-semibold.mb-6 Открытая группа для маркетологов-практиков с пользой для дела и общением для души
-						.flex.items-start.justify-start.-mx-1
-							.px-1(class="w-1/2 sm_w-full")
-								a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-6.sm_px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.text-center
-									span.font-semibold.sm_underline Facebook
-							.px-1(class="w-1/2 sm_hidden")
-								a(href="#" target="_blank").w-full.sm_w-initial.sm_hidden.inline-block.px-6.sm_px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.px-3.text-center
-									span.font-semibold.sm_underline Telegram
-					.w-full(class="lg_w-5/12 px-3").order-1.lg_order-2
-						img(src=require('/img/community-1.svg'), alt="").w-full.h-56.object-contain.mb-6.lg_mb-0.object-bottom
+			+community-card-360('#ТЫЖМАРКЕТОЛОГ', 'Открытая группа для маркетологов-практиков с пользой для дела и общением для души', 'community-1.svg', 'Facebook')
 		.w-full.mb-6(class="md_w-1/2 px-3")
-			.rounded-xl.px-4.py-6.sm_px-6.sm_py-8.flex.flex-col.justify-between.h-full.bg-white.border-2.border-red
-				.flex.flex-wrap.items-end.-mx-3 
-					.w-full(class="lg_w-7/12 px-3").order-2.lg_order-1
-						.min-h-sm.items-center.flex.mb-3.lg_mb-6
-							h5.text-2xl.xl_text-3xl.text-indigo.font-bold Закрытые телеграм-каналы
-						p.text-indigo.text-sm.font-semibold.mb-6 Статьи, анонсы онлайн-занятий и любой полезный контент, который пригодится интернет-маркетологу
-						a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.text-center
-							span.hidden.sm_inline-block.font-semibold.underline Telegram
-							span.font-semibold.sm_hidden Наш блог
-					.w-full(class="lg_w-5/12 px-3").order-1.lg_order-2
-						img(src=require('/img/community-2.svg'), alt="").w-full.h-56.object-contain.mb-6.lg_mb-0.object-bottom
+			+community-card-360('Закрытые телеграм-каналы', 'Статьи, анонсы онлайн-занятий и любой полезный контент, который пригодится интернет-маркетологу', 'community-2.svg', 'Telegram')
 		.w-full.mb-6(class="md_w-1/2 px-3")
-			.rounded-xl.px-4.py-6.sm_px-6.sm_py-8.flex.flex-col.justify-between.h-full.bg-white.border-2.border-red
-				.flex.flex-wrap.items-start.-mx-3 
-					.w-full(class="lg_w-7/12 px-3").order-2.lg_order-1
-						.min-h-sm.items-center.flex.mb-3.lg_mb-6
-							h5.text-2xl.xl_text-3xl.text-indigo.font-bold Сообщество студентов
-						p.text-indigo.text-sm.font-semibold.mb-6 Внутренние чаты курсов, доступные после зачисления
-						a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.text-center.lg_hidden
-							span.font-semibold.underline Сообщество
-					.w-full(class="lg_w-5/12 px-3").order-1.lg_order-2
-						img(src=require('/img/community-3.svg'), alt="").w-full.h-56.object-contain.mb-6.lg_mb-0.object-bottom
+			+community-card-360('Сообщество студентов', 'Внутренние чаты курсов, доступные после зачисления', 'community-3.svg')
 		.w-full.mb-6(class="md_w-1/2 px-3")
-			.rounded-xl.px-4.py-6.sm_px-6.sm_py-8.flex.flex-col.justify-between.h-full.bg-white.border-2.border-red
-				.flex.flex-wrap.items-start.-mx-3 
-					.w-full(class="lg_w-7/12 px-3").order-2.lg_order-1
-						.min-h-sm.items-center.flex.mb-3.lg_mb-6
-							h5.text-2xl.xl_text-3xl.text-indigo.font-bold MAED Magazine
-						p.text-indigo.text-sm.font-semibold.mb-6 Блог MAED, где собраны актуальные статьи от ведущих маркетологов
-						a(href="#" target="_blank").w-full.sm_w-initial.inline-block.px-8.md_px-10.py-3.rounded-md.sm_rounded-xl.duration-300.bg-indigo.text-white.hover_bg-purple.text-center
-							span.font-semibold.underline Наш блог
-					.w-full(class="lg_w-5/12 px-3").order-1.lg_order-2
-						img(src=require('/img/community-4.svg'), alt="").w-full.h-56.object-contain.mb-6.lg_mb-0.object-bottom
+			+community-card-360('MAED Magazine', 'Блог MAED, где собраны актуальные статьи от ведущих маркетологов', 'community-4.svg', 'Наш блог')
