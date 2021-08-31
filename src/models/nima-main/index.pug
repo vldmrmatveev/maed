@@ -4,7 +4,7 @@ section.pt-32.sm_pt-56.md_pt-48.z-20.relative.overflow-hidden
 			.w-full(class="lg_w-1/2 xl_w-7/12 px-3")
 				+h1Title('Готовим маркетологов международного уровня')
 				p.text-gray-base.mb-6.sm_mb-10.font-semibold MAED обучает и готовит студентов к сдаче экзамена – NIMA создает стандарты и присваивает международную квалификацию
-				.hidden.lg_flex.flex-wrap.-mx-3
+				.flex.flex-wrap.-mx-3
 					.w-full(class="sm_w-1/2 px-3")
 						+listCheck('Перспективная работа с&nbsp;хорошей оплатой и&nbsp;драйвом')
 						+listCheck('Возможность претендовать на&nbsp;вакансии в&nbsp;представительствах зарубежных компаний')
@@ -12,16 +12,28 @@ section.pt-32.sm_pt-56.md_pt-48.z-20.relative.overflow-hidden
 						+listCheck('Способ начать жить и&nbsp;работать в&nbsp;Европе')
 						+listCheck('Европейское образование, не&nbsp;выходя из&nbsp;дома')
 					.w-full.px-3
-						+btn('indigo', 'purple', 'Узнать о сертификации', '14')
-			.w-full(class="sm_w-1/2 xl_w-5/12 px-3")
+						a(href="#modalFormNima" data-modal).inline-flex.justify-center.items-center.px-8.md_px-10.py-3.rounded-lg.sm_rounded-xl.duration-300.text-white.bg-indigo.hover_bg-purple.text-white.hover_text-white.mb-8.sm_mb-14.sm_w-initial.w-full
+							span.font-semibold.mr-3.pointer-events-none Узнать больше
+							span.triangle-to-right.triangle-to-right__big.inline-block.pointer-events-none
+			.w-full(class="sm_w-8/12 md_w-1/2 xl_w-5/12 px-3")
 				img(src=require('/img/Group_7691.svg'), alt="").w-full
-			.w-full.lg_hidden 
-				.flex.flex-wrap.mt-8
-					.w-full.px-3(class="sm_w-1/2")
-						+listCheck('Перспективная работа с&nbsp;хорошей оплатой и&nbsp;драйвом')
-						+listCheck('Возможность претендовать на&nbsp;вакансии в&nbsp;представительствах зарубежных компаний')
-					.w-full.px-3(class="sm_w-1/2")
-						+listCheck('Способ начать жить и&nbsp;работать в&nbsp;Европе')
-						+listCheck('Европейское образование, не&nbsp;выходя из&nbsp;дома')
-					.w-full.px-3
-						+btn('indigo', 'purple', 'Узнать о сертификации', '14')
+
+.modal__bg
+	.modal.modal__xl.container.px-0.border-3.border-indigo#modalFormNima
+		.modal__body.px-10.py-12
+			.modal__close 
+			.flex.flex-wrap.-mx-3.mt-6
+				.w-full.px-3(class="md_w-1/2")
+					p.text-indigo.font-extrabold.text-2xl.sm_text-4xl.mb-6 Курс подготовки к&nbsp;международной сертификации.
+					p.text-indigo.font-bold.mb-8 Поможем подобрать нужную программу, сориентируем по&nbsp;срокам сдачи эказмена, ответим на&nbsp;вопросы.
+					img(src=require('/img/form-modal.svg'), alt="").hidden.w-54.md_block
+				.w-full.px-3(class="md_w-1/2")
+					.flex.flex-wrap.justify-center
+						.form_container.text-center(class="md_w-10/12")
+							form.form(action="https://jsonplaceholder.typicode.com/users")
+								+modalInput('text', 'Имя', 'name')
+								+modalInput('text', 'Телефон', 'phone')
+								+modalInput('email', 'E-mail', 'email')
+								textarea.rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.resize-none.min-h-sm.input_custom(name="message" placeholder="Ваше сообщение")
+								button.btn_submit.bg-indigo.rounded-md.px-4.py-3.hover_bg-purple.duration-300.font-semibold.text-white.mb-4.w-full(data-text="Ваши данные были успешно отправлены") Оставить заявку
+								p.mb-4.text-indigo.text-center.text-xs Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных

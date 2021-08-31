@@ -1,3 +1,10 @@
+mixin modalInput(typeInput, placeholder, nameInput)
+	if nameInput == "name"
+		input(type=typeInput name=nameInput placeholder=placeholder required minlength="2").rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom
+	else if nameInput == "phone"
+		input(type=typeInput name=nameInput placeholder=placeholder required maxlength="17" minlength="17").rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom.input__phone
+	else
+		input(type=typeInput name=nameInput placeholder=placeholder required).rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom
 mixin payImages(text, ...images)
 	each img in images 
 		.px-1.mb-3(class="w-1/2 sm_w-1/3 md_w-1/4")

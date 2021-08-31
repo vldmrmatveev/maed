@@ -1,10 +1,3 @@
-mixin modalInput(typeInput, placeholder, nameInput)
-	if nameInput == "name"
-		input(type=typeInput name=nameInput placeholder=placeholder required minlength="2").rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom
-	else if nameInput == "phone"
-		input(type=typeInput name=nameInput placeholder=placeholder required maxlength="17" minlength="17").rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom.input__phone
-	else
-		input(type=typeInput name=nameInput placeholder=placeholder required).rounded-md.border.border-indigo.px-6.outline-none.py-3.mb-6.duration-300.w-full.input_custom
 mixin career-start-num(num, text)
 	.px-3.w-full.flex.items-center.md_flex-col.md_justify-center(class="md_w-1/3")
 		.text-yellow.font-black.text-5xl.mb-1.mr-4.md_mr-0= num 
