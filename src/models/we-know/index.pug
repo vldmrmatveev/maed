@@ -3,7 +3,7 @@ mixin we-know-card(name, bg, ...lists)
 		.rounded-xl.border.border-yellow.px-4.py-8.min-h-lg.h-full(class="bg-"+ bg)
 			h5.text-indigo.text-xl.lg_text-2xl.font-extrabold.leading-tight.mb-3= name 
 			if lists.length > 1
-				ul.pl-3.list-disc
+				ul.pl-3.list-disc(class="ml-0.5")
 					each list in lists
 						li.mb-3.font-semibold.text-indigo.text-sm= list
 			else 

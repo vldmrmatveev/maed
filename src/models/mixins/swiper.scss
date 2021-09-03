@@ -1,7 +1,15 @@
+.swiper-button-prev:after {
+	transform: translateX(-1px);
+}
+
+.swiper-button-next:after {
+	transform: translateX(1px);
+}
+
 .swiper-container {
 	.swiper-pagination-bullet {
 		margin: 0 7px !important;
-		background-color: #D9DADB;
+		background-color: #d9dadb;
 		position: relative;
 		&:before {
 			content: '';
@@ -135,8 +143,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .swiper-button {
@@ -155,11 +167,13 @@
 }
 
 .swiper-gallery {
-	.swiper-button-prev, .swiper-button-next {
+	.swiper-button-prev,
+	.swiper-button-next {
 		bottom: -15px;
 	}
 	@media (min-width: 1140px) {
-		.swiper-button-prev, .swiper-button-next {
+		.swiper-button-prev,
+		.swiper-button-next {
 			left: 0;
 			right: 0;
 			margin: auto;
