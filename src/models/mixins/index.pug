@@ -237,7 +237,7 @@ mixin course-card(color, bg, title, user, category = 'smm', feature = 'employmen
 	.px-3.course-card-main__block(class="w-full md_w-1/2 lg_w-1/3" data-title=title data-category=category data-feature=feature data-month=month data-property=prop data-specification=spec)
 		.px-4.py-5.flex.flex-col.relative.mb-4.rounded-xl.justify-between.overflow-hidden.course-card-main(class="bg-"+bg + " border border-" + color)
 			if bg == "white"
-				div(class="sm_w-9/12")
+				.main-title-card(class="w-9/12")
 					p.font-bold.text-sm.mb-1.text-indigo Профессия
 					p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3.text-indigo.line-height-min= title 
 					ul.list-disc.list-inside
@@ -257,7 +257,7 @@ mixin course-card(color, bg, title, user, category = 'smm', feature = 'employmen
 						span.mr-3 Записаться
 						span.inline-block.triangle-to-right
 			else
-				div(class="sm_w-9/12")
+				.main-title-card(class="w-9/12")
 					p.font-bold.text-sm.mb-1.text-white Профессия
 					p.text-lg.sm_text-xl.xl_text-2xl.font-bold.mb-3.text-white.line-height-min= title 
 					ul.list-disc.list-inside

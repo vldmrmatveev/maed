@@ -1,11 +1,11 @@
-@import "colors";
-@import "popover";
-@import "skew";
-@import "checkbox";
-@import "slide-range";
-@import "select";
-@import "swiper";
-@import "scrollbar";
+@import 'colors';
+@import 'popover';
+@import 'skew';
+@import 'checkbox';
+@import 'slide-range';
+@import 'select';
+@import 'swiper';
+@import 'scrollbar';
 
 input {
 	-webkit-appearance: none;
@@ -31,7 +31,7 @@ input {
 .revert-on-hover {
 	&:hover {
 		.revert-on-hover__item {
-			&-footer  {
+			&-footer {
 				background-color: $blue-light;
 			}
 			&-header {
@@ -91,7 +91,7 @@ input {
 			&:nth-child(6) {
 				border-right: 1px solid $gray;
 			}
-			&:nth-child(7), 
+			&:nth-child(7),
 			&:nth-child(8) {
 				border-bottom: 1px solid $gray;
 			}
@@ -119,7 +119,7 @@ input {
 
 .course-card-main {
 	min-height: 330px;
-	@media (max-width:639px) {
+	@media (max-width: 639px) {
 		min-height: initial;
 	}
 }
@@ -222,7 +222,6 @@ input {
 				top: auto;
 				right: -8px;
 			}
-			
 		}
 		&:before {
 			display: none;
@@ -293,7 +292,6 @@ input {
 		}
 	}
 }
-
 
 .collapse {
 	height: 0;
@@ -384,7 +382,7 @@ input {
 	overflow: scroll;
 	max-height: 100%;
 	-ms-overflow-style: none;
-  scrollbar-width: none;
+	scrollbar-width: none;
 	::-webkit-scrollbar {
 		display: none;
 	}
@@ -433,7 +431,7 @@ input {
 		position: fixed;
 		top: 0;
 		left: 0;
-		background-color: rgba(0,0,0,0.6);
+		background-color: rgba(0, 0, 0, 0.6);
 		width: 100%;
 		height: 100%;
 		transition: 0.3s ease all;
@@ -480,7 +478,7 @@ input {
 
 .installment-block {
 	input:disabled {
-		border-color:aliceblue;
+		border-color: aliceblue;
 	}
 	button:disabled {
 		background-color: aliceblue !important;
@@ -497,7 +495,7 @@ input {
 	align-items: center;
 	&:before {
 		counter-increment: section;
-  	content: counter(section);
+		content: counter(section);
 		width: 30px;
 		min-width: 30px;
 		height: 30px;
@@ -524,7 +522,6 @@ input {
 	}
 }
 
-
 @keyframes bouceCustom {
 	0% {
 		transform: translateY(0);
@@ -539,7 +536,7 @@ input {
 
 .installment {
 	margin: 0 -10px;
-	@media (max-width:767px) {
+	@media (max-width: 767px) {
 		margin: 0;
 	}
 	&__item {
@@ -572,7 +569,7 @@ input {
 		&:after {
 			transform: rotate(-45deg);
 		}
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			margin: 10px 0;
 			padding-right: 0;
 			padding-left: 20px;
@@ -588,5 +585,11 @@ input {
 				}
 			}
 		}
+	}
+}
+
+.main-title-card {
+	@media (max-width: 340px) {
+		width: 100%;
 	}
 }
