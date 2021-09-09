@@ -379,7 +379,10 @@ input {
 
 .modal {
 	background-color: $white;
-	overflow: scroll;
+	overflow: hidden;
+	@media (max-width: 991px) {
+		overflow: scroll;
+	}
 	max-height: 100%;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
