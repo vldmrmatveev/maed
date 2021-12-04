@@ -1,17 +1,22 @@
 .maed-mag-card {
-	height: 370px;
+	// height: 370px;
+	height: 100%;
+	&-container {
+		height: initial;
+		display: flex;
+	}
 	&__hand {
 		background-image: url('../img/maed-mag-bg-3.png');
 		background-repeat: no-repeat;
 		background-position: 90% 65%;
 		background-size: 50%;
 	}
-	&-height {
-		&-1 {
-			height: 45%;
-		}
-		&-2 {
-			height: 55%;
-		}
-	}
+	// &-height {
+	// 	&-1 {
+	// 		height: 45%;
+	// 	}
+	// 	&-2 {
+	// 		height: 55%;
+	// 	}
+	// }
 }
