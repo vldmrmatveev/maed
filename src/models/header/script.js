@@ -104,33 +104,45 @@ function showHeaderMenuMob(item) {
 	document.body.classList.toggle("modal-opened");
 }
 
-function changeValueHeader(item) {
-	const elem = item.dataset.content;
-	document.getElementById(elem).classList.toggle("hidden");
-	item.classList.toggle("opened");
-	item.closest("#header").classList.toggle("header-opened");
-	const elemParent = item.dataset.open;
-	document.getElementById(elemParent).classList.toggle("open");
+function changeValueHeader(target) {
+	const header = target.closest('#header');
+	const headerBar = header ? header.querySelector(".header__container") : null;
+	const openedMenu = document.getElementById(target.dataset.content);
+	const menu = document.getElementById(target.dataset.open);
+	
+	target.classList.toggle("opened");
+	if (header) header.classList.toggle("header-opened");
+	if (openedMenu) openedMenu.classList.toggle("hidden");
+	if (menu) menu.classList.toggle("open");
+	if (menu) menu.style.height = '';
+	
+	const headerHeight = headerBar ? headerBar.offsetHeight : 0;
+	
+	if (menu && menu.classList.contains("open") && menu.offsetHeight > window.innerHeight - headerHeight) {
+		menu.style.height =  (window.innerHeight - headerHeight) + 'px';
+	}
+	
 	document.body.classList.toggle("overflow-hidden");
 	document.body.classList.toggle("modal-opened");
 }
 
 function changeHiddenBlockHeight() {
-	if (window.innerWidth < 1024) {
-		let headerHeight = document.querySelector(".header__container")
-			.offsetHeight;
-		let windowWidth = window.innerHeight;
-		let headerShowHeight = windowWidth - headerHeight;
-		document.getElementById(
-			"headerDesktopHidden"
-		).style.height = `${headerShowHeight}px`;
-		document.getElementById(
-			"headerDesktopHiddenMob"
-		).style.height = `${headerShowHeight}px`;
-	} else {
-		document.getElementById("headerDesktopHidden").style.height = "";
-		document.getElementById("headerDesktopHiddenMob").style.height = "";
+	const headerBar = document.querySelector('#header .header__container');
+	const openedMenuDesktop = document.getElementById('headerDesktopHidden');
+	const openedMenuMob = document.getElementById('headerDesktopHiddenMob');
+	
+	openedMenuDesktop.style.height = '';
+	openedMenuMob.style.height = '';
+	
+	const openedMenuDesktopHeight = openedMenuDesktop ? openedMenuDesktop.offsetHeight : 0;
+	const headerHeight = headerBar ? headerBar.offsetHeight : 0;
+	const visibleHeight = window.innerHeight - headerHeight;
+	
+	if (openedMenuDesktopHeight >= visibleHeight && openedMenuDesktop) {
+		openedMenuDesktop.style.height =  (window.innerHeight - headerHeight) + 'px';
 	}
+	
+	if (openedMenuMob) openedMenuMob.style.height = `calc(100vh - ${headerHeight}px)`;
 }
 
 function dropdownClick() {
